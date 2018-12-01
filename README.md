@@ -13,6 +13,8 @@ Please feel free to improve/fix anything and submit a PR. There's lots of work t
 
 ## TODO:
 Add oculus go controller interactions
+
 Add trackpad and/or button scrolling
+
 General debugging (some webpages don't work)
 
