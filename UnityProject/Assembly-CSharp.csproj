@@ -54,8 +54,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AbilitiesSpecificAssets\WindowsFiles\Prefabs\BrowserView.cs" />
-    <Compile Include="Assets\AbilitiesSpecificAssets\WindowsFiles\Prefabs\UnityThread.cs" />
+    <Compile Include="Assets\BrowserView.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\AbuseReportOptions.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\AbuseReportType.cs" />
     <Compile Include="Assets\Oculus\Platform\Scripts\AchievementType.cs" />
@@ -257,6 +256,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\UnityThread.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRUnlitTransparent.shader" />
