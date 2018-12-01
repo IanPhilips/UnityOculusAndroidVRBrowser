@@ -11,8 +11,23 @@ This uses the CPU to draw an Android webview onto a bitmap which is passed onto 
 
 Please feel free to improve/fix anything and submit a PR. There's lots of work to do!
 
+
+## Clicking
+If/when input is implemented, make sure the browser has pivot points set to (0.5,0.5) so the coordinates will translate correctly to the Android's `Webview` coordinates.
+
+
+## How to edit the Java plugin
+The code is in the unitylibrary module. The MainGL class is where most of the work is done, and uses the BitmapWebView's overrided draw method to get the webpage images. 
+
+
 ## TODO:
+Improve this readme
+
 Add oculus go controller interactions
+
 Add trackpad and/or button scrolling
+
 General debugging (some webpages don't work)
+
+
 
