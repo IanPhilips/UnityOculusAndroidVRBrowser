@@ -1,0 +1,10 @@
+{
+	"name": "com.unity.collab-proxy",
+	"displayName":"Unity Collaborate",
+	"version": "1.2.9",
+	"unity": "2018.3",
+	"description": "Collaborate is a simple way for teams to save, share, and sync their Unity project",
+	"keywords": ["collab", "collaborate", "teams", "team", "cloud", "backup"],
+	"dependencies": {
+	}
+}
