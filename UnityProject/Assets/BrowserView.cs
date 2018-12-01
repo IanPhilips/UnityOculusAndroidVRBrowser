@@ -50,6 +50,7 @@ public class BrowserView : MonoBehaviour
 
     private void Update()
     {
+        // TODO: not sure how OVRInput works, this is non-working code:
         OVRInput.Update();
         Vector3 fwd = ControllerForwardTransform.transform.forward;
         Debug.DrawRay(ControllerForwardTransform.transform.position, fwd * 50, Color.green);
@@ -149,6 +150,7 @@ public class BrowserView : MonoBehaviour
         }
     }
 
+    // android's scroll down is negative, up is positive
     public void InvokeScrollUp()
     {
         CallAjc("Scroll",new object[]{ _scrollByY});
@@ -269,16 +271,15 @@ public class BrowserView : MonoBehaviour
         _imageTexture2D = new Texture2D(Screen.width, Screen.height, TextureFormat.ARGB32, false);
         _rawImage = gameObject.GetComponent<RawImage>();
         _rawImage.texture = _imageTexture2D;
- 
-        // working values but shows mobile
-//        _width = (int) _rawImage.rectTransform.rect.width;
-//        int outputHeight = (int) (_rawImage.rectTransform.rect.height);
+         
         // testing new values 
         _width = 1200;//(int) _rawImage.rectTransform.rect.width;
         int outputHeight = 800;//(int) (_rawImage.rectTransform.rect.height);
 
-        //        _androidScreenHeight = 1440; // this is the oculus go's height
+        // _androidScreenHeight = 1440; // this is the oculus go's height
         _androidScreenHeight = outputHeight;
+        
+        // don't scroll by the entire screen
         _scrollByY = (int) (_androidScreenHeight * .8 );
         
 #if !UNITY_EDITOR && UNITY_ANDROID
@@ -301,14 +302,9 @@ public class BrowserView : MonoBehaviour
 
 
         RectTransform rectTransform = _rawImage.GetComponent<RectTransform>();
-
-        // Bottom left and right positions will give us the width of the screen in the 3d world with
-        // regards to the viewer
-        Camera thisCamera = Camera.main;//gameObject.GetComponent<Camera>();
+        Camera thisCamera = Camera.main;
         Debug.Assert(thisCamera.name == "CenterEyeAnchor");
         Vector2 positionInRect = new Vector2();
-        // transform the x=0 position by how far the browser's rect transform is from the center,
-        // i.e. its position. 
 
         Vector2 screenPoint = RectTransformUtility .WorldToScreenPoint(thisCamera, pos);
         //Debug.Log("screen point: " + screenPoint);
@@ -331,7 +327,7 @@ public class BrowserView : MonoBehaviour
         bool assumingPositionIsInWebView = true;
         // TODO: we're assuming the point is within the texture
         Debug.Assert(assumingPositionIsInWebView);
-        // TODO: assuming these dimensions for oculus go screen
+
         // get the screen dimensions and divide them by the rectangle's screen dimensions for scaling
         float screenWidth = _width; //rect.width;
         float screenHeight = _androidScreenHeight; //rect.height;
@@ -341,8 +337,6 @@ public class BrowserView : MonoBehaviour
 
         Vector2 positionInWebView = new Vector2(positionInRect.x * xScale, positionInRect.y * yScale);
         Debug.Log("position in webview: " + positionInWebView);
-        // our scroll down is positive but the android's scroll down is negative
-//        positionInWebView = new Vector2(positionInWebView.x, positionInWebView.y);
 
 //        Debug.Log("transformed pos:" + positionInWebView);
         // if we're within the bounds of the rectangle
@@ -355,7 +349,8 @@ public class BrowserView : MonoBehaviour
     
     public void UpdateProgress(int progress, bool canGoBack, bool canGoForward)  {
         Debug.Log("progress is now:" + progress);
-//        _loadingProgress = progress;
+
+        // disable scrolling while still loading
         if (progress >= 100)
         {
             _letLoadFirstUrl = false;

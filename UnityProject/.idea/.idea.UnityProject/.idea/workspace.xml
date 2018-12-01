@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96ea206a-a44f-4a26-bc4d-8229aec4fbf4" name="Default Changelist" comment="" />
+    <list default="true" id="96ea206a-a44f-4a26-bc4d-8229aec4fbf4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BrowserView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BrowserView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ce4198-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ce4198-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/14/14e46ccbdf75742839b9b28bfcd6e99c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/14/14e46ccbdf75742839b9b28bfcd6e99c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/14/14e46ccbdf75742839b9b28bfcd6e99c.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/14/14e46ccbdf75742839b9b28bfcd6e99c.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,13 +32,120 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="181" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="181" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/BrowserView.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="338" column="80" lean-forward="true" selection-start-line="338" selection-start-column="80" selection-end-line="338" selection-end-column="80" />
+              <folding>
+                <marker date="1543691488462" expanded="false" signature="6:183" ph="..." />
+                <marker date="1543691488462" expanded="true" signature="228:11374" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="927:1068" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="1105:1156" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="1183:1911" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="1515:1897" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="1633:1887" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="1809:1873" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="1971:2592" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="2393:2444" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="2629:2738" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="2661:2732" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="2775:3291" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="2819:2874" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="2980:3045" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="3058:3276" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="3366:3518" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="3429:3512" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="3554:3659" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="3586:3653" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="3698:3806" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="3730:3800" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="3840:3942" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="3982:4086" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="4133:4207" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="4240:4295" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="4324:4430" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="4459:4560" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="4589:4745" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="4887:5035" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="4919:5029" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="5196:5666" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="5751:6070" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="6084:6262" ph="/* TODO: this may be a bad UX if we load a page then go home and expect to come back to it loaded ... */" />
+                <marker date="1543691488462" expanded="true" signature="6321:6510" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="6543:6911" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="6575:6904" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="6639:6777" ph="/* we need to have the webview call draw so it can reset it self ... */" />
+                <marker date="1543691488462" expanded="true" signature="6943:7033" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="7111:8404" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="8516:10648" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="9050:9166" ph="/* Debug.Log(&quot;main camera is: &quot; + Camera.main.name); ... */" />
+                <marker date="1543691488462" expanded="true" signature="10321:10510" ph="/* our scroll down is positive but the android's scroll down is negative ... */" />
+                <marker date="1543691488462" expanded="true" signature="10535:10642" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="10736:11367" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="10855:10999" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="11012:11123" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="11476:13003" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="11705:11841" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="11880:12019" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="12134:12811" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="12317:12422" ph="/* Debug.Log(&quot;frame bytes arrived&quot;); ... */" />
+                <marker date="1543691488462" expanded="true" signature="12449:12805" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="12496:12719" ph="{...}" />
+                <marker date="1543691488462" expanded="true" signature="12899:12994" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>faceboo</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/BrowserView.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/AbilitiesSpecificAssets/WindowsFiles/Prefabs/BrowserView.cs" />
+        <option value="$PROJECT_DIR$/Assets/BrowserView.cs" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -29,6 +154,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="29" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="777" />
@@ -39,13 +165,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-      </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -92,25 +218,30 @@
       <option name="presentableId" value="Default" />
       <updated>1543682968127</updated>
       <workItem from="1543682970134" duration="4000" />
+      <workItem from="1543683013621" duration="1090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4000" />
+    <option name="totallyTimeSpent" value="1094000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <frame x="29" y="23" width="1280" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -118,17 +249,24 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -142,5 +280,78 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/AbilitiesSpecificAssets/WindowsFiles/Prefabs/BrowserView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="249" column="9" lean-forward="true" selection-start-line="249" selection-start-column="9" selection-end-line="249" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BrowserView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="338" column="80" lean-forward="true" selection-start-line="338" selection-start-column="80" selection-end-line="338" selection-end-column="80" />
+          <folding>
+            <marker date="1543691488462" expanded="false" signature="6:183" ph="..." />
+            <marker date="1543691488462" expanded="true" signature="228:11374" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="927:1068" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="1105:1156" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="1183:1911" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="1515:1897" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="1633:1887" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="1809:1873" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="1971:2592" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="2393:2444" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="2629:2738" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="2661:2732" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="2775:3291" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="2819:2874" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="2980:3045" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="3058:3276" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="3366:3518" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="3429:3512" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="3554:3659" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="3586:3653" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="3698:3806" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="3730:3800" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="3840:3942" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="3982:4086" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="4133:4207" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="4240:4295" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="4324:4430" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="4459:4560" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="4589:4745" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="4887:5035" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="4919:5029" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="5196:5666" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="5751:6070" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="6084:6262" ph="/* TODO: this may be a bad UX if we load a page then go home and expect to come back to it loaded ... */" />
+            <marker date="1543691488462" expanded="true" signature="6321:6510" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="6543:6911" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="6575:6904" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="6639:6777" ph="/* we need to have the webview call draw so it can reset it self ... */" />
+            <marker date="1543691488462" expanded="true" signature="6943:7033" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="7111:8404" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="8516:10648" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="9050:9166" ph="/* Debug.Log(&quot;main camera is: &quot; + Camera.main.name); ... */" />
+            <marker date="1543691488462" expanded="true" signature="10321:10510" ph="/* our scroll down is positive but the android's scroll down is negative ... */" />
+            <marker date="1543691488462" expanded="true" signature="10535:10642" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="10736:11367" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="10855:10999" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="11012:11123" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="11476:13003" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="11705:11841" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="11880:12019" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="12134:12811" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="12317:12422" ph="/* Debug.Log(&quot;frame bytes arrived&quot;); ... */" />
+            <marker date="1543691488462" expanded="true" signature="12449:12805" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="12496:12719" ph="{...}" />
+            <marker date="1543691488462" expanded="true" signature="12899:12994" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
