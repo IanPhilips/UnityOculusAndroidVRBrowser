@@ -1,7 +1,7 @@
 # UnityAndroidVRBrowser
 
 
-[screenshot] (https://github.com/IanPhilips/UnityAndroidVRBrowser/blob/master/Screen%20Shot%202018-12-01%20at%2010.02.13%20AM.png)
+![screenshot] (https://github.com/IanPhilips/UnityAndroidVRBrowser/blob/master/Screen%20Shot%202018-12-01%20at%2010.02.13%20AM.png)
 
 This is in `Beta` mode.
 Youtube does not work, see: https://stackoverflow.com/questions/19273437/android-draw-youtube-video-on-surfacetexture
