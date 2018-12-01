@@ -21,7 +21,7 @@ If/when input is implemented, make sure the browser has pivot points set to (0.5
 ## How to edit the Java plugin
 The code is in the unitylibrary module. The MainGL class is where most of the work is done, and uses the BitmapWebView's overrided draw method to get the webpage images. 
 
-Then using the gradle menu, build unitylibrary. Take the new `unitylibrary-debug.aar` from ` ⁨UnityAndroidVRBrowser⁩/⁨AndroidViewToGLRendering-master⁩/⁨unitylibrary⁩/⁨build/⁨outputs/⁨aar⁩` and move it to `Assets/Plugins/Android/`
+After modifying, use the gradle menu to build unitylibrary. Take the new `unitylibrary-debug.aar` from ` ⁨UnityAndroidVRBrowser⁩/⁨AndroidViewToGLRendering-master⁩/⁨unitylibrary⁩/⁨build/⁨outputs/⁨aar⁩` and move it to `Assets/Plugins/Android/`
 
 
 ## TODO:
