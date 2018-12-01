@@ -1217,7 +1217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9113702722498888166}
   m_Layer: 0
-  m_Name: Navigation (1)
+  m_Name: Navigation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1985,7 +1985,7 @@ GameObject:
   - component: {fileID: 9036462499681295809}
   - component: {fileID: 9036462499681295808}
   m_Layer: 0
-  m_Name: SideButtons
+  m_Name: LeftSideButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3067,7 +3067,7 @@ GameObject:
   - component: {fileID: 9036462500708178291}
   - component: {fileID: 9036462500708178300}
   m_Layer: 0
-  m_Name: SideButtons (1)
+  m_Name: RightSideButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
