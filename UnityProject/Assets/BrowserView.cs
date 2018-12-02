@@ -18,7 +18,8 @@ public class BrowserView : MonoBehaviour
     public Button ForwardButton;
     public TMP_InputField UrlInputField;
     public TMP_Text ProgressText;
-    public Transform ControllerForwardTransform;
+    public Transform GazePointer;
+    public Transform ForwardDirection;
 
 
     private RawImage _rawImage;
@@ -46,28 +47,29 @@ public class BrowserView : MonoBehaviour
     private void Awake()
     {
         UnityThread.initUnityThread();
+        GetComponent<Button>().onClick.AddListener(OnClick);
+        
     }
 
     private void Update()
     {
-        // TODO: not sure how OVRInput works, this is non-working code:
-        // TODO: can't get any trigger events
-        OVRInput.Update();
-        Vector3 fwd = ControllerForwardTransform.transform.forward;
-        Debug.DrawRay(ControllerForwardTransform.transform.position, fwd * 50, Color.green);
+        Vector3 dir = GazePointer.transform.position-ForwardDirection.transform.position;
+        Debug.DrawRay(ForwardDirection.transform.position,dir,Color.green);
 
-        if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger))
-        {
-            if (Physics.Raycast(ControllerForwardTransform.transform.position, fwd, out var objectHit, 50))
-            {
-                Debug.Log("hit: " + objectHit.transform.name);
-                //do something if hit object ie
-                if(objectHit.transform==transform){
-                    AddTap(objectHit.point);
-                }
-            }
-        }        
     }
+
+    private void OnClick()
+    {
+        
+//        Vector3 dir = GazePointer.transform.position-ForwardDirection.transform.position;
+
+//        if (Physics.Raycast(ForwardDirection.transform.position, dir, out var info,1000f, Physics.AllLayers))
+//        {
+          AddTap(GazePointer.transform.position);    
+        
+        
+    }
+ 
 
     private bool ValidHttpURL(string s, out Uri resultURI)
     {        
@@ -296,6 +298,8 @@ public class BrowserView : MonoBehaviour
         LoadURL("https://www.google.com"); 
 
     }
+    
+    
 
     // method to to tap in the right coords despite difference in scaling
     private void AddTap(Vector3 pos)

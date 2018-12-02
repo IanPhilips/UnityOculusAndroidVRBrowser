@@ -20,6 +20,7 @@ limitations under the License.
 
  ************************************************************************************/
 
+using System;
 using UnityEngine;
 using System.Collections;
 
@@ -74,11 +75,19 @@ public class OVRTrackedRemote : MonoBehaviour
 		OVRInput.Update();
 		transform.localRotation = OVRInput.GetLocalControllerRotation(OVRInput.GetActiveController());
 		transform.localPosition = OVRInput.GetLocalControllerPosition(OVRInput.GetActiveController());
-		// TODO: can't get any trigger events
-		if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger))
-		{
-			Debug.Log("triggered!");
-		}
-
+//		// TODO: can't get any trigger events
+//		foreach (OVRInput.RawButton button in Enum.GetValues(typeof(OVRInput.RawButton)))
+//		{
+//			
+//			if (OVRInput.GetUp(button))
+//			{
+//				Debug.Log("triggered up! " + button.ToString());
+//			}
+//			if (OVRInput.GetDown(button))
+//			{
+//				Debug.Log("triggered down! " + button.ToString());
+//			}
+//		}
+		
 	}
 }

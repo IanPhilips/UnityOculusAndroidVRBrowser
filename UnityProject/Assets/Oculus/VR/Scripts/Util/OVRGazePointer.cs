@@ -246,11 +246,11 @@ public class OVRGazePointer : MonoBehaviour {
     /// </summary>
     public void RequestHide()
     {
-        if (!dimOnHideRequest)
-        {
-            Hide();
-        }
-        lastHideRequestTime = Time.time;
+//        if (!dimOnHideRequest)
+//        {
+//            Hide();
+//        }
+//        lastHideRequestTime = Time.time;
     }
 
     /// <summary>

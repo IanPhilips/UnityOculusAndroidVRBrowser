@@ -2,7 +2,7 @@ Android
 PlayerPath?
 /Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/UnityProject/Builds/build_01.apk
 SceneListBegin?
-Assets/Scenes/SampleScene.unity
+Assets/Scenes/GazePointerWebviewScene.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -194,7 +194,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 ca1c9695bbafcb52af6a07f1bd4c4ea5 Assembly-CSharp.dll:TMPro.Examples.TMP_TextInfoDebugTool
 bd3f0ca738703903e759f77536ed74fd Assembly-CSharp.dll:TMPro.Examples.TMP_FrameRateCounter
 a1ca1237bad0f30ea5ba8f4060929114 Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
-93b8917c93bda6f36ef928cb3af2e902 Assembly-CSharp.dll:.BrowserView
+f40ccbd88e11a8d31eda5fadc08252dd Assembly-CSharp.dll:.BrowserView
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 27e5341178f188b89bdc6495710b590c Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
 3f70808c2961a598688d62ac6c3c9016 Assembly-CSharp.dll:UnityEngine.EventSystems.OVRPhysicsRaycaster
