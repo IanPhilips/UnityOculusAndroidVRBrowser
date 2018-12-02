@@ -25,6 +25,8 @@ After modifying, use the gradle menu to build unitylibrary. Take the new `unityl
 
 
 ## TODO:
+Add VR keyboard
+
 Improve this readme
 
 Add oculus go controller interactions
