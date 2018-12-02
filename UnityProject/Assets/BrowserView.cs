@@ -51,11 +51,12 @@ public class BrowserView : MonoBehaviour
     private void Update()
     {
         // TODO: not sure how OVRInput works, this is non-working code:
+        // TODO: can't get any trigger events
         OVRInput.Update();
         Vector3 fwd = ControllerForwardTransform.transform.forward;
         Debug.DrawRay(ControllerForwardTransform.transform.position, fwd * 50, Color.green);
 
-        if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
+        if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger))
         {
             if (Physics.Raycast(ControllerForwardTransform.transform.position, fwd, out var objectHit, 50))
             {

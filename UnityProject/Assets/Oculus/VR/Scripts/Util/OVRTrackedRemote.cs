@@ -69,5 +69,16 @@ public class OVRTrackedRemote : MonoBehaviour
 		{
 			return;
 		}
+
+		
+		OVRInput.Update();
+		transform.localRotation = OVRInput.GetLocalControllerRotation(OVRInput.GetActiveController());
+		transform.localPosition = OVRInput.GetLocalControllerPosition(OVRInput.GetActiveController());
+		// TODO: can't get any trigger events
+		if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger))
+		{
+			Debug.Log("triggered!");
+		}
+
 	}
 }
