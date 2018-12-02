@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 897368249134851544}
   - component: {fileID: 897368249134851550}
   - component: {fileID: 897368249134851545}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: GoUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 897368249295229646}
   - component: {fileID: 897368249295229641}
   - component: {fileID: 897368249295229640}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Go
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,9 @@ GameObject:
   - component: {fileID: 897368249321244093}
   - component: {fileID: 897368249321244092}
   - component: {fileID: 897368249321244095}
-  - component: {fileID: 897368249321244094}
+  - component: {fileID: 2054605428}
+  - component: {fileID: 2054605433}
+  - component: {fileID: 2054605434}
   m_Layer: 0
   m_Name: WebviewPanel
   m_TagString: Untagged
@@ -403,7 +405,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897368249321244089}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.38}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_Children:
@@ -446,7 +448,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -473,9 +475,9 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_TargetDisplay: 0
---- !u!114 &897368249321244094
+--- !u!114 &2054605428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -484,14 +486,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 897368249321244089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!114 &2054605433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897368249321244089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &2054605434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897368249321244089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  pointer: {fileID: 0}
+  sortOrder: 0
 --- !u!1 &897368249404732176
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +542,7 @@ GameObject:
   - component: {fileID: 897368249404732183}
   - component: {fileID: 897368249404732182}
   - component: {fileID: 897368249404732177}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897368249457471707}
   - component: {fileID: 897368249457471704}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Text Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +830,7 @@ GameObject:
   - component: {fileID: 897368250168419493}
   - component: {fileID: 897368250168419492}
   - component: {fileID: 897368250168419494}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: TextMeshPro - InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,7 +1009,7 @@ GameObject:
   - component: {fileID: 897368250609311605}
   - component: {fileID: 897368250609311604}
   - component: {fileID: 897368250609311607}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1656,7 +1695,7 @@ GameObject:
   - component: {fileID: 897368251077805428}
   - component: {fileID: 897368251077805706}
   - component: {fileID: 897368251077805429}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: GoDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2107,7 +2146,7 @@ GameObject:
   - component: {fileID: 8148104017890180427}
   - component: {fileID: 8148104017890180424}
   - component: {fileID: 8148104017890180420}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: GoForward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2391,7 +2430,7 @@ GameObject:
   - component: {fileID: 8148104018016880047}
   - component: {fileID: 8148104018016880048}
   - component: {fileID: 8148104018016880049}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Refresh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2856,7 +2895,7 @@ GameObject:
   - component: {fileID: 8148104018471339725}
   - component: {fileID: 8148104018471339722}
   - component: {fileID: 8148104018471339726}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Stop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3054,7 +3093,7 @@ GameObject:
   - component: {fileID: 8148104018759114199}
   - component: {fileID: 8148104018759114200}
   - component: {fileID: 8148104018759114197}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Refresh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3374,7 +3413,7 @@ GameObject:
   - component: {fileID: 8148104019086873706}
   - component: {fileID: 8148104019086873707}
   - component: {fileID: 8148104019086873703}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: GoBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3659,7 +3698,7 @@ GameObject:
   - component: {fileID: 8148104019209223125}
   - component: {fileID: 8148104019209223122}
   - component: {fileID: 8148104019209223126}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: ReloadPluginBroswer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3857,7 +3896,7 @@ GameObject:
   - component: {fileID: 8148104019362455435}
   - component: {fileID: 8148104019362455436}
   - component: {fileID: 8148104019362455437}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Stop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3932,7 +3971,8 @@ GameObject:
   - component: {fileID: 8148104019827265729}
   - component: {fileID: 8148104019827265726}
   - component: {fileID: 8148104019827265724}
-  m_Layer: 11
+  - component: {fileID: 463691569}
+  m_Layer: 0
   m_Name: BrowserView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4010,7 +4050,49 @@ MonoBehaviour:
   ForwardButton: {fileID: 8148104017890180420}
   UrlInputField: {fileID: 897368250168419494}
   ProgressText: {fileID: 8148104017904143385}
-  ControllerForwardTransform: {fileID: 0}
+  GazePointer: {fileID: 0}
+  ForwardDirection: {fileID: 0}
+--- !u!114 &463691569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8148104019827265725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 8148104019827265726}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &8148556077269724938
 GameObject:
   m_ObjectHideFlags: 0
