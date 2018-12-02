@@ -33,8 +33,6 @@ Add VR keyboard
 
 Improve this readme
 
-Add oculus go controller interactions
-
 Add trackpad scrolling
 
 General debugging (some webpages don't work)
