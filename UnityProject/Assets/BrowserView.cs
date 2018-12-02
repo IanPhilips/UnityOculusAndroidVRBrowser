@@ -61,12 +61,7 @@ public class BrowserView : MonoBehaviour
     private void OnClick()
     {
         
-//        Vector3 dir = GazePointer.transform.position-ForwardDirection.transform.position;
-
-//        if (Physics.Raycast(ForwardDirection.transform.position, dir, out var info,1000f, Physics.AllLayers))
-//        {
           AddTap(GazePointer.transform.position);    
-        
         
     }
  
