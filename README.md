@@ -29,7 +29,7 @@ Improve this readme
 
 Add oculus go controller interactions
 
-Add trackpad and/or button scrolling
+Add trackpad scrolling
 
 General debugging (some webpages don't work)
 
