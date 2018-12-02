@@ -3,6 +3,9 @@
 
 ![screenshot](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/com.ianphilips.UnityAndroidVRBrowser-20181202-085045.jpg)
 
+
+![video](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/output.gif)
+
 This is in `Beta` mode. It's been tested and works on the Oculus Go.
 
 ## Notes
