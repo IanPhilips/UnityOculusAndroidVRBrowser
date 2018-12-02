@@ -25,8 +25,6 @@ After modifying, use the gradle menu to build unitylibrary. Take the new `unityl
 
 
 ## TODO:
-Add a frickin go button to the URL inputfield
-
 Improve this readme
 
 Add oculus go controller interactions
