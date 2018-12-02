@@ -1,7 +1,7 @@
 # UnityAndroidVRBrowser
 
 
-![screenshot](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/com.ianphilips.UnityAndroidVRBrowser-20181202-085045.jpg)
+![screenshot](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/webview.png)
 
 
 ![video](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/output.gif)
