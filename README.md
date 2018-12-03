@@ -12,6 +12,10 @@ This is in `Beta` mode. It's been tested and works on the Oculus Go.
 Open the `GazePointerWebviewScene` and use your head to aim and the controller's trigger to click. Make sure the browser has pivot points set to (0.5,0.5) so click coordinates translate correctly to the Android's `WebView` coordinates.
 
 
+## Importing into your own project
+Copy `BrowserView.cs` and  `UnityThread.cs` to your scripts directory, and `unitylibrary-debug.aar` to your Plugins/Android/ directory.
+
+
 ## Notes
 Youtube does not work, see [this.](https://stackoverflow.com/questions/19273437/android-draw-youtube-video-on-surfacetexture)
 
