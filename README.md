@@ -8,17 +8,22 @@
 
 This is in `Beta` mode. It's been tested and works on the Oculus Go.
 
+## Usage
+Open the `GazePointerWebviewScene` and use your head to aim and the controller's trigger to click. Make sure the browser has pivot points set to (0.5,0.5) so click coordinates translate correctly to the Android's `WebView` coordinates.
+
+
+## Importing into your own project
+Copy `BrowserView.cs` and  `UnityThread.cs` to your scripts directory, and `unitylibrary-debug.aar` to your Plugins/Android/ directory.
+
+
 ## Notes
-Youtube does not work, see: https://stackoverflow.com/questions/19273437/android-draw-youtube-video-on-surfacetexture
+Youtube does not work, see [this.](https://stackoverflow.com/questions/19273437/android-draw-youtube-video-on-surfacetexture)
 
-This uses the CPU to draw an Android webview onto a bitmap which is passed onto a Unity `RawImage`. This drawing code should be transferred to the GPU as in https://github.com/ArtemBogush/AndroidViewToGLRendering. You'll see the android project is based on that but I don't know opengl and there are some difficulties I didn't have time to overcome on passing graphics contexts to/from Unity. ( i.e. https://stackoverflow.com/questions/52088859/opengl-drawing-on-android-combining-with-unity-to-transfer-texture-through-frame)
+The CPU draws an Android webview onto a bitmap, [converts it to a png](https://stackoverflow.com/questions/52101948/android-bitmap-image-to-unity-c-sharp-texture), then passes that onto a Unity `RawImage`. This drawing code should be transferred to the GPU as in [here]( https://github.com/ArtemBogush/AndroidViewToGLRendering). You'll see the android project is based on that but I don't know opengl and there are some difficulties I didn't have time to overcome on passing graphics contexts to/from Unity. ( i.e. [this](https://stackoverflow.com/questions/52088859/opengl-drawing-on-android-combining-with-unity-to-transfer-texture-through-frame))
 
+The plugin uses `WebView.enableSlowWholeDocumentDraw()` before inflating the view. This slows down the loading process for a webpage but it's the [only way](https://stackoverflow.com/questions/52782166/programmatic-scroll-of-webview-isnt-reflected-when-drawing-from-canvas) I could scroll the view programmatically and still be able to see the webpage beyond the initial dimensions of the screen.
 
 Please feel free to improve/fix anything and submit a PR. There's lots of work to do!
-
-
-## Clicking
-If/when input is implemented, make sure the browser has pivot points set to (0.5,0.5) so the coordinates will translate correctly to the Android's `Webview` coordinates.
 
 
 ## How to edit the Java plugin
@@ -31,8 +36,6 @@ After modifying, use the gradle menu to build unitylibrary. Take the new `unityl
 Add VR keyboard
 
 Improve this readme
-
-Add oculus go controller interactions
 
 Add trackpad scrolling
 
