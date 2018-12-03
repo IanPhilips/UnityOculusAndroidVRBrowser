@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96ea206a-a44f-4a26-bc4d-8229aec4fbf4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BrowserView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BrowserView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.Android.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.Android.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.Android.Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.Android.Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.XR.Oculus.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.XR.Oculus.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.XR.Oculus.Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.XR.Oculus.Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ce4198-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/ce4198-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/14/14e46ccbdf75742839b9b28bfcd6e99c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/14/14e46ccbdf75742839b9b28bfcd6e99c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +37,12 @@
     <session id="-1780270195">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -33,12 +57,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="970" />
+          <entry key="cs" value="1022" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="970" />
+          <entry key="C#" value="1022" />
         </counts>
       </usages-collector>
     </session>
@@ -48,62 +72,61 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/BrowserView.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+            <state relative-caret-position="480">
+              <caret line="402" lean-forward="true" selection-start-line="402" selection-end-line="402" />
               <folding>
-                <marker date="1543772491338" expanded="false" signature="6:183" ph="..." />
-                <marker date="1543772491338" expanded="true" signature="228:11030" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="951:1092" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="1129:1250" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="1277:1456" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="1484:1568" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="1630:2251" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="2052:2103" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="2288:2397" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="2320:2391" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="2434:2950" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="2478:2533" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="2639:2704" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="2717:2935" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3025:3177" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3088:3171" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3213:3318" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3245:3312" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3357:3465" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3389:3459" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3556:3658" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3698:3802" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3849:3923" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="3956:4011" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="4040:4146" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="4175:4276" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="4305:4461" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="4603:4751" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="4635:4745" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="4912:5382" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="5467:5786" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="5800:5978" ph="/* TODO: this may be a bad UX if we load a page then go home and expect to come back to it loaded ... */" />
-                <marker date="1543772491338" expanded="true" signature="6037:6226" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="6259:6627" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="6291:6620" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="6355:6493" ph="/* we need to have the webview call draw so it can reset it self ... */" />
-                <marker date="1543772491338" expanded="true" signature="6659:6749" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="6827:8120" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="8242:10293" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="8776:8892" ph="/* Debug.Log(&quot;main camera is: &quot; + Camera.main.name); ... */" />
-                <marker date="1543772491338" expanded="true" signature="10040:10155" ph="/* Debug.Log(&quot;transformed pos:&quot; + positionInWebView); ... */" />
-                <marker date="1543772491338" expanded="true" signature="10180:10287" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="10381:11023" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="10511:10655" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="10668:10779" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="11132:12659" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="11361:11497" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="11536:11675" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="11790:12467" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="11973:12078" ph="/* Debug.Log(&quot;frame bytes arrived&quot;); ... */" />
-                <marker date="1543772491338" expanded="true" signature="12105:12461" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="12152:12375" ph="{...}" />
-                <marker date="1543772491338" expanded="true" signature="12555:12650" ph="{...}" />
+                <marker date="1543839447404" expanded="false" signature="6:183" ph="..." />
+                <marker date="1543839447404" expanded="true" signature="228:10826" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="911:1052" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="1135:1205" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="1242:1363" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="1426:2047" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="1848:1899" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="2084:2193" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="2116:2187" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="2230:2746" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="2274:2329" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="2435:2500" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="2513:2731" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="2821:2973" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="2884:2967" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3009:3114" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3041:3108" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3153:3261" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3185:3255" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3352:3454" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3494:3598" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3645:3719" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3752:3807" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3836:3942" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="3971:4072" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="4101:4257" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="4399:4547" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="4431:4541" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="4708:5178" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="5263:5582" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="5596:5774" ph="/* TODO: this may be a bad UX if we load a page then go home and expect to come back to it loaded ... */" />
+                <marker date="1543839447404" expanded="true" signature="5833:6022" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="6055:6423" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="6087:6416" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="6151:6289" ph="/* we need to have the webview call draw so it can reset it self ... */" />
+                <marker date="1543839447404" expanded="true" signature="6455:6545" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="6623:7916" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="8038:10089" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="8572:8688" ph="/* Debug.Log(&quot;main camera is: &quot; + Camera.main.name); ... */" />
+                <marker date="1543839447404" expanded="true" signature="9836:9951" ph="/* Debug.Log(&quot;transformed pos:&quot; + positionInWebView); ... */" />
+                <marker date="1543839447404" expanded="true" signature="9976:10083" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="10177:10819" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="10307:10451" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="10464:10575" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="10928:12455" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="11157:11293" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="11332:11471" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="11586:12263" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="11769:11874" ph="/* Debug.Log(&quot;frame bytes arrived&quot;); ... */" />
+                <marker date="1543839447404" expanded="true" signature="11901:12257" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="11948:12171" ph="{...}" />
+                <marker date="1543839447404" expanded="true" signature="12351:12446" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -112,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
+            <state relative-caret-position="2048">
               <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
               <folding>
                 <marker date="1538790006000" expanded="true" signature="0:958" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
@@ -155,7 +178,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGazePointer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="3104">
               <caret line="197" selection-start-line="197" selection-end-line="197" />
               <folding>
                 <marker date="1543767305914" expanded="true" signature="0:959" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
@@ -311,7 +334,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRPlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
+            <state relative-caret-position="5856">
               <caret line="367" column="84" selection-start-line="367" selection-start-column="77" selection-end-line="367" selection-end-column="84" />
               <folding>
                 <marker date="1538790013000" expanded="true" signature="0:958" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
@@ -404,7 +427,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRTrackedRemote.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
+            <state relative-caret-position="1328">
               <caret line="83" selection-start-line="83" selection-end-line="84" />
               <folding>
                 <marker date="1543765400731" expanded="true" signature="0:960" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
@@ -464,8 +487,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="29" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="777" />
@@ -476,12 +498,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
       </pane>
     </panes>
   </component>
@@ -531,11 +553,12 @@
       <workItem from="1543682970134" duration="4000" />
       <workItem from="1543683013621" duration="1275000" />
       <workItem from="1543761564511" duration="7059000" />
+      <workItem from="1543839318371" duration="135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8338000" />
+    <option name="totallyTimeSpent" value="8473000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -550,7 +573,7 @@
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -595,100 +618,70 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/AbilitiesSpecificAssets/WindowsFiles/Prefabs/BrowserView.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRPlayerController.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/BrowserView.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="367" column="84" selection-start-line="367" selection-start-column="77" selection-end-line="367" selection-end-column="84" />
+        <state relative-caret-position="480">
+          <caret line="402" lean-forward="true" selection-start-line="402" selection-end-line="402" />
           <folding>
-            <marker date="1538790013000" expanded="true" signature="0:958" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
-            <marker date="1538790013000" expanded="false" signature="966:992" ph="..." />
-            <marker date="1538790013000" expanded="true" signature="994:1077" ph="/// Controls the player's movement in virtual reality. ... " />
-            <marker date="1538790013000" expanded="true" signature="1174:17706" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="1178:1251" ph="/// The rate acceleration during movement. ... " />
-            <marker date="1538790013000" expanded="true" signature="1289:1356" ph="/// The rate of damping on movement. ... " />
-            <marker date="1538790013000" expanded="true" signature="1389:1489" ph="/// The rate of additional damping when moving sideways or backwards. ... " />
-            <marker date="1538790013000" expanded="true" signature="1532:1615" ph="/// The force applied to the character when jumping. ... " />
-            <marker date="1538790013000" expanded="true" signature="1650:1727" ph="/// The rate of rotation when using a gamepad. ... " />
-            <marker date="1538790013000" expanded="true" signature="1767:1847" ph="/// The rate of rotation when using the keyboard. ... " />
-            <marker date="1538790013000" expanded="true" signature="1889:1990" ph="/// The player will rotate in fixed steps if Snap Rotation is enabled. ... " />
-            <marker date="1538790013000" expanded="true" signature="2108:2210" ph="/// How many fixed speeds to use with linear movement? 0=linear control ... " />
-            <marker date="1538790013000" expanded="true" signature="2324:2447" ph="/// If true, reset the initial yaw of the player controller when the Hmd pose is recentered. ... " />
-            <marker date="1538790013000" expanded="true" signature="2482:2604" ph="/// If true, tracking data from a child OVRCameraRig will update the direction of movement. ... " />
-            <marker date="1538790013000" expanded="true" signature="2640:2708" ph="/// Modifies the strength of gravity. ... " />
-            <marker date="1538790013000" expanded="true" signature="2752:2859" ph="/// If true, each OVRPlayerController will use the player's physical height. ... " />
-            <marker date="1538790013000" expanded="true" signature="2898:3138" ph="/// The CameraHeight is the actual height of the HMD and can be used to adjust the height of the character contro ... " />
-            <marker date="1538790013000" expanded="true" signature="3186:3406" ph="/// This event is raised after the character controller is moved. This is used by the OVRAvatarLocomotion script  ... " />
-            <marker date="1538790013000" expanded="true" signature="3459:3778" ph="/// This bool is set to true whenever the player controller has been teleported. It is reset after every frame. S ... " />
-            <marker date="1538790013000" expanded="true" signature="3876:4020" ph="/// This event is raised immediately after the camera transform has been updated, but before movement is updated. ... " />
-            <marker date="1538790013000" expanded="true" signature="4059:4395" ph="/// This event is raised right before the character controller is actually moved in order to provide other system ... " />
-            <marker date="1538790013000" expanded="true" signature="4437:4626" ph="/// When true, user input will be applied to linear movement. Set this to false whenever the player controller ne ... " />
-            <marker date="1538790013000" expanded="true" signature="4671:4841" ph="/// When true, user input will be applied to rotation. Set this to false whenever the player controller needs to  ... " />
-            <marker date="1538790013000" expanded="true" signature="5736:5930" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="5945:6601" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="6119:6208" ph="/* We use OVRCameraRig to set rotations to cameras, ... */" />
-            <marker date="1538790013000" expanded="true" signature="6619:6764" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="6705:6761" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="6783:6928" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="6869:6925" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="6944:7130" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="7174:9758" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="7199:7931" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="7231:7488" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="7241:7334" ph="/* Save the initial pose so it can be recovered if useProfileData ... */" />
-            <marker date="1538790013000" expanded="true" signature="7371:7482" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="7620:7721" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="7813:7885" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="7963:8208" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="8299:8327" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="9075:9290" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="9323:9377" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="9801:14228" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="9870:12860" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="10267:10324" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="10372:10425" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="12040:12218" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="12883:14225" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="13597:14024" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="13666:13783" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="13698:13777" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="13852:13969" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="13884:13963" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="13978:14019" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="14032:14171" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="14232:14387" ph="/// Invoked by OVRCameraRig's UpdatedAnchors callback. Allows the Hmd rotation to update the facing direction of  ... " />
-            <marker date="1538790013000" expanded="true" signature="14434:14889" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="14567:14796" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="14851:14886" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="14892:14958" ph="/// Jump! Must be enabled manually. ... " />
-            <marker date="1538790013000" expanded="true" signature="14978:15121" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="15124:15178" ph="/// Stop this instance. ... " />
-            <marker date="1538790013000" expanded="true" signature="15198:15288" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="15291:15427" ph="/// Gets the move scale multiplier. ... " />
-            <marker date="1538790013000" expanded="true" signature="15494:15545" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="15548:15684" ph="/// Sets the move scale multiplier. ... " />
-            <marker date="1538790013000" expanded="true" signature="15747:15798" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="15801:15949" ph="/// Gets the rotation scale multiplier. ... " />
-            <marker date="1538790013000" expanded="true" signature="16024:16083" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="16086:16234" ph="/// Sets the rotation scale multiplier. ... " />
-            <marker date="1538790013000" expanded="true" signature="16305:16364" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="16367:16499" ph="/// Gets the allow mouse rotation. ... " />
-            <marker date="1538790013000" expanded="true" signature="16561:16608" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="16611:16765" ph="/// Sets the allow mouse rotation. ... " />
-            <marker date="1538790013000" expanded="true" signature="16823:16870" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="16873:17006" ph="/// Gets the halt update movement. ... " />
-            <marker date="1538790013000" expanded="true" signature="17070:17119" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="17122:17277" ph="/// Sets the halt update movement. ... " />
-            <marker date="1538790013000" expanded="true" signature="17337:17386" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="17389:17493" ph="/// Resets the player look rotation when the device orientation is reset. ... " />
-            <marker date="1538790013000" expanded="true" signature="17525:17704" ph="{...}" />
-            <marker date="1538790013000" expanded="true" signature="17562:17701" ph="{...}" />
+            <marker date="1543839447404" expanded="false" signature="6:183" ph="..." />
+            <marker date="1543839447404" expanded="true" signature="228:10826" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="911:1052" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="1135:1205" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="1242:1363" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="1426:2047" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="1848:1899" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="2084:2193" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="2116:2187" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="2230:2746" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="2274:2329" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="2435:2500" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="2513:2731" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="2821:2973" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="2884:2967" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3009:3114" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3041:3108" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3153:3261" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3185:3255" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3352:3454" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3494:3598" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3645:3719" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3752:3807" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3836:3942" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="3971:4072" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="4101:4257" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="4399:4547" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="4431:4541" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="4708:5178" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="5263:5582" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="5596:5774" ph="/* TODO: this may be a bad UX if we load a page then go home and expect to come back to it loaded ... */" />
+            <marker date="1543839447404" expanded="true" signature="5833:6022" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="6055:6423" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="6087:6416" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="6151:6289" ph="/* we need to have the webview call draw so it can reset it self ... */" />
+            <marker date="1543839447404" expanded="true" signature="6455:6545" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="6623:7916" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="8038:10089" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="8572:8688" ph="/* Debug.Log(&quot;main camera is: &quot; + Camera.main.name); ... */" />
+            <marker date="1543839447404" expanded="true" signature="9836:9951" ph="/* Debug.Log(&quot;transformed pos:&quot; + positionInWebView); ... */" />
+            <marker date="1543839447404" expanded="true" signature="9976:10083" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="10177:10819" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="10307:10451" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="10464:10575" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="10928:12455" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="11157:11293" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="11332:11471" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="11586:12263" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="11769:11874" ph="/* Debug.Log(&quot;frame bytes arrived&quot;); ... */" />
+            <marker date="1543839447404" expanded="true" signature="11901:12257" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="11948:12171" ph="{...}" />
+            <marker date="1543839447404" expanded="true" signature="12351:12446" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
+        <state relative-caret-position="2048">
           <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
           <folding>
             <marker date="1538790006000" expanded="true" signature="0:958" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
@@ -723,6 +716,59 @@
             <marker date="1538790006000" expanded="true" signature="4508:4588" ph="{...}" />
             <marker date="1538790006000" expanded="true" signature="4610:4782" ph="{...}" />
             <marker date="1538790006000" expanded="true" signature="4649:4776" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGazePointer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3104">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+          <folding>
+            <marker date="1543767305914" expanded="true" signature="0:959" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
+            <marker date="1543767305914" expanded="false" signature="967:1059" ph="..." />
+            <marker date="1543767305914" expanded="true" signature="1061:1126" ph="/// UI pointer driven by gaze input. ... " />
+            <marker date="1543767305914" expanded="true" signature="1171:9129" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="1844:1898" ph="/// The gaze ray. ... " />
+            <marker date="1543767305914" expanded="true" signature="1939:2011" ph="/// Is gaze pointer current visible ... " />
+            <marker date="1543767305914" expanded="true" signature="2062:2135" ph="/// Current scale applied to pointer ... " />
+            <marker date="1543767305914" expanded="true" signature="2193:2270" ph="/// Current depth of pointer from camera ... " />
+            <marker date="1543767305914" expanded="true" signature="2333:2481" ph="/// How many times position has been set this frame. Used to detect when there are no position sets in a frame. ... " />
+            <marker date="1543767305914" expanded="true" signature="2529:2671" ph="/// Last time code requested the pointer be shown. Usually when pointer passes over interactive elements. ... " />
+            <marker date="1543767305914" expanded="true" signature="2715:2833" ph="/// Last time pointer was requested to be hidden. Usually mouse pointer activity. ... " />
+            <marker date="1543767305914" expanded="true" signature="3228:3684" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="3327:3665" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="3372:3625" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="3691:3860" ph="/// Used to determine alpha level of gaze cursor. Could also be used to determine cursor size, for example, as th ... " />
+            <marker date="1543767305914" expanded="true" signature="3897:4991" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="3917:4984" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="3940:4170" ph="/* It's possible there are reasons to show the cursor - such as it hovering over some UI - and reasons to hide ... */" />
+            <marker date="1543767305914" expanded="true" signature="4258:4452" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="4469:4583" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="5027:5275" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="5045:5143" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="5155:5269" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="5300:5687" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="5431:5536" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="5712:6202" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="6065:6105" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="6156:6196" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="6208:6361" ph="/// Set position and orientation of pointer ... " />
+            <marker date="1543767305914" expanded="true" signature="6418:7037" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="7043:7183" ph="/// SetPosition overload without normal. Just makes cursor face user ... " />
+            <marker date="1543767305914" expanded="true" signature="7224:7284" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="7321:7377" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="7400:8075" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="7578:7874" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="8081:8151" ph="/// Request the pointer be hidden ... " />
+            <marker date="1543767305914" expanded="true" signature="8181:8315" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="8188:8309" ph="/* if (!dimOnHideRequest) ... */" />
+            <marker date="1543767305914" expanded="true" signature="8321:8419" ph="/// Request the pointer be shown. Hide requests take priority ... " />
+            <marker date="1543767305914" expanded="true" signature="8449:8518" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="8628:8869" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="8681:8748" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="8886:9126" ph="{...}" />
+            <marker date="1543767305914" expanded="true" signature="8939:9005" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -826,9 +872,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRPlayerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5856">
+          <caret line="367" column="84" selection-start-line="367" selection-start-column="77" selection-end-line="367" selection-end-column="84" />
+          <folding>
+            <marker date="1538790013000" expanded="true" signature="0:958" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
+            <marker date="1538790013000" expanded="false" signature="966:992" ph="..." />
+            <marker date="1538790013000" expanded="true" signature="994:1077" ph="/// Controls the player's movement in virtual reality. ... " />
+            <marker date="1538790013000" expanded="true" signature="1174:17706" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="1178:1251" ph="/// The rate acceleration during movement. ... " />
+            <marker date="1538790013000" expanded="true" signature="1289:1356" ph="/// The rate of damping on movement. ... " />
+            <marker date="1538790013000" expanded="true" signature="1389:1489" ph="/// The rate of additional damping when moving sideways or backwards. ... " />
+            <marker date="1538790013000" expanded="true" signature="1532:1615" ph="/// The force applied to the character when jumping. ... " />
+            <marker date="1538790013000" expanded="true" signature="1650:1727" ph="/// The rate of rotation when using a gamepad. ... " />
+            <marker date="1538790013000" expanded="true" signature="1767:1847" ph="/// The rate of rotation when using the keyboard. ... " />
+            <marker date="1538790013000" expanded="true" signature="1889:1990" ph="/// The player will rotate in fixed steps if Snap Rotation is enabled. ... " />
+            <marker date="1538790013000" expanded="true" signature="2108:2210" ph="/// How many fixed speeds to use with linear movement? 0=linear control ... " />
+            <marker date="1538790013000" expanded="true" signature="2324:2447" ph="/// If true, reset the initial yaw of the player controller when the Hmd pose is recentered. ... " />
+            <marker date="1538790013000" expanded="true" signature="2482:2604" ph="/// If true, tracking data from a child OVRCameraRig will update the direction of movement. ... " />
+            <marker date="1538790013000" expanded="true" signature="2640:2708" ph="/// Modifies the strength of gravity. ... " />
+            <marker date="1538790013000" expanded="true" signature="2752:2859" ph="/// If true, each OVRPlayerController will use the player's physical height. ... " />
+            <marker date="1538790013000" expanded="true" signature="2898:3138" ph="/// The CameraHeight is the actual height of the HMD and can be used to adjust the height of the character contro ... " />
+            <marker date="1538790013000" expanded="true" signature="3186:3406" ph="/// This event is raised after the character controller is moved. This is used by the OVRAvatarLocomotion script  ... " />
+            <marker date="1538790013000" expanded="true" signature="3459:3778" ph="/// This bool is set to true whenever the player controller has been teleported. It is reset after every frame. S ... " />
+            <marker date="1538790013000" expanded="true" signature="3876:4020" ph="/// This event is raised immediately after the camera transform has been updated, but before movement is updated. ... " />
+            <marker date="1538790013000" expanded="true" signature="4059:4395" ph="/// This event is raised right before the character controller is actually moved in order to provide other system ... " />
+            <marker date="1538790013000" expanded="true" signature="4437:4626" ph="/// When true, user input will be applied to linear movement. Set this to false whenever the player controller ne ... " />
+            <marker date="1538790013000" expanded="true" signature="4671:4841" ph="/// When true, user input will be applied to rotation. Set this to false whenever the player controller needs to  ... " />
+            <marker date="1538790013000" expanded="true" signature="5736:5930" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="5945:6601" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="6119:6208" ph="/* We use OVRCameraRig to set rotations to cameras, ... */" />
+            <marker date="1538790013000" expanded="true" signature="6619:6764" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="6705:6761" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="6783:6928" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="6869:6925" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="6944:7130" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="7174:9758" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="7199:7931" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="7231:7488" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="7241:7334" ph="/* Save the initial pose so it can be recovered if useProfileData ... */" />
+            <marker date="1538790013000" expanded="true" signature="7371:7482" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="7620:7721" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="7813:7885" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="7963:8208" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="8299:8327" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="9075:9290" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="9323:9377" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="9801:14228" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="9870:12860" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="10267:10324" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="10372:10425" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="12040:12218" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="12883:14225" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="13597:14024" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="13666:13783" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="13698:13777" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="13852:13969" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="13884:13963" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="13978:14019" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="14032:14171" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="14232:14387" ph="/// Invoked by OVRCameraRig's UpdatedAnchors callback. Allows the Hmd rotation to update the facing direction of  ... " />
+            <marker date="1538790013000" expanded="true" signature="14434:14889" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="14567:14796" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="14851:14886" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="14892:14958" ph="/// Jump! Must be enabled manually. ... " />
+            <marker date="1538790013000" expanded="true" signature="14978:15121" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="15124:15178" ph="/// Stop this instance. ... " />
+            <marker date="1538790013000" expanded="true" signature="15198:15288" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="15291:15427" ph="/// Gets the move scale multiplier. ... " />
+            <marker date="1538790013000" expanded="true" signature="15494:15545" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="15548:15684" ph="/// Sets the move scale multiplier. ... " />
+            <marker date="1538790013000" expanded="true" signature="15747:15798" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="15801:15949" ph="/// Gets the rotation scale multiplier. ... " />
+            <marker date="1538790013000" expanded="true" signature="16024:16083" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="16086:16234" ph="/// Sets the rotation scale multiplier. ... " />
+            <marker date="1538790013000" expanded="true" signature="16305:16364" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="16367:16499" ph="/// Gets the allow mouse rotation. ... " />
+            <marker date="1538790013000" expanded="true" signature="16561:16608" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="16611:16765" ph="/// Sets the allow mouse rotation. ... " />
+            <marker date="1538790013000" expanded="true" signature="16823:16870" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="16873:17006" ph="/// Gets the halt update movement. ... " />
+            <marker date="1538790013000" expanded="true" signature="17070:17119" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="17122:17277" ph="/// Sets the halt update movement. ... " />
+            <marker date="1538790013000" expanded="true" signature="17337:17386" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="17389:17493" ph="/// Resets the player look rotation when the device orientation is reset. ... " />
+            <marker date="1538790013000" expanded="true" signature="17525:17704" ph="{...}" />
+            <marker date="1538790013000" expanded="true" signature="17562:17701" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRTrackedRemote.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
+        <state relative-caret-position="1328">
           <caret line="83" selection-start-line="83" selection-end-line="84" />
           <folding>
             <marker date="1543765400731" expanded="true" signature="0:960" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
@@ -843,121 +980,6 @@
             <marker date="1543765400731" expanded="true" signature="2062:2319" ph="{...}" />
             <marker date="1543765400731" expanded="true" signature="2348:2367" ph="{...}" />
             <marker date="1543765400731" expanded="true" signature="2587:2940" ph="/* TODO: can't get any trigger events ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGazePointer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
-          <folding>
-            <marker date="1543767305914" expanded="true" signature="0:959" ph="/* Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved. ... */" />
-            <marker date="1543767305914" expanded="false" signature="967:1059" ph="..." />
-            <marker date="1543767305914" expanded="true" signature="1061:1126" ph="/// UI pointer driven by gaze input. ... " />
-            <marker date="1543767305914" expanded="true" signature="1171:9129" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="1844:1898" ph="/// The gaze ray. ... " />
-            <marker date="1543767305914" expanded="true" signature="1939:2011" ph="/// Is gaze pointer current visible ... " />
-            <marker date="1543767305914" expanded="true" signature="2062:2135" ph="/// Current scale applied to pointer ... " />
-            <marker date="1543767305914" expanded="true" signature="2193:2270" ph="/// Current depth of pointer from camera ... " />
-            <marker date="1543767305914" expanded="true" signature="2333:2481" ph="/// How many times position has been set this frame. Used to detect when there are no position sets in a frame. ... " />
-            <marker date="1543767305914" expanded="true" signature="2529:2671" ph="/// Last time code requested the pointer be shown. Usually when pointer passes over interactive elements. ... " />
-            <marker date="1543767305914" expanded="true" signature="2715:2833" ph="/// Last time pointer was requested to be hidden. Usually mouse pointer activity. ... " />
-            <marker date="1543767305914" expanded="true" signature="3228:3684" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="3327:3665" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="3372:3625" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="3691:3860" ph="/// Used to determine alpha level of gaze cursor. Could also be used to determine cursor size, for example, as th ... " />
-            <marker date="1543767305914" expanded="true" signature="3897:4991" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="3917:4984" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="3940:4170" ph="/* It's possible there are reasons to show the cursor - such as it hovering over some UI - and reasons to hide ... */" />
-            <marker date="1543767305914" expanded="true" signature="4258:4452" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="4469:4583" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="5027:5275" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="5045:5143" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="5155:5269" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="5300:5687" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="5431:5536" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="5712:6202" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="6065:6105" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="6156:6196" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="6208:6361" ph="/// Set position and orientation of pointer ... " />
-            <marker date="1543767305914" expanded="true" signature="6418:7037" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="7043:7183" ph="/// SetPosition overload without normal. Just makes cursor face user ... " />
-            <marker date="1543767305914" expanded="true" signature="7224:7284" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="7321:7377" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="7400:8075" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="7578:7874" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="8081:8151" ph="/// Request the pointer be hidden ... " />
-            <marker date="1543767305914" expanded="true" signature="8181:8315" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="8188:8309" ph="/* if (!dimOnHideRequest) ... */" />
-            <marker date="1543767305914" expanded="true" signature="8321:8419" ph="/// Request the pointer be shown. Hide requests take priority ... " />
-            <marker date="1543767305914" expanded="true" signature="8449:8518" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="8628:8869" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="8681:8748" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="8886:9126" ph="{...}" />
-            <marker date="1543767305914" expanded="true" signature="8939:9005" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/BrowserView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-          <folding>
-            <marker date="1543772491338" expanded="false" signature="6:183" ph="..." />
-            <marker date="1543772491338" expanded="true" signature="228:11030" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="951:1092" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="1129:1250" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="1277:1456" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="1484:1568" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="1630:2251" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="2052:2103" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="2288:2397" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="2320:2391" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="2434:2950" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="2478:2533" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="2639:2704" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="2717:2935" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3025:3177" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3088:3171" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3213:3318" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3245:3312" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3357:3465" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3389:3459" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3556:3658" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3698:3802" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3849:3923" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="3956:4011" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="4040:4146" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="4175:4276" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="4305:4461" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="4603:4751" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="4635:4745" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="4912:5382" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="5467:5786" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="5800:5978" ph="/* TODO: this may be a bad UX if we load a page then go home and expect to come back to it loaded ... */" />
-            <marker date="1543772491338" expanded="true" signature="6037:6226" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="6259:6627" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="6291:6620" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="6355:6493" ph="/* we need to have the webview call draw so it can reset it self ... */" />
-            <marker date="1543772491338" expanded="true" signature="6659:6749" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="6827:8120" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="8242:10293" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="8776:8892" ph="/* Debug.Log(&quot;main camera is: &quot; + Camera.main.name); ... */" />
-            <marker date="1543772491338" expanded="true" signature="10040:10155" ph="/* Debug.Log(&quot;transformed pos:&quot; + positionInWebView); ... */" />
-            <marker date="1543772491338" expanded="true" signature="10180:10287" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="10381:11023" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="10511:10655" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="10668:10779" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="11132:12659" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="11361:11497" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="11536:11675" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="11790:12467" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="11973:12078" ph="/* Debug.Log(&quot;frame bytes arrived&quot;); ... */" />
-            <marker date="1543772491338" expanded="true" signature="12105:12461" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="12152:12375" ph="{...}" />
-            <marker date="1543772491338" expanded="true" signature="12555:12650" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -19,8 +19,6 @@ public class BrowserView : MonoBehaviour
     public TMP_InputField UrlInputField;
     public TMP_Text ProgressText;
     public Transform GazePointer;
-    public Transform ForwardDirection;
-
 
     private RawImage _rawImage;
     private int _width = Screen.width;
@@ -40,6 +38,13 @@ public class BrowserView : MonoBehaviour
         CallAjc("AddKeys", new object[]{appendText, isFunctionKey});
         Debug.Log("adding text to browser: " + appendText);
     }
+    
+    
+    // CHANGE PER YOUR INPUT MODULE SPECIFICS
+    private void OnClick()
+    {   
+        AddTap(GazePointer.transform.position);       
+    }
 
     
     
@@ -51,19 +56,6 @@ public class BrowserView : MonoBehaviour
         
     }
 
-    private void Update()
-    {
-        Vector3 dir = GazePointer.transform.position-ForwardDirection.transform.position;
-        Debug.DrawRay(ForwardDirection.transform.position,dir,Color.green);
-
-    }
-
-    private void OnClick()
-    {
-        
-          AddTap(GazePointer.transform.position);    
-        
-    }
  
 
     private bool ValidHttpURL(string s, out Uri resultURI)
