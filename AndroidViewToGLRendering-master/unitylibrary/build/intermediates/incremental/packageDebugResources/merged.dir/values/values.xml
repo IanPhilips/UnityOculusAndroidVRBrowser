@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Unity Library</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

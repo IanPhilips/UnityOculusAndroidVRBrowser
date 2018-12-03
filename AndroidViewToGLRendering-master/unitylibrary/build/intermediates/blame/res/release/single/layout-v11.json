@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/layout-v11/notification_media_action.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/layout-v11/notification_media_cancel_action.xml"
+    }
+]
