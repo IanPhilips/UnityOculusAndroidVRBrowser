@@ -13,7 +13,7 @@ Open the `GazePointerWebviewScene` and use your head to aim and the controller's
 
 
 ## Importing into your own project
-Copy `BrowserView.cs` and  `UnityThread.cs` to your scripts directory, and `unitylibrary-debug.aar` to your Plugins/Android/ directory.
+Copy `BrowserView.cs` and  `UnityThread.cs` to your scripts directory, and `unitylibrary-debug.aar` to your Plugins/Android/ directory. You must set your Unity API version to 25 (in player settings).
 
 
 ## Notes
