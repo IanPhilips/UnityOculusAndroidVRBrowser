@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
                     "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/values-fr-rCA/values-fr-rCA.xml",
@@ -16,7 +16,7 @@
             ]
         },
         {
-            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
                     "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/values-fr-rCA/values-fr-rCA.xml",

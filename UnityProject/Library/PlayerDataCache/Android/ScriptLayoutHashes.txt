@@ -59,6 +59,8 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 b3bb7c40cede9849e7814d6093dcfcea Assembly-CSharp.dll:.OVRRaycaster
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
+71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
+71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -194,7 +196,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 ca1c9695bbafcb52af6a07f1bd4c4ea5 Assembly-CSharp.dll:TMPro.Examples.TMP_TextInfoDebugTool
 bd3f0ca738703903e759f77536ed74fd Assembly-CSharp.dll:TMPro.Examples.TMP_FrameRateCounter
 a1ca1237bad0f30ea5ba8f4060929114 Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
-f40ccbd88e11a8d31eda5fadc08252dd Assembly-CSharp.dll:.BrowserView
+4321f26bb94e1e28662c7f6e734b8ffa Assembly-CSharp.dll:.BrowserView
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 27e5341178f188b89bdc6495710b590c Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
 3f70808c2961a598688d62ac6c3c9016 Assembly-CSharp.dll:UnityEngine.EventSystems.OVRPhysicsRaycaster

@@ -196,10 +196,12 @@ public class MainGL extends Fragment {
             if (mWebView == null) {
                 return;
             }
+            // we must remeasure the webview for proper scrolling
         mWebView.measure(View.MeasureSpec.makeMeasureSpec(
                 View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED),
                 View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
 
+            // get whichever height is higher and set that to our max scroll height
             int measuredHeight = mWebView.getMeasuredHeight();
             int currentScroll = mWebView.getScrollY();
             int maxHeight = mWebView.getHeight();
@@ -211,12 +213,8 @@ public class MainGL extends Fragment {
             }
 
             Log.d("AndroidUnity", "webview is scrolled to: " + currentScroll);
-            // get whichever height is higher and set that to our max scroll height
-
-
-
-            Log.d("AndroidUnity", "webview has height : " + mWebView.getHeight());
-            Log.d("AndroidUnity", "and measured height is:" + measuredHeight);
+//            Log.d("AndroidUnity", "webview has height : " + mWebView.getHeight());
+            Log.d("AndroidUnity", "webview has measured height: " + measuredHeight);
 
             if (currentScroll + yScrollBy > 0 && yScrollBy > 0 ) {
                  Log.d("AndroidUnity", "rejecting scroll at: " + currentScroll);
@@ -240,8 +238,6 @@ public class MainGL extends Fragment {
 
             mWebView.scrollBy(0,yScrollBy);
             Log.d("AndroidUnity", "webview is now scrolled to: " + currentScroll);
-
-
         }});
 
 
@@ -399,7 +395,6 @@ public class MainGL extends Fragment {
         webSettings.setDefaultTextEncodingName("utf-8");
         webSettings.setDomStorageEnabled(true);
 
-
         //Add Keyboard Listener to call unity method
         mWebView.setOnTouchListener(new View.OnTouchListener() {
 
@@ -437,14 +432,7 @@ public class MainGL extends Fragment {
             }
         });
 
-        // ignore long clicks
-        mWebView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Log.d("AndroidUnity","long clicked!");
-                return true;
-            }
-        });
+
 
         // I don't think this works properly yet
         mWebView.setWebViewClient(new WebViewClient() {
@@ -481,6 +469,10 @@ public class MainGL extends Fragment {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
                 if (newProgress >= 100) {
+                    // we must remeasure the webview after loading
+                    mWebView.measure(View.MeasureSpec.makeMeasureSpec(
+                            View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED),
+                            View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
                     // scroll to the top
                     mWebView.scrollTo(0, 0);
                     // update unity's url
@@ -504,6 +496,13 @@ public class MainGL extends Fragment {
                 if (UnityBitmapCallback != null )
                     UnityBitmapCallback.updateProgress(newProgress, canGoBack, canGoForward);
                 super.onProgressChanged(view, newProgress);
+            }
+        });
+
+        mWebView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                return true;
             }
         });
 

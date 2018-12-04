@@ -176,7 +176,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 11 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Sat Dec 01 08:00:56 MST 2018      </nav>
+Check performed at Tue Dec 04 13:11:27 MST 2018      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -289,14 +289,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java">../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java</a>:393</span>: <span class="message">Using <code>setJavaScriptEnabled</code> can introduce XSS vulnerabilities into your application, review carefully.</span><br /><pre class="errorlines">
-<span class="lineno"> 390 </span>        mWebView.setVerticalScrollBarEnabled(<span class="keyword">true</span>);
-<span class="lineno"> 391 </span>
-<span class="lineno"> 392 </span>        WebSettings webSettings = mWebView.getSettings();
-<span class="caretline"><span class="lineno"> 393 </span>        <span class="warning">webSettings.setJavaScriptEnabled(<span class="keyword">true</span>)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 394 </span>        webSettings.setSupportZoom(<span class="keyword">true</span>);
-<span class="lineno"> 395 </span>        webSettings.setBuiltInZoomControls(<span class="keyword">true</span>);
-<span class="lineno"> 396 </span>        webSettings.setDisplayZoomControls(<span class="keyword">false</span>);
+<span class="location"><a href="../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java">../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java</a>:389</span>: <span class="message">Using <code>setJavaScriptEnabled</code> can introduce XSS vulnerabilities into your application, review carefully.</span><br /><pre class="errorlines">
+<span class="lineno"> 386 </span>        mWebView.setVerticalScrollBarEnabled(<span class="keyword">true</span>);
+<span class="lineno"> 387 </span>
+<span class="lineno"> 388 </span>        WebSettings webSettings = mWebView.getSettings();
+<span class="caretline"><span class="lineno"> 389 </span>        <span class="warning">webSettings.setJavaScriptEnabled(<span class="keyword">true</span>)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 390 </span>        webSettings.setSupportZoom(<span class="keyword">true</span>);
+<span class="lineno"> 391 </span>        webSettings.setBuiltInZoomControls(<span class="keyword">true</span>);
+<span class="lineno"> 392 </span>        webSettings.setDisplayZoomControls(<span class="keyword">false</span>);
 </pre>
 
 </div>
@@ -408,14 +408,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java">../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java</a>:407</span>: <span class="message"><code>onTouch</code> should call <code>View#performClick</code> when a click is detected</span><br /><pre class="errorlines">
-<span class="lineno"> 404 </span>        mWebView.setOnTouchListener(<span class="keyword">new</span> View.OnTouchListener() {
-<span class="lineno"> 405 </span>
-<span class="lineno"> 406 </span>            <span class="annotation">@Override</span>
-<span class="caretline"><span class="lineno"> 407 </span>            <span class="keyword">public</span> <span class="keyword">boolean</span> <span class="warning">onTouch</span>(View v, MotionEvent event) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 408 </span>                WebView.HitTestResult hr = ((BitmapWebView) v).getHitTestResult();
-<span class="lineno"> 409 </span>                Log.d(<span class="string">"AndroidUnity"</span>,<span class="string">"on touch called!"</span>);
-<span class="lineno"> 410 </span>                Log.d(<span class="string">"AndroidUnity"</span>,<span class="string">"scroll "</span> + mWebView.getScrollY());
+<span class="location"><a href="../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java">../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java</a>:402</span>: <span class="message"><code>onTouch</code> should call <code>View#performClick</code> when a click is detected</span><br /><pre class="errorlines">
+<span class="lineno"> 399 </span>        mWebView.setOnTouchListener(<span class="keyword">new</span> View.OnTouchListener() {
+<span class="lineno"> 400 </span>
+<span class="lineno"> 401 </span>            <span class="annotation">@Override</span>
+<span class="caretline"><span class="lineno"> 402 </span>            <span class="keyword">public</span> <span class="keyword">boolean</span> <span class="warning">onTouch</span>(View v, MotionEvent event) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 403 </span>                WebView.HitTestResult hr = ((BitmapWebView) v).getHitTestResult();
+<span class="lineno"> 404 </span>                Log.d(<span class="string">"AndroidUnity"</span>,<span class="string">"on touch called!"</span>);
+<span class="lineno"> 405 </span>                Log.d(<span class="string">"AndroidUnity"</span>,<span class="string">"scroll "</span> + mWebView.getScrollY());
 </pre>
 
 </div>

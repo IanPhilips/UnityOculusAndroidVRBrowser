@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/values/values.xml",
+            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/src/main/res/values/dimens.xml",
+                    "source": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "41",
-                        "endOffsets": "53"
+                        "startLines": "3,1,2",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "128,16,67",
+                        "endColumns": "52,50,60",
+                        "endOffsets": "176,62,123"
                     },
                     "to": {
-                        "startLines": "289",
-                        "startColumns": "4",
-                        "startOffsets": "30231",
-                        "endColumns": "41",
-                        "endOffsets": "30268"
+                        "startLines": "358,359,362",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "34917,34970,35145",
+                        "endColumns": "52,50,60",
+                        "endOffsets": "34965,35016,35201"
                     }
                 },
                 {
@@ -40,42 +40,42 @@
                     }
                 },
                 {
-                    "source": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/src/main/res/values/strings.xml",
+                    "source": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/values/dimens.xml",
                     "from": {
-                        "startLines": "3,1,2",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "128,16,67",
-                        "endColumns": "52,50,60",
-                        "endOffsets": "176,62,123"
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "41",
+                        "endOffsets": "53"
                     },
                     "to": {
-                        "startLines": "358,359,362",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "34917,34970,35145",
-                        "endColumns": "52,50,60",
-                        "endOffsets": "34965,35016,35201"
+                        "startLines": "289",
+                        "startColumns": "4",
+                        "startOffsets": "30231",
+                        "endColumns": "41",
+                        "endOffsets": "30268"
                     }
                 }
             ]
         },
         {
-            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/src/main/res/values/dimens.xml",
+                    "source": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "41",
-                        "endOffsets": "53"
+                        "startLines": "3,1,2",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "128,16,67",
+                        "endColumns": "52,50,60",
+                        "endOffsets": "176,62,123"
                     },
                     "to": {
-                        "startLines": "289",
-                        "startColumns": "4",
-                        "startOffsets": "30231",
-                        "endColumns": "41",
-                        "endOffsets": "30268"
+                        "startLines": "358,359,362",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "34917,34970,35145",
+                        "endColumns": "52,50,60",
+                        "endOffsets": "34965,35016,35201"
                     }
                 },
                 {
@@ -98,20 +98,20 @@
                     }
                 },
                 {
-                    "source": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/src/main/res/values/strings.xml",
+                    "source": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/values/dimens.xml",
                     "from": {
-                        "startLines": "3,1,2",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "128,16,67",
-                        "endColumns": "52,50,60",
-                        "endOffsets": "176,62,123"
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "41",
+                        "endOffsets": "53"
                     },
                     "to": {
-                        "startLines": "358,359,362",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "34917,34970,35145",
-                        "endColumns": "52,50,60",
-                        "endOffsets": "34965,35016,35201"
+                        "startLines": "289",
+                        "startColumns": "4",
+                        "startOffsets": "30231",
+                        "endColumns": "41",
+                        "endOffsets": "30268"
                     }
                 }
             ]

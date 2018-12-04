@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
                     "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/values-hdpi-v4/values-hdpi-v4.xml",
@@ -17,7 +17,7 @@
             ]
         },
         {
-            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
                     "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/values-hdpi-v4/values-hdpi-v4.xml",

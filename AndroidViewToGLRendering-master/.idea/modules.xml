@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidViewToGLRendering-master.iml" filepath="$PROJECT_DIR$/AndroidViewToGLRendering-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UnityLib/UnityLib.iml" filepath="$PROJECT_DIR$/UnityLib/UnityLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Unity_Lib/Unity_Lib.iml" filepath="$PROJECT_DIR$/Unity_Lib/Unity_Lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/classes/classes.iml" filepath="$PROJECT_DIR$/classes/classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unity-lib/unity-lib.iml" filepath="$PROJECT_DIR$/unity-lib/unity-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/unitylibrary/unitylibrary.iml" filepath="$PROJECT_DIR$/unitylibrary/unitylibrary.iml" />
     </modules>
   </component>

@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/raw/per_pixel_fragment_shader.glsl",
-        "source": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/src/main/res/raw/per_pixel_fragment_shader.glsl"
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/raw/per_pixel_vertex_shader.glsl",
+        "source": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/raw/per_pixel_vertex_shader.glsl"
     },
     {
-        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/raw/per_pixel_vertex_shader.glsl",
-        "source": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/src/main/res/raw/per_pixel_vertex_shader.glsl"
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/raw/point_vertex_shader.glsl",
+        "source": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/raw/point_vertex_shader.glsl"
     },
     {
-        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/raw/point_fragment_shader.glsl",
-        "source": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/src/main/res/raw/point_fragment_shader.glsl"
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/raw/per_pixel_fragment_shader.glsl",
+        "source": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/raw/per_pixel_fragment_shader.glsl"
     },
     {
-        "merged": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/raw/point_vertex_shader.glsl",
-        "source": "/Users/iansp/Documents/BlueAlloy/Android/AndroidViewToGLRendering-master/unitylibrary/src/main/res/raw/point_vertex_shader.glsl"
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/release/raw/point_fragment_shader.glsl",
+        "source": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/raw/point_fragment_shader.glsl"
     }
 ]
