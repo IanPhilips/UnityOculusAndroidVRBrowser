@@ -1,5 +1,6 @@
 /UnityProject/Builds/
 Temp/
+.idea/
 AndroidViewToGLRendering-master/UnityLib/
 AndroidViewToGLRendering-master/Unity_Lib/
 AndroidViewToGLRendering-master/unity-lib/
