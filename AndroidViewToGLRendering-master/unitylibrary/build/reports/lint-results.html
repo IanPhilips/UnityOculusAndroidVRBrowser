@@ -173,10 +173,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 11 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 12 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Tue Dec 04 13:11:27 MST 2018      </nav>
+Check performed at Tue Dec 04 16:21:46 MST 2018      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -185,7 +185,7 @@ Check performed at Tue Dec 04 13:11:27 MST 2018      </nav>
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
       <a class="mdl-navigation__link" href="#SetJavaScriptEnabled"><i class="material-icons warning-icon">warning</i>Using <code>setJavaScriptEnabled</code> (1)</a>
-      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (8)</a>
+      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (9)</a>
       <a class="mdl-navigation__link" href="#ClickableViewAccessibility"><i class="material-icons warning-icon">warning</i>Accessibility in Custom Views (1)</a>
     </nav>
   </div>
@@ -212,7 +212,7 @@ Check performed at Tue Dec 04 13:11:27 MST 2018      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
-<td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">9</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#UnusedResources">UnusedResources</a>: Unused resources</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Accessibility">Accessibility</a>
 </td></tr>
@@ -289,14 +289,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java">../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java</a>:389</span>: <span class="message">Using <code>setJavaScriptEnabled</code> can introduce XSS vulnerabilities into your application, review carefully.</span><br /><pre class="errorlines">
-<span class="lineno"> 386 </span>        mWebView.setVerticalScrollBarEnabled(<span class="keyword">true</span>);
-<span class="lineno"> 387 </span>
-<span class="lineno"> 388 </span>        WebSettings webSettings = mWebView.getSettings();
-<span class="caretline"><span class="lineno"> 389 </span>        <span class="warning">webSettings.setJavaScriptEnabled(<span class="keyword">true</span>)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 390 </span>        webSettings.setSupportZoom(<span class="keyword">true</span>);
-<span class="lineno"> 391 </span>        webSettings.setBuiltInZoomControls(<span class="keyword">true</span>);
-<span class="lineno"> 392 </span>        webSettings.setDisplayZoomControls(<span class="keyword">false</span>);
+<span class="location"><a href="../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java">../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java</a>:393</span>: <span class="message">Using <code>setJavaScriptEnabled</code> can introduce XSS vulnerabilities into your application, review carefully.</span><br /><pre class="errorlines">
+<span class="lineno"> 390 </span>        mWebView.setVerticalScrollBarEnabled(<span class="keyword">true</span>);
+<span class="lineno"> 391 </span>
+<span class="lineno"> 392 </span>        WebSettings webSettings = mWebView.getSettings();
+<span class="caretline"><span class="lineno"> 393 </span>        <span class="warning">webSettings.setJavaScriptEnabled(<span class="keyword">true</span>)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 394 </span>        webSettings.setSupportZoom(<span class="keyword">true</span>);
+<span class="lineno"> 395 </span>        webSettings.setBuiltInZoomControls(<span class="keyword">true</span>);
+<span class="lineno"> 396 </span>        webSettings.setDisplayZoomControls(<span class="keyword">false</span>);
 </pre>
 
 </div>
@@ -343,9 +343,19 @@ Dismiss</button>            </div>
 <span class="lineno"> 3 </span><span class="tag">&lt;/resources></span>
 </pre>
 
+<span class="location"><a href="../../src/main/res/layout/geckolayout.xml">../../src/main/res/layout/geckolayout.xml</a>:2</span>: <span class="message">The resource <code>R.layout.geckolayout</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno"> 1 </span><span class="prologue">&lt;?xml version="1.0" encoding="utf-8"?></span>
+<span class="caretline"><span class="lineno"> 2 </span><span class="warning"><span class="tag">&lt;org.mozilla.geckoview.GeckoView</span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 3 </span>    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 4 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 5 </span>    <span class="prefix">android:</span><span class="attribute">foregroundGravity</span>=<span class="value">"top|center_horizontal"</span>>
+</pre>
+
 <span class="location"><a href="../../src/main/res/raw/per_pixel_fragment_shader.glsl">../../src/main/res/raw/per_pixel_fragment_shader.glsl</a></span>: <span class="message">The resource <code>R.raw.per_pixel_fragment_shader</code> appears to be unused</span><br />
 <span class="location"><a href="../../src/main/res/raw/per_pixel_vertex_shader.glsl">../../src/main/res/raw/per_pixel_vertex_shader.glsl</a></span>: <span class="message">The resource <code>R.raw.per_pixel_vertex_shader</code> appears to be unused</span><br />
 <span class="location"><a href="../../src/main/res/raw/point_fragment_shader.glsl">../../src/main/res/raw/point_fragment_shader.glsl</a></span>: <span class="message">The resource <code>R.raw.point_fragment_shader</code> appears to be unused</span><br />
+<button class="mdl-button mdl-js-button mdl-button--primary" id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 4 More Occurrences...</button>
+<div id="UnusedResourcesDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/raw/point_vertex_shader.glsl">../../src/main/res/raw/point_vertex_shader.glsl</a></span>: <span class="message">The resource <code>R.raw.point_vertex_shader</code> appears to be unused</span><br />
 <span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:2</span>: <span class="message">The resource <code>R.string.app_name</code> appears to be unused</span><br /><pre class="errorlines">
 <span class="lineno"> 1 </span><span class="tag">&lt;resources></span>
@@ -370,6 +380,7 @@ Dismiss</button>            </div>
 <span class="lineno"> 5 </span><span class="tag">&lt;/resources></span>
 </pre>
 
+</div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationUnusedResources" style="display: none;">
 Unused resources make applications larger and slow down builds.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
@@ -408,14 +419,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java">../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java</a>:402</span>: <span class="message"><code>onTouch</code> should call <code>View#performClick</code> when a click is detected</span><br /><pre class="errorlines">
-<span class="lineno"> 399 </span>        mWebView.setOnTouchListener(<span class="keyword">new</span> View.OnTouchListener() {
-<span class="lineno"> 400 </span>
-<span class="lineno"> 401 </span>            <span class="annotation">@Override</span>
-<span class="caretline"><span class="lineno"> 402 </span>            <span class="keyword">public</span> <span class="keyword">boolean</span> <span class="warning">onTouch</span>(View v, MotionEvent event) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 403 </span>                WebView.HitTestResult hr = ((BitmapWebView) v).getHitTestResult();
-<span class="lineno"> 404 </span>                Log.d(<span class="string">"AndroidUnity"</span>,<span class="string">"on touch called!"</span>);
-<span class="lineno"> 405 </span>                Log.d(<span class="string">"AndroidUnity"</span>,<span class="string">"scroll "</span> + mWebView.getScrollY());
+<span class="location"><a href="../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java">../../src/main/java/com/unityexport/ian/unitylibrary/MainGL.java</a>:406</span>: <span class="message"><code>onTouch</code> should call <code>View#performClick</code> when a click is detected</span><br /><pre class="errorlines">
+<span class="lineno"> 403 </span>        mWebView.setOnTouchListener(<span class="keyword">new</span> View.OnTouchListener() {
+<span class="lineno"> 404 </span>
+<span class="lineno"> 405 </span>            <span class="annotation">@Override</span>
+<span class="caretline"><span class="lineno"> 406 </span>            <span class="keyword">public</span> <span class="keyword">boolean</span> <span class="warning">onTouch</span>(View v, MotionEvent event) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 407 </span>                WebView.HitTestResult hr = ((BitmapWebView) v).getHitTestResult();
+<span class="lineno"> 408 </span>                Log.d(<span class="string">"AndroidUnity"</span>,<span class="string">"on touch called!"</span>);
+<span class="lineno"> 409 </span>                Log.d(<span class="string">"AndroidUnity"</span>,<span class="string">"scroll "</span> + mWebView.getScrollY());
 </pre>
 
 </div>

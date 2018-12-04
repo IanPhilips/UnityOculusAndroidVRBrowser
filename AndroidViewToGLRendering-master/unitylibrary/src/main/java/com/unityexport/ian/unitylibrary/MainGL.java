@@ -29,6 +29,8 @@ import android.widget.RelativeLayout;
 import com.unity3d.player.UnityPlayer;
 import com.unity3d.player.UnityPlayerActivity;
 
+import org.mozilla.geckoview.GeckoView;
+
 import java.io.ByteArrayOutputStream;
 
 public class MainGL extends Fragment {
@@ -362,6 +364,8 @@ public class MainGL extends Fragment {
             r.removeViewAt(index);
             // re inflate the webview and add it
             mWebView = (BitmapWebView) View.inflate(this.getContext(),R.layout.extralayouts,null);
+//            GeckoView geckoView = (GeckoView) View.inflate(this.getContext(),R.layout.geckolayout,null);
+
             r.addView(mWebView, index);
         }
         else {
@@ -518,6 +522,8 @@ public class MainGL extends Fragment {
         setRetainInstance(true); // Retain between configuration changes (like device rotation)
     }
 
+    private GeckoView geckoView = null;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         // Defines the xml file for the fragment
@@ -530,6 +536,8 @@ public class MainGL extends Fragment {
 
         mView =  inflater.inflate(R.layout.fragment_layout, parent, false);
         Log.d("AndroidUnity","On inflate  View!");
+
+        geckoView = new GeckoView(getContext());
 
         initViews(mView);
         Log.d("AndroidUnity","On finish Create View + initViews!");

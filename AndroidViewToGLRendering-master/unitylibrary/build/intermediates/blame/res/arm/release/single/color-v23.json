@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_tint_default.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/color-v23/abc_tint_switch_thumb.xml"
+    }
+]

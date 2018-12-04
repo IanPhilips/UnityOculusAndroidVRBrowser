@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_slide_in_top.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_popup_enter.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_slide_out_top.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_fade_out.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_fade_in.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_popup_exit.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/build/intermediates/res/merged/arm/release/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/iansp/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/2fcc4656a83e4bd7f2fb3323d0ea150a/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    }
+]

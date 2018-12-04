@@ -34,7 +34,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/java/com/unityexport/ian/unitylibrary/MainGL.java"
-            line="389"
+            line="393"
             column="9"/>
     </issue>
 
@@ -53,6 +53,23 @@
             file="/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/values/dimens.xml"
             line="2"
             column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.layout.geckolayout` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;org.mozilla.geckoview.GeckoView xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/res/layout/geckolayout.xml"
+            line="2"
+            column="1"/>
     </issue>
 
     <issue
@@ -170,7 +187,7 @@
         errorLine2="                           ~~~~~~~">
         <location
             file="/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/java/com/unityexport/ian/unitylibrary/MainGL.java"
-            line="402"
+            line="406"
             column="28"/>
     </issue>
 

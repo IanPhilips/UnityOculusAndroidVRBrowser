@@ -15,14 +15,34 @@ android {
 
     }
 
+
+    flavorDimensions "abi"
+
+    productFlavors {
+        arm     { dimension "abi" }
+    }
+
     buildTypes {
 
     }
 
 }
 
+
+ext {
+    geckoviewChannel = ""
+    geckoviewVersion = "64.0.20181204213330"
+}
+
+repositories {
+    maven {
+        url "https://maven.mozilla.org/maven2/"
+    }
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:25.4.0'
     implementation project(':classes')
+//    armImplementation     "org.mozilla.geckoview:geckoview-${geckoviewChannel}-armeabi-v7a:${geckoviewVersion}"
+    implementation     "org.mozilla.geckoview:geckoview${geckoviewChannel}-armeabi-v7a:${geckoviewVersion}"
 }
