@@ -11,7 +11,7 @@ This is in `Beta` mode. It's been tested and works on the Oculus Go.
 ## Usage
 Open the `GazePointerWebviewScene` and use your head to aim and the controller's trigger to click. Make sure the browser has pivot points set to (0.5,0.5) so click coordinates translate correctly to the Android's `WebView` coordinates.
 
-if you want to input text, connect your Oculus via usb and use the command: `adb shell input text 'yourtexthere'`
+If you want to input text, connect your Oculus via usb and use the command: `adb shell input text 'yourtexthere'`
 
 
 ## Importing into your own project
