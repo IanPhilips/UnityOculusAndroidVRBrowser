@@ -272,7 +272,7 @@ public class MainGL extends Fragment {
             initViews(mView);
         }
 
-        if (bm.getHeight() != outputWindowHeight)
+        if (bm.getHeight() != outputWindowHeight || bm.getWidth() != outputWindowWidth)
             initBitmapStuff();
 
         bm.compress(Bitmap.CompressFormat.PNG, 100, stream);
