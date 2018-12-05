@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 
@@ -280,7 +282,9 @@ public class BrowserView : MonoBehaviour
         _ajc.Call("SetUnityBitmapCallback", androidPluginCallback);
         // set output width and height
         _ajc.Call("SetOutputWindowSizes", _width, outputHeight);
+        _ajc.Call("ShouldDownloadFiles");
         #endif
+        
         _letLoadFirstUrl = true;
         LoadURL("https://www.google.com"); 
 
@@ -361,6 +365,26 @@ public class BrowserView : MonoBehaviour
         ProgressText.text = progress + "%";
     }
 
+
+    private string _filePathToReadWhenComplete = "";
+    public void PrepareReadFile(string path, string directory, string fileName, string url)
+    {
+        Debug.Log("download file called in plugin");
+        
+        path = Path.Combine(path, directory);
+        Debug.Log("abs path is: " + path);
+        _filePathToReadWhenComplete = Path.Combine(path, fileName);
+    }
+
+    public void ReadFile()
+    {
+        Debug.Log("abs path with filename is: " + _filePathToReadWhenComplete);
+        string fileContents = System.IO.File.ReadAllText(_filePathToReadWhenComplete);
+        Debug.Log("file contents are: " + fileContents);
+
+    }
+
+
    
 }
 
@@ -408,6 +432,18 @@ class AndroidBitmapPluginCallback : AndroidJavaProxy
 
     }
     
+    public void DownloadFileRequestedAtURL(string path, string directory, string fileName, string url)
+    {
+        Debug.Log("message from android about download files: " + url);
+        
+        UnityThread.executeInUpdate(()=> BrowserView.PrepareReadFile(path,directory,fileName,url));
+    }
+
+    public void FileDownloadComplete()
+    {
+        UnityThread.executeInUpdate(()=> BrowserView.ReadFile());
+
+    }
 
 
 }

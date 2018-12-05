@@ -2,13 +2,19 @@ package com.unityexport.ian.unitylibrary;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.DownloadManager;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.os.Build;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.InputDevice;
@@ -18,6 +24,9 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.CookieManager;
+import android.webkit.DownloadListener;
+import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -27,9 +36,11 @@ import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
 //import com.self.viewtoglrendering.cuberenerer.CubeGLRenderer;
 import com.unity3d.player.UnityPlayer;
-import com.unity3d.player.UnityPlayerActivity;
 
 import java.io.ByteArrayOutputStream;
+import java.util.Random;
+
+import static android.content.Context.DOWNLOAD_SERVICE;
 
 public class MainGL extends Fragment {
 
@@ -49,7 +60,7 @@ public class MainGL extends Fragment {
     // these values changed by unity:
     int outputWindowHeight = 500;
     int outputWindowWidth = 700;
-
+    boolean shouldDownloadFilesWhenClicked = false;
 
     KeyCharacterMap CharMap;
 
@@ -66,6 +77,10 @@ public class MainGL extends Fragment {
         AddFragment(newMainGL);
 
         return newMainGL;
+    }
+
+    public void ShouldDownloadFiles(){
+        shouldDownloadFilesWhenClicked = true;
     }
 
     public void SetOutputWindowSizes(int width, int height){
@@ -453,7 +468,9 @@ public class MainGL extends Fragment {
             public boolean shouldOverrideUrlLoading (WebView view,
                                                      WebResourceRequest request){
                 String url = request.getUrl().toString();
+                // normal url, don't override
                 if (url.startsWith("http")) return false;
+                // just load normal url if
                 else if (url.startsWith("market") || url.startsWith("intent")){
                     mWebView.loadUrl(url);
                 }
@@ -462,6 +479,63 @@ public class MainGL extends Fragment {
 
 
         });
+
+        mWebView.setDownloadListener(new DownloadListener() {
+
+            @Override
+            public void onDownloadStart(String url, String userAgent,
+                                        String contentDisposition, String mimeType,
+                                        long contentLength) {
+                DownloadManager.Request request = new DownloadManager.Request(
+                        Uri.parse(url));
+                // set by calling from unity : ShouldDownloadFiles()
+                if (!shouldDownloadFilesWhenClicked)
+                    return;
+                String filename= URLUtil.guessFileName(url, contentDisposition, mimeType);
+
+                // so we can get a unique filename and not just append a -num to the same name
+                if (filename.contains("downloadfile.bin")) {
+                    Random r = new java.util.Random ();
+                    filename = Long.toString (r.nextLong () & Long.MAX_VALUE,36) + ".txt";
+                }
+
+                request.setMimeType(mimeType);
+                //------------------------COOKIE!!------------------------
+                String cookies = CookieManager.getInstance().getCookie(url);
+                request.addRequestHeader("cookie", cookies);
+                //------------------------COOKIE!!------------------------
+                request.addRequestHeader("User-Agent", userAgent);
+                request.setTitle(filename);
+
+                request.allowScanningByMediaScanner();
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED); //Notify client once download is completed!
+                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, filename);
+                DownloadManager dm = (DownloadManager) getContext().getSystemService(DOWNLOAD_SERVICE);
+
+                try {
+                    if (dm != null) {
+
+                        dm.enqueue(request);
+                    }
+                    else{
+                        Log.d("AndroidUnity", "dm = null");
+                    }
+                }
+                catch(Exception e){
+                    Log.d("AndroidUnity", "exception: " + e.getMessage());
+
+                }
+
+                Log.d("AndroidUnity", "downloading file: " + filename + " to: " + Environment.DIRECTORY_DOWNLOADS);
+                String externalStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+                UnityBitmapCallback.DownloadFileRequestedAtURL(externalStoragePath, Environment.DIRECTORY_DOWNLOADS, filename, url);
+                // UnityBitmapCallback.FileDownloadComplete() called when download is complete
+                // save the filename to load it later
+
+            }
+        });
+
+
 
 
         // Update unity on our progress
@@ -509,12 +583,23 @@ public class MainGL extends Fragment {
         Log.d("AndroidUnity","webview init-ed!");
     }
 
+    // tell Unity our file download is complete
+    BroadcastReceiver onComplete=new BroadcastReceiver() {
+        public void onReceive(Context ctxt, Intent intent) {
+            Log.d("AndroidUnity","Download complete");
+            UnityBitmapCallback.FileDownloadComplete();
+        }
+    };
+
 
 // utility stuff
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        // register listener for download complete status
+        getContext().registerReceiver(onComplete, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
         setRetainInstance(true); // Retain between configuration changes (like device rotation)
     }
 
@@ -542,10 +627,7 @@ public class MainGL extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
-        // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
         Log.d("AndroidUnity","On View Created!");
-
-
     }
 
     @SuppressLint("ResourceType")

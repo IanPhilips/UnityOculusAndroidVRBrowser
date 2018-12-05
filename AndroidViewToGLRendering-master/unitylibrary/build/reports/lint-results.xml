@@ -34,7 +34,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/java/com/unityexport/ian/unitylibrary/MainGL.java"
-            line="389"
+            line="404"
             column="9"/>
     </issue>
 
@@ -170,7 +170,7 @@
         errorLine2="                           ~~~~~~~">
         <location
             file="/Users/iansp/Documents/BlueAlloy/Android/UnityAndroidVRBrowser/AndroidViewToGLRendering-master/unitylibrary/src/main/java/com/unityexport/ian/unitylibrary/MainGL.java"
-            line="402"
+            line="417"
             column="28"/>
     </issue>
 
