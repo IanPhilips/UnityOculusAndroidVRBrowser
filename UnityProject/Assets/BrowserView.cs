@@ -99,6 +99,7 @@ public class BrowserView : MonoBehaviour
             LoadURL("google.com");
         }
         string potentialUrl = UrlInputField.text;
+        
         if (ValidHttpURL(potentialUrl, out var outUri))
         {
             LoadURL(outUri.AbsoluteUri);    
@@ -109,6 +110,8 @@ public class BrowserView : MonoBehaviour
             string searchUrl = "https://www.google.com/search?q=" + encodedSearchString;
             LoadURL(searchUrl);
         }
+        // TODO: this doesn't work, maybe register a callback for when the progress starts loading? 
+        CallAjc("ScrollToTop", new object[]{});
         
     }
 

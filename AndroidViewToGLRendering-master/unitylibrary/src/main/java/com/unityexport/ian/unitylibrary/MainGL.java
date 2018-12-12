@@ -205,6 +205,14 @@ public class MainGL extends Fragment {
 
     }
 
+    public void ScrollToTop(){
+        mWebView.measure(View.MeasureSpec.makeMeasureSpec(
+                View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED),
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+
+        mWebView.scrollTo(0,0);
+    }
+
     public void Scroll( final int yScrollBy){
         final Activity a = UnityPlayer.currentActivity;
         a.runOnUiThread(new Runnable() {public void run() {
@@ -543,12 +551,6 @@ public class MainGL extends Fragment {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
                 if (newProgress >= 100) {
-                    // we must remeasure the webview after loading
-                    mWebView.measure(View.MeasureSpec.makeMeasureSpec(
-                            View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED),
-                            View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-                    // scroll to the top
-                    mWebView.scrollTo(0, 0);
                     // update unity's url
                     if (UnityBitmapCallback != null )
                         try {
