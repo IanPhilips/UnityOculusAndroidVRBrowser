@@ -40,8 +40,7 @@ use the `AndroidUnity` tag in logcat to see the plugin's log output, i.e.:
 
 ## TODO:
 Add VR keyboard  
-Transfer rendering to OpenGL  
-Try replacing `WebView` with a `GeckoView` The moment I [add](https://wiki.mozilla.org/Mobile/GeckoView) a `GeckoView` Unity crashes  
+Transfer rendering to OpenGL while replacing `WebView` with a `GeckoView` - Targeting completion before the end of February.
 Test Javascript scrolling to avoid `WebView.enableSlowWholeDocumentDraw()`  
 Improve this readme  
 Add trackpad scrolling  
