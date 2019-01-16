@@ -40,7 +40,7 @@ use the `AndroidUnity` tag in logcat to see the plugin's log output, i.e.:
 
 ## TODO:
 Add VR keyboard  
-Transfer rendering to OpenGL while replacing `WebView` with a `GeckoView` - Targeting completion before the end of February.
+Transfer rendering to OpenGL while replacing `WebView` with a `GeckoView` - Targeting completion before the end of February 2019.  
 Test Javascript scrolling to avoid `WebView.enableSlowWholeDocumentDraw()`  
 Improve this readme  
 Add trackpad scrolling  
