@@ -6,7 +6,7 @@
 
 ![video](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/output.gif)
 
-This is in `Beta` mode. It's been tested and works on the Oculus Go.
+This is in `Beta` mode. It's been tested and works on the Oculus Go. Requires Android API 25.
 
 ## Usage
 Open the `GazePointerWebviewScene` and use your head to aim and the controller's trigger to click. Make sure the browser has pivot points set to (0.5,0.5) so click coordinates translate correctly to the Android's `WebView` coordinates.
@@ -15,7 +15,7 @@ If you want to input text, connect your Oculus via usb and use the command: `adb
 
 
 ## Importing into your own project
-Copy `BrowserView.cs` and  `UnityThread.cs` to your scripts directory, and `unitylibrary-debug.aar`([precompiled](https://github.com/IanPhilips/UnityAndroidVRBrowser/releases/)) to your Plugins/Android/ directory. Fill `BrowserView.cs`'s public fields appropriately. You must set your Unity API version to 25 (in player settings).
+Copy `BrowserView.cs` and  `UnityThread.cs` to your scripts directory, and `unitylibrary-debug.aar`([precompiled](https://github.com/IanPhilips/UnityAndroidVRBrowser/releases/)) to your Plugins/Android/ directory. Fill `BrowserView.cs`'s public fields appropriately. You must set your Android API version to 25 (in player settings).
 
 
 ## Notes
