@@ -1,4 +1,6 @@
 /UnityProject/Builds/
+UnityProject/Library/
+GeckoViewPLugin/
 Temp/
 .idea/
 AndroidViewToGLRendering-master/UnityLib/
