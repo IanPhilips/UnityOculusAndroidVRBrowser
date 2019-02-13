@@ -6,7 +6,7 @@
 
 ![video](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/output.gif)
 
-This is in `Beta` mode. It's been tested and works on the Oculus Go. Requires Android API 25. If you can answer [this](https://stackoverflow.com/questions/54224025/surfacetexture-in-android-plugin-doesnt-work-in-unity-eth-reward/54311593) question you'd be extremely helpful to the improvement of this repo.
+This is in `Beta` mode. It's been tested and works on the Oculus Go. Requires Android API 25.
 
 ## Usage
 Open the `GazePointerWebviewScene` and use your head to aim and the controller's trigger to click. Make sure the browser has pivot points set to (0.5,0.5) so click coordinates translate correctly to the Android's `WebView` coordinates.
