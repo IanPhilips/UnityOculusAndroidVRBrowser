@@ -1,0 +1,1 @@
+include ':app', ':classes', ':mozillaandroid', ':geckoview-arm64-v8a-64.0.20181214004633-sources', ':aar-geckoview-arm64-v8a-64.0.20181214004633', ':support-v4-25.4.0', ':supportv4androidlibrary', ':AndroidSupportV4'

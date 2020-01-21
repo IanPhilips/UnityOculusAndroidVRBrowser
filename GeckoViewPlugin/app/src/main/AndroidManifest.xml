@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eyeflite.ian.geckoviewplugin">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<uses-feature android:glEsVersion="0x00020000"/>-->
+
+    <!--geckoview application stuff:-->
+
+    <!--<application-->
+        <!--android:allowBackup="true"-->
+        <!--android:icon="@mipmap/ic_launcher"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:roundIcon="@mipmap/ic_launcher_round"-->
+        <!--android:supportsRtl="true"-->
+        <!--android:canPerformGestures="true">-->
+        <!--&lt;!&ndash;<service android:name=".CustomAccessibleService"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:enabled="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">&ndash;&gt;-->
+            <!--&lt;!&ndash;<intent-filter>&ndash;&gt;-->
+                <!--&lt;!&ndash;<action android:name="android.accessibilityservice.AccessibilityService" />&ndash;&gt;-->
+            <!--&lt;!&ndash;</intent-filter>&ndash;&gt;-->
+            <!--&lt;!&ndash;<meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibilityservice" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</service>&ndash;&gt;-->
+        <!--&lt;!&ndash;android:theme="@style/AppTheme">&ndash;&gt;-->
+        <!--<activity android:name=".BasicActivity">-->
+
+            <!--<intent-filter>-->
+
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+
+            <!--</intent-filter>-->
+        <!--</activity>-->
+    <!--</application>-->
+
+</manifest>

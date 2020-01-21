@@ -1,0 +1,97 @@
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+/**
+* NOTE: to switch from emulator to unity plugin :
+* comment out above plugin application line and uncomment the plugin library line
+* comment out applicationid below
+* comment out compile options below
+* comment out x86 build flavor of mozilla and uncomment arm-7 buildflavor of mozilla
+* comment out application tag in androidmanifest
+ * comment out ENTIRE BasicActivity class
+* */
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+//        applicationId "com.eyeflite.ian.geckoviewplugin"
+        minSdkVersion 25
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+//                arguments '-DANDROID_STL=c++_static'
+            }
+        }
+    }
+
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+//            path 'src/main/cpp/CMakeLists.txt'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            useProguard false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    repositories {
+        maven {
+            url "https://maven.mozilla.org/maven2/"
+        }
+    }
+//
+//    flavorDimensions "abi"
+//
+//    productFlavors {
+//        x86     { dimension "abi" }
+//        x86_64  { dimension "abi" }
+//        arm     { dimension "abi" }
+//        aarch64 { dimension "abi" }
+//    }
+}
+
+ext {
+    geckoviewChannel =  ""//"-beta"
+    geckoviewVersion = "70.0.20191022130254"//"68.0.20190711090008"//"68.0.20190527103257"
+}
+
+dependencies {
+    // this works for the emulator:
+//        implementation    "org.mozilla.geckoview:geckoview${geckoviewChannel}-x86:${geckoviewVersion}"
+    // this one works for Oculus + Unity:
+    implementation "org.mozilla.geckoview:geckoview${geckoviewChannel}-armeabi-v7a:${geckoviewVersion}"
+    //        implementation "org.mozilla.geckoview:geckoview${geckoviewChannel}-arm64-v8a:${geckoviewVersion}"
+    //    armImplementation     "org.mozilla.geckoview:geckoview${geckoviewChannel}-armeabi-v7a:${geckoviewVersion}"
+    //    aarch64Implementation "org.mozilla.geckoview:geckoview${geckoviewChannel}-arm64-v8a:${geckoviewVersion}"
+    implementation project(':classes')
+    implementation 'com.android.support:support-v4:25.4.0'
+    //    implementation 'com.android.support:support-v4:26.1.0'
+    //    implementation 'com.android.support:appcompat-v7:25.4.0'
+    //    implementation group: 'com.android.support', name: 'support-v4', version: '25.4.0'
+}

@@ -1,0 +1,9 @@
+{
+  "buildFiles": [
+    "/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/iansp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/release/arm64-v8a --target clean"
+  ],
+  "libraries": {}
+}

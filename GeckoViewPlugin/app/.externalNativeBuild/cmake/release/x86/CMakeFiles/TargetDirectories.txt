@@ -1,0 +1,2 @@
+/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/edit_cache.dir
+/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/rebuild_cache.dir
