@@ -5,7 +5,6 @@
 2. Update the .gradle file with the new version number: `geckoviewVersion = "65.0.20190201231734"`  
 3. UPDATE: To remove the speech api reference: Change `.aar` to zip and unzip. Then change the classes.jar to classes.zip and unzip that. Remove the `InputOptionsUtil.class` file from the classes directory and re-jar and re-aar both via `jar cvf newLib.{jar, aar} -C libDirectory/ .`
 
-
 ## Usage
 Open the `GazePointerWebviewScene` and use your head to aim and the controller's trigger to click. Make sure the browser has pivot points set to (0.5,0.5) so click coordinates translate correctly to the Android's `WebView` coordinates.
 
@@ -19,4 +18,13 @@ After modifying, use the gradle menu to build unitylibrary. Take the new `unityl
 ## Debugging
 use the `AndroidUnity` tag in logcat to see the plugin's log output, i.e.:
 `./adb logcat -s  ActivityManager PackageManager DEBUG AndroidUnity Unity` 
+
+## TODO:
+Add VR keyboard  
+Generalize input module for demo project  
+Test Javascript scrolling to avoid `WebView.enableSlowWholeDocumentDraw()`  
+Add trackpad scrolling  
+
+
+
 
