@@ -1,5 +1,12 @@
 # UnityAndroidVRBrowser
 
+![screenshot](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/webview.png)
+
+
+![video](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/output.gif)
+
+
+
 ## Updating GeckoView  
 1. Download the latest `.aar` from https://maven.mozilla.org/maven2/?prefix=maven2/org/mozilla/geckoview/geckoview-armeabi-v7a/ and place it in Unity's Plugin/Android/  
 2. Update the .gradle file with the new version number: `geckoviewVersion = "65.0.20190201231734"`  
