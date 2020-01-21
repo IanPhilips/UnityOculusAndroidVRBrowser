@@ -34,7 +34,7 @@ use the `AndroidUnity` tag in logcat to see the plugin's log output, i.e.:
 Open the GeckoViewPlugin in android studio.
 
 ## TODO:
-Generalize sessions for any #, not just youtube and browser
+Generalize sessions for any #, not just youtube and browser  
 Add VR keyboard  
 Generalize input module for demo project  
 Add trackpad scrolling  
