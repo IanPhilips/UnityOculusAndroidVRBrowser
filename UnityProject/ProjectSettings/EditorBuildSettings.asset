@@ -5,13 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Oculus/VR/Scenes/UI.unity
-    guid: 1f4d3ae64a10d434db219de8b14348e1
   - enabled: 1
-    path: Assets/Scenes/GazePointerWebviewScene.unity
-    guid: c726b8bff4cfc4936a830dd48bd3877e
+    path: Assets/Scenes/GazePointerWebviewScene_01.unity
+    guid: 849d0993dc0514622bc23678b462bd78
   m_configObjects: {}
