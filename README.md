@@ -1,6 +1,8 @@
 # UnityAndroidVRBrowser
 This is a fully functioning Android plugin in-game 3D web browser based on the GeckoView browser engine from Mozilla and works on the Oculus Go. It's adapted from Eyeflite's hands-free browser and you'll find lots of API calls intended for hands-free use. The demo project does not work with controller buttons other than the trigger, i.e. no scrolling with the controller. It should work on any android device, though you'll have to adapt/add in the Unity input module to support your device.
 
+Note: I don't really work in VR at the moment so I will likely not do any work on this repo. Maintainers/contributers are welcome and needed.
+
 ![video](https://raw.githubusercontent.com/IanPhilips/UnityAndroidVRBrowser/master/output.gif)
 
 
