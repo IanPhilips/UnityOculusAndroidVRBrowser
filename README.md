@@ -18,7 +18,8 @@ If you want to input text, connect your Oculus via usb and use the command: `adb
 
 The demo supports two 'tabs' at the moment, also known as sessions in GeckoView lingo. You can switch between youtube and browser sessions which are essentially tabs in a browser. The demo and plugin are kind of hard-wired for these two special tabs atm though the wires are not very hard.
 
-**Displaying Over the Browser:** Using more OVROverlays is the only option to display other UI elements over the browser, or you can hide (scaling or moving) the browser.
+**Displaying Over the Browser:** Using more [OVROverlays](https://developer.oculus.com/documentation/unity/unity-ovroverlay/
+) is the only option to display other UI elements over the browser, or you can hide (scaling or moving) the browser.
 
 ## Using in your own project
 Currently you need: `UnityProject/Assets/Oculus`, `UnityProject/Assets/Plugin/Android`, `UnityProject/Assets/Scripts/BrowserView.cs` and `UnityProject/Assets/Scripts/UnityThread.cs` though a bit of configuration is needed for the `BrowserView.cs` to work properly, see the demo scene for guidance. Hopefully we can update the plugin from the Oculus folder to the most recent plugin and you won't have to use this older version package (1.30.0).
