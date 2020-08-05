@@ -34,5 +34,10 @@ namespace Oculus.Platform
       ovr_UnityResetTestPlatform();
 #endif
     }
+
+    void OnApplicationQuit()
+    {
+      Callback.OnApplicationQuit();
+    }
   }
 }

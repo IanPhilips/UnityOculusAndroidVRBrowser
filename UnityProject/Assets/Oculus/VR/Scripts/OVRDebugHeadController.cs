@@ -1,22 +1,17 @@
 /************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
-
-Licensed under the Oculus SDK License Version 3.4.1 (the "License");
-you may not use the Oculus SDK except in compliance with the License,
-which is provided at the time of installation or download, or which
-otherwise accompanies this software in either electronic or hard copy form.
+Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
+the Utilities SDK except in compliance with the License, which is provided at the time of installation
+or download, or which otherwise accompanies this software in either electronic or hard copy form.
 
 You may obtain a copy of the License at
+https://developer.oculus.com/licenses/oculusmastersdk-1.0/
 
-https://developer.oculus.com/licenses/sdk-3.4.1
-
-Unless required by applicable law or agreed to in writing, the Oculus SDK
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
 ************************************************************************************/
 
 using UnityEngine;
@@ -30,13 +25,13 @@ using System.Collections;
 /// of the game object. Then, add the OVRDebugHeadController behavior to the game object.
 /// Alternatively, this behavior can be placed directly on the OVRCameraRig object, but
 /// that is not guaranteed to work if OVRCameraRig functionality changes in the future.
-/// In the parent case, the object with OVRDebugHeadController can be thougt of as a 
-/// platform that your camera is attached to. When the platform moves or rotates, the 
+/// In the parent case, the object with OVRDebugHeadController can be thougt of as a
+/// platform that your camera is attached to. When the platform moves or rotates, the
 /// camera moves or rotates, but the camera can still move independently while "on" the
 /// platform.
 /// In general, this behavior should be disabled when not debugging.
 /// </summary>
-public class OVRDebugHeadController : MonoBehaviour 
+public class OVRDebugHeadController : MonoBehaviour
 {
 	[SerializeField]
 	public bool AllowPitchLook = false;
@@ -54,14 +49,14 @@ public class OVRDebugHeadController : MonoBehaviour
 	public float ForwardSpeed = 2.0f;
 	[SerializeField]
 	public float StrafeSpeed = 2.0f;
-	
+
 	protected OVRCameraRig CameraRig = null;
 
 	void Awake()
 	{
 		// locate the camera rig so we can use it to get the current camera transform each frame
 		OVRCameraRig[] CameraRigs = gameObject.GetComponentsInChildren<OVRCameraRig>();
-		
+
 		if( CameraRigs.Length == 0 )
 			Debug.LogWarning("OVRCamParent: No OVRCameraRig attached.");
 		else if (CameraRigs.Length > 1)
@@ -69,13 +64,13 @@ public class OVRDebugHeadController : MonoBehaviour
 		else
 			CameraRig = CameraRigs[0];
 	}
-	
+
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -83,17 +78,13 @@ public class OVRDebugHeadController : MonoBehaviour
 		{
 			float gamePad_FwdAxis = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).y;
 			float gamePad_StrafeAxis = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x;
-			
+
 			Vector3 fwdMove = ( CameraRig.centerEyeAnchor.rotation * Vector3.forward ) * gamePad_FwdAxis * Time.deltaTime * ForwardSpeed;
 			Vector3 strafeMove = ( CameraRig.centerEyeAnchor.rotation * Vector3.right ) * gamePad_StrafeAxis * Time.deltaTime * StrafeSpeed;
 			transform.position += fwdMove + strafeMove;
 		}
 
-#if UNITY_2017_2_OR_NEWER
 		if ( !UnityEngine.XR.XRDevice.isPresent && ( AllowYawLook || AllowPitchLook ) )
-#else
-		if ( !UnityEngine.VR.VRDevice.isPresent && ( AllowYawLook || AllowPitchLook ) )
-#endif
 		{
 			Quaternion r = transform.rotation;
 			if ( AllowYawLook )
@@ -117,7 +108,7 @@ public class OVRDebugHeadController : MonoBehaviour
 					r = r * pitchRot;
 				}
 			}
-			
+
 			transform.rotation = r;
 		}
 	}

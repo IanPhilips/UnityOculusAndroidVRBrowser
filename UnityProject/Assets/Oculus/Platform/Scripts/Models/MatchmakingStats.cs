@@ -13,6 +13,8 @@ namespace Oculus.Platform.Models
     public readonly uint DrawCount;
     public readonly uint LossCount;
     public readonly uint SkillLevel;
+    public readonly double SkillMean;
+    public readonly double SkillStandardDeviation;
     public readonly uint WinCount;
 
 
@@ -21,6 +23,8 @@ namespace Oculus.Platform.Models
       DrawCount = CAPI.ovr_MatchmakingStats_GetDrawCount(o);
       LossCount = CAPI.ovr_MatchmakingStats_GetLossCount(o);
       SkillLevel = CAPI.ovr_MatchmakingStats_GetSkillLevel(o);
+      SkillMean = CAPI.ovr_MatchmakingStats_GetSkillMean(o);
+      SkillStandardDeviation = CAPI.ovr_MatchmakingStats_GetSkillStandardDeviation(o);
       WinCount = CAPI.ovr_MatchmakingStats_GetWinCount(o);
     }
   }

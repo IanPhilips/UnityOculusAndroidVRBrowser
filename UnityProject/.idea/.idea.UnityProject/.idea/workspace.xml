@@ -1338,7 +1338,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../Unity/AvaUnity/Assets/_Ava/Scripts/Browser/BrowserView.cs">
+        <entry file="file://$PROJECT_DIR$/../../AvaUnity/Assets/_Ava/Scripts/Browser/BrowserView.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="832">
               <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="78" selection-end-column="9" />
@@ -1388,7 +1388,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVROverlay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGazePointer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Unity/AvaUnity/Assets/_Ava/Scripts/UrlManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../AvaUnity/Assets/_Ava/Scripts/UrlManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRInputModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRGrabbable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/018C54BB-D13F-49B4-84ED-E27A6CD4A0BE/94/f7970bd9/Texture2D.cs" root0="SKIP_HIGHLIGHTING" />
@@ -1401,7 +1401,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/92279700-D76C-41B7-88E3-5515AEB29BC9/e8/2ed5caa1/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9E212F4D-AC63-4C83-BB98-A320D2C5EC4D/1c/2ef768b6/XmlDocument.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9E212F4D-AC63-4C83-BB98-A320D2C5EC4D/09/158145ca/XmlNode.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Unity/AvaUnity/Assets/_Ava/Scripts/Browser/BrowserView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../AvaUnity/Assets/_Ava/Scripts/Browser/BrowserView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/Util/OVRTrackedRemote.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -1485,14 +1485,12 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="800">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="800" />
-      <option name="userSelectedPid" value="false" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
     <list>
@@ -1974,7 +1972,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Unity/AvaUnity/Assets/_Ava/Scripts/UrlManager.cs">
+    <entry file="file://$PROJECT_DIR$/../../AvaUnity/Assets/_Ava/Scripts/UrlManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="33" selection-start-line="29" selection-start-column="2" selection-end-line="33" />
@@ -2041,7 +2039,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Unity/AvaUnity/Assets/_Ava/Scripts/Browser/BrowserView.cs">
+    <entry file="file://$PROJECT_DIR$/../../AvaUnity/Assets/_Ava/Scripts/Browser/BrowserView.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
           <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="78" selection-end-column="9" />

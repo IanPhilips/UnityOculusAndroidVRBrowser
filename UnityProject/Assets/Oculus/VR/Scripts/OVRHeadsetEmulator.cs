@@ -1,3 +1,19 @@
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
+the Utilities SDK except in compliance with the License, which is provided at the time of installation
+or download, or which otherwise accompanies this software in either electronic or hard copy form.
+
+You may obtain a copy of the License at
+https://developer.oculus.com/licenses/oculusmastersdk-1.0/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,17 +48,27 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 	private Vector3 recordedHeadPoseRelativeOffsetRotation;
 
 	private bool hasSentEvent = false;
+	private bool emulatorHasInitialized = false;
 
 	// Use this for initialization
 	void Start () {
-		Cursor.lockState = CursorLockMode.None;
-		manager = OVRManager.instance;
-		recordedHeadPoseRelativeOffsetTranslation = manager.headPoseRelativeOffsetTranslation;
-		recordedHeadPoseRelativeOffsetRotation = manager.headPoseRelativeOffsetRotation;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (!emulatorHasInitialized)
+		{
+			if (OVRManager.OVRManagerinitialized)
+			{
+				Cursor.lockState = CursorLockMode.None;
+				manager = OVRManager.instance;
+				recordedHeadPoseRelativeOffsetTranslation = manager.headPoseRelativeOffsetTranslation;
+				recordedHeadPoseRelativeOffsetRotation = manager.headPoseRelativeOffsetRotation;
+				emulatorHasInitialized = true;
+			}
+			else
+				return;
+		}
 		bool emulationActivated = IsEmulationActivated();
 		if (emulationActivated)
 		{

@@ -31,10 +31,15 @@ namespace Oculus.Platform
       }
       var accessToken = StandalonePlatformSettings.OculusPlatformTestUserAccessToken;
 
+      return AsyncInitialize(UInt64.Parse(appID), accessToken);
+    }
+
+    public Request<Models.PlatformInitialize> AsyncInitialize(ulong appID, string accessToken)
+    {
       CAPI.ovr_UnityResetTestPlatform();
       CAPI.ovr_UnityInitGlobals(IntPtr.Zero);
 
-      return new Request<Models.PlatformInitialize>(CAPI.ovr_PlatformInitializeWithAccessToken(UInt64.Parse(appID), accessToken));
+      return new Request<Models.PlatformInitialize>(CAPI.ovr_PlatformInitializeWithAccessToken(appID, accessToken));
     }
   }
 }

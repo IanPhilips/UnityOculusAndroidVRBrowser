@@ -19,6 +19,10 @@ limitations under the License.
 
 ************************************************************************************/
 
+#if USING_XR_MANAGEMENT && USING_XR_SDK_OCULUS
+#define USING_XR_SDK
+#endif
+
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
@@ -29,7 +33,7 @@ using System.IO;
 class OVREngineConfigurationUpdater
 {
 	private const string prefName = "OVREngineConfigurationUpdater_Enabled";
-	private const string menuItemName = "Tools/Oculus/Use Required Project Settings";
+	private const string menuItemName = "Oculus/Tools/Use Required Project Settings";
 	private const string androidAssetsPath = "Assets/Plugins/Android/assets";
 	private const string androidManifestPath = "Assets/Plugins/Android/AndroidManifest.xml";
 	static bool setPrefsForUtilities;
@@ -47,7 +51,6 @@ class OVREngineConfigurationUpdater
 		Debug.Log("Using required project settings: " + setPrefsForUtilities);
 	}
 	
-#if UNITY_2017_3_OR_NEWER
 	private static readonly string dashSupportEnableConfirmedKey = "Oculus_Utilities_OVREngineConfiguration_DashSupportEnableConfirmed_" + Application.unityVersion + OVRManager.utilitiesVersion;
 	private static bool dashSupportEnableConfirmed
 	{
@@ -61,41 +64,12 @@ class OVREngineConfigurationUpdater
 			PlayerPrefs.SetInt(dashSupportEnableConfirmedKey, value ? 1 : 0);
 		}
 	}
-	
-	private static void DashSupportWarningPrompt()
-	{
-		/// <summary>
-		/// Since Unity 2017.3.0f1 and 2017.3.0f2 have "Dash Support" enabled by default
-		/// We need prompt developers in case they never test their app with dash
-		/// </summary>
-		/// 
-		if (Application.unityVersion == "2017.3.0f1" || Application.unityVersion == "2017.3.0f2")
-		{
-			if (!dashSupportEnableConfirmed)
-			{
-				bool dialogResult = EditorUtility.DisplayDialog("Oculus Dash support", "Your current Unity engine " + Application.unityVersion +
-					" has Oculus Dash Supporting enabled by default. please make sure to test your app with Dash enabled runtime 1.21 or newer," +
-					" Otherwise, you can also turn it off under XR Settings -> Oculus", "Understand", "Learn more ");
 
-				if (!dialogResult)
-				{
-					Application.OpenURL("https://developer.oculus.com/documentation/unity/latest/concepts/unity-lifecycle/");
-				}
-
-				dashSupportEnableConfirmed = true;
-			}
-		}
-	}
-#endif
 
     static OVREngineConfigurationUpdater()
 	{
 		EditorApplication.delayCall += OnDelayCall;
 		EditorApplication.update += OnUpdate;
-
-#if UNITY_2017_3_OR_NEWER
-		DashSupportWarningPrompt();
-#endif
 	}
 
 	static void OnDelayCall()
@@ -106,7 +80,7 @@ class OVREngineConfigurationUpdater
 		if (!setPrefsForUtilities)
 			return;
 
-		OVRPlugin.SendEvent("build_target", EditorUserBuildSettings.activeBuildTarget.ToString());
+		OVRPlugin.AddCustomMetadata("build_target", EditorUserBuildSettings.activeBuildTarget.ToString());
 		EnforceAndroidSettings();
 		EnforceInputManagerBindings();
 #if UNITY_ANDROID
@@ -120,7 +94,9 @@ class OVREngineConfigurationUpdater
 			return;
 		
 		EnforceBundleId();
+#if !USING_XR_SDK
 		EnforceVRSupport();
+#endif
 		EnforceInstallLocation();
 	}
 
@@ -136,6 +112,7 @@ class OVREngineConfigurationUpdater
 			PlayerSettings.defaultInterfaceOrientation = UIOrientation.LandscapeLeft;
 		}
 
+#if !USING_XR_SDK
 		if (!PlayerSettings.virtualRealitySupported)
 		{
 			// NOTE: This value should not affect the main window surface
@@ -152,6 +129,7 @@ class OVREngineConfigurationUpdater
 				QualitySettings.antiAliasing = 1;
 			}
 		}
+#endif
 
 		if (QualitySettings.vSyncCount != 0)
 		{
@@ -175,11 +153,7 @@ class OVREngineConfigurationUpdater
 				PlayerSettings.virtualRealitySupported = true;
 
 				bool oculusFound = false;
-#if UNITY_2017_2_OR_NEWER
 				foreach (var device in UnityEngine.XR.XRSettings.supportedDevices)
-#else
-				foreach (var device in UnityEngine.VR.VRSettings.supportedDevices)
-#endif
 					oculusFound |= (device == "Oculus");
 
 				if (!oculusFound)

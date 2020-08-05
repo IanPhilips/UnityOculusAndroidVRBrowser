@@ -39,7 +39,7 @@ namespace Oculus.Platform
     [SerializeField]
     private bool ovrUseStandalonePlatform = true;
 #endif
-
+    
     private static PlatformSettings instance;
     public static PlatformSettings Instance
     {

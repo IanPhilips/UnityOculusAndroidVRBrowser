@@ -1,3 +1,24 @@
+/************************************************************************************
+
+Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Licensed under the Oculus SDK License Version 3.4.1 (the "License");
+you may not use the Oculus SDK except in compliance with the License,
+which is provided at the time of installation or download, or which
+otherwise accompanies this software in either electronic or hard copy form.
+
+You may obtain a copy of the License at
+
+https://developer.oculus.com/licenses/sdk-3.4.1
+
+Unless required by applicable law or agreed to in writing, the Oculus SDK
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+************************************************************************************/
+
 using UnityEngine;
 using UnityEditor;
 using System.IO;
@@ -6,9 +27,9 @@ using System.IO;
 /// From the selected transform, takes a cubemap screenshot that can be submitted with the application
 /// as a screenshot (or additionally used for reflection shaders).
 /// </summary>
-class OVRScreenshotWizard : ScriptableWizard 
+class OVRScreenshotWizard : ScriptableWizard
 {
-	public enum TexFormat 
+	public enum TexFormat
 	{
 		JPEG,	// 512kb at 1k x 1k resolution vs
 		PNG,	// 5.3mb
@@ -45,16 +66,16 @@ class OVRScreenshotWizard : ScriptableWizard
 		string currentPath;
 		string[] pathFolders;
 
-		pathFolders = newFolderPath.Split (new char[]{ '/' }, maxFoldersCount); 
+		pathFolders = newFolderPath.Split (new char[]{ '/' }, maxFoldersCount);
 
-		if (!string.Equals ("Assets", pathFolders [0], System.StringComparison.OrdinalIgnoreCase)) 
+		if (!string.Equals ("Assets", pathFolders [0], System.StringComparison.OrdinalIgnoreCase))
 		{
 			Debug.LogError( "Folder path has to be started with \" Assets \" " );
 			return false;
 		}
 
 		currentPath = "Assets";
-		for (int i = 1; i < pathFolders.Length; i++) 
+		for (int i = 1; i < pathFolders.Length; i++)
 		{
 			if (!string.IsNullOrEmpty(pathFolders[i]))
 			{
@@ -124,7 +145,7 @@ class OVRScreenshotWizard : ScriptableWizard
 		string pathName = string.Format("{0}vr_screenshot_{1}.cubemap", cubeMapFolder, (++idx).ToString("d2"));
 		Cubemap cubemap = new Cubemap(size, TextureFormat.RGB24, false);
 
-		// render into cubemap        
+		// render into cubemap
 		if ((camera != null) && (cubemap != null))
 		{
 			// set up cubemap defaults
@@ -169,7 +190,7 @@ class OVRScreenshotWizard : ScriptableWizard
 		string format = textureFormat.ToString();
 		string fullPath = EditorUtility.SaveFilePanel( string.Format( "Save Cubemap Screenshot as {0}", format ), "", pathName, format.ToLower() );
 		if ( !string.IsNullOrEmpty( fullPath ) )
-        {
+		{
 			Debug.Log( "Saving: " + fullPath );
 			OVRCubemapCapture.SaveCubemapCapture(cubemap, fullPath);
 		}
@@ -178,18 +199,18 @@ class OVRScreenshotWizard : ScriptableWizard
 	/// <summary>
 	/// Unity Editor menu option to take a screenshot
 	/// </summary>
-	[MenuItem("Tools/Oculus/OVR Screenshot Wizard",false,100000)]	
-	static void TakeOVRScreenshot() 
+	[MenuItem("Oculus/Tools/OVR Screenshot Wizard", false, 100000)]
+	static void TakeOVRScreenshot()
 	{
-        OVRScreenshotWizard wizard = ScriptableWizard.DisplayWizard<OVRScreenshotWizard>("OVR Screenshot Wizard", "Render Cubemap");
-        if (wizard != null)
-        {
-            if (Selection.activeGameObject != null)
-                wizard.renderFrom = Selection.activeGameObject;
-            else
-                wizard.renderFrom = Camera.main.gameObject;
+		OVRScreenshotWizard wizard = ScriptableWizard.DisplayWizard<OVRScreenshotWizard>("OVR Screenshot Wizard", "Render Cubemap");
+		if (wizard != null)
+		{
+			if (Selection.activeGameObject != null)
+			wizard.renderFrom = Selection.activeGameObject;
+			else
+			wizard.renderFrom = Camera.main.gameObject;
 
-            wizard.isValid = (wizard.renderFrom != null);
-        }
-    }
+			wizard.isValid = (wizard.renderFrom != null);
+		}
+	}
 }

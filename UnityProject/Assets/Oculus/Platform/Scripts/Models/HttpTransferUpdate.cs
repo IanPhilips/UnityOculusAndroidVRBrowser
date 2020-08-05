@@ -1,4 +1,4 @@
-﻿namespace Oculus.Platform.Models
+namespace Oculus.Platform.Models
 {
   using System;
   using System.Collections;

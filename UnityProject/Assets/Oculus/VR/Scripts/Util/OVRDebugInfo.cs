@@ -1,22 +1,17 @@
 /************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
-
-Licensed under the Oculus SDK License Version 3.4.1 (the "License");
-you may not use the Oculus SDK except in compliance with the License,
-which is provided at the time of installation or download, or which
-otherwise accompanies this software in either electronic or hard copy form.
+Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
+the Utilities SDK except in compliance with the License, which is provided at the time of installation
+or download, or which otherwise accompanies this software in either electronic or hard copy form.
 
 You may obtain a copy of the License at
+https://developer.oculus.com/licenses/oculusmastersdk-1.0/
 
-https://developer.oculus.com/licenses/sdk-3.4.1
-
-Unless required by applicable law or agreed to in writing, the Oculus SDK
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
 ************************************************************************************/
 
 using UnityEngine;
@@ -29,18 +24,18 @@ using UnityEngine.UI;
 /// </summary>
 public class OVRDebugInfo : MonoBehaviour
 {
-    #region GameObjects for Debug Information UIs   
+    #region GameObjects for Debug Information UIs
     GameObject debugUIManager;
     GameObject debugUIObject;
-    GameObject riftPresent;    
-    GameObject fps;    
+    GameObject riftPresent;
+    GameObject fps;
     GameObject ipd;
     GameObject fov;
     GameObject height;
 	GameObject depth;
 	GameObject resolutionEyeTexture;
     GameObject latencies;
-    GameObject texts;    
+    GameObject texts;
     #endregion
 
     #region Debug strings
@@ -129,7 +124,7 @@ public class OVRDebugInfo : MonoBehaviour
         {
             debugUIManager.SetActive(true);
             UpdateVariable();
-            UpdateStrings();           
+            UpdateStrings();
         }
         else
         {
@@ -185,7 +180,7 @@ public class OVRDebugInfo : MonoBehaviour
         {
             height = VariableObjectManager(height, "Height", posY -= offsetY, strHeight, fontSize);
         }
-		
+
 		// Print out for Depth
 		if (!string.IsNullOrEmpty(strDepth))
 		{
@@ -214,14 +209,14 @@ public class OVRDebugInfo : MonoBehaviour
     /// Update VR Variables
     /// </summary>
     void UpdateVariable()
-    {        
+    {
         UpdateIPD();
         UpdateEyeHeightOffset();
 		UpdateEyeDepthOffset();
 		UpdateFOV();
         UpdateResolutionEyeTexture();
         UpdateLatencyValues();
-        UpdateFPS();       
+        UpdateFPS();
     }
 
     /// <summary>
@@ -230,8 +225,8 @@ public class OVRDebugInfo : MonoBehaviour
     void UpdateStrings()
     {
         if (debugUIObject == null)
-            return;       
-                
+            return;
+
         if (!string.IsNullOrEmpty(strFPS))
             fps.GetComponentInChildren<Text>().text = strFPS;
         if (!string.IsNullOrEmpty(strIPD))
@@ -250,7 +245,7 @@ public class OVRDebugInfo : MonoBehaviour
 		if (!string.IsNullOrEmpty(strDepth))
 			depth.GetComponentInChildren<Text>().text = strDepth;
 	}
-	
+
 	/// <summary>
     /// It's for rift present GUI
     /// </summary>
@@ -348,7 +343,7 @@ public class OVRDebugInfo : MonoBehaviour
         float eyeHeight = OVRManager.profile.eyeHeight;
         strHeight = System.String.Format("Eye Height (m): {0:F3}", eyeHeight);
 	}
-	
+
 	/// <summary>
 	/// Updates the eye depth offset.
 	/// </summary>
@@ -357,18 +352,14 @@ public class OVRDebugInfo : MonoBehaviour
 		float eyeDepth = OVRManager.profile.eyeDepth;
 		strDepth = System.String.Format("Eye Depth (m): {0:F3}", eyeDepth);
 	}
-	
+
 	/// <summary>
 	/// Updates the FOV.
     /// </summary>
     void UpdateFOV()
     {
-#if UNITY_2017_2_OR_NEWER
         OVRDisplay.EyeRenderDesc eyeDesc = OVRManager.display.GetEyeRenderDesc(UnityEngine.XR.XRNode.LeftEye);
-#else
-		OVRDisplay.EyeRenderDesc eyeDesc = OVRManager.display.GetEyeRenderDesc(UnityEngine.VR.VRNode.LeftEye);
-#endif
-        strFOV = System.String.Format("FOV (deg): {0:F3}", eyeDesc.fov.y);   
+        strFOV = System.String.Format("FOV (deg): {0:F3}", eyeDesc.fov.y);
     }
 
     /// <summary>
@@ -376,17 +367,10 @@ public class OVRDebugInfo : MonoBehaviour
     /// </summary>
     void UpdateResolutionEyeTexture()
     {
-#if UNITY_2017_2_OR_NEWER
 		OVRDisplay.EyeRenderDesc leftEyeDesc = OVRManager.display.GetEyeRenderDesc(UnityEngine.XR.XRNode.LeftEye);
 		OVRDisplay.EyeRenderDesc rightEyeDesc = OVRManager.display.GetEyeRenderDesc(UnityEngine.XR.XRNode.RightEye);
 
 		float scale = UnityEngine.XR.XRSettings.renderViewportScale;
-#else
-		OVRDisplay.EyeRenderDesc leftEyeDesc = OVRManager.display.GetEyeRenderDesc(UnityEngine.VR.VRNode.LeftEye);
-		OVRDisplay.EyeRenderDesc rightEyeDesc = OVRManager.display.GetEyeRenderDesc(UnityEngine.VR.VRNode.RightEye);
-
-		float scale = UnityEngine.VR.VRSettings.renderViewportScale;
-#endif
         float w = (int)(scale * (float)(leftEyeDesc.resolution.x + rightEyeDesc.resolution.x));
         float h = (int)(scale * (float)Mathf.Max(leftEyeDesc.resolution.y, rightEyeDesc.resolution.y));
 
@@ -408,7 +392,7 @@ public class OVRDebugInfo : MonoBehaviour
                     latency.timeWarp,
                     latency.postPresent,
                     latency.renderError,
-                    latency.timeWarpError);      
+                    latency.timeWarpError);
 #endif
     }
 

@@ -33,6 +33,10 @@ namespace Oculus.Platform.Models
     public readonly User OwnerOptional;
     [Obsolete("Deprecated in favor of OwnerOptional")]
     public readonly User Owner;
+    // May be null. Check before using.
+    public readonly TeamList TeamsOptional;
+    [Obsolete("Deprecated in favor of TeamsOptional")]
+    public readonly TeamList Teams;
     public readonly RoomType Type;
     // May be null. Check before using.
     public readonly UserList UsersOptional;
@@ -77,6 +81,15 @@ namespace Oculus.Platform.Models
           OwnerOptional = null;
         } else {
           OwnerOptional = Owner;
+        }
+      }
+      {
+        var pointer = CAPI.ovr_Room_GetTeams(o);
+        Teams = new TeamList(pointer);
+        if (pointer == IntPtr.Zero) {
+          TeamsOptional = null;
+        } else {
+          TeamsOptional = Teams;
         }
       }
       Type = CAPI.ovr_Room_GetType(o);

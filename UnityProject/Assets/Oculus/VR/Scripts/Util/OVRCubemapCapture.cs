@@ -1,3 +1,20 @@
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
+the Utilities SDK except in compliance with the License, which is provided at the time of installation
+or download, or which otherwise accompanies this software in either electronic or hard copy form.
+
+You may obtain a copy of the License at
+https://developer.oculus.com/licenses/oculusmastersdk-1.0/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
+
+
 using UnityEngine;
 using System.Collections;
 using System.IO;
@@ -9,10 +26,10 @@ using System.IO;
 /// <description>
 /// How it works:
 /// 1) This script can be attached to a existing game object, you can also use prefab Assets\OVR\Prefabs\OVRCubemapCaptureProbe
-///	There are 2 ways to trigger a capture if you attached this script to a game object.  
+///	There are 2 ways to trigger a capture if you attached this script to a game object.
 ///		* Automatic capturing: if [autoTriggerAfterLaunch] is true, a automatic capturing will be triggered after [autoTriggerDelay] seconds.
 ///		* Keyboard trigger: press key [triggeredByKey], a capturing will be triggered.
-/// 2) If you like to trigger the screen capture in your code logic, just call static function [OVRCubemapCapture.TriggerCubemapCapture] with proper input arguments. 
+/// 2) If you like to trigger the screen capture in your code logic, just call static function [OVRCubemapCapture.TriggerCubemapCapture] with proper input arguments.
 /// </description>
 
 public class OVRCubemapCapture : MonoBehaviour
@@ -65,10 +82,10 @@ public class OVRCubemapCapture : MonoBehaviour
 	/// Generate unity cubemap at specific location and save into JPG/PNG
 	/// </summary>
 	/// <description>
-	/// Default save folder: your app's persistentDataPath 
-	/// Default file name: using current time OVR_hh_mm_ss.png 
+	/// Default save folder: your app's persistentDataPath
+	/// Default file name: using current time OVR_hh_mm_ss.png
 	/// Note1: this will take a few seconds to finish
-	/// Note2: if you only want to specify path not filename, please end [pathName] with "/" 
+	/// Note2: if you only want to specify path not filename, please end [pathName] with "/"
 	/// </description>
 
 	public static void TriggerCubemapCapture(Vector3 capturePos, int cubemapSize = 2048, string pathName = null)
@@ -159,7 +176,7 @@ public class OVRCubemapCapture : MonoBehaviour
 	/// </summary>
 	/// <description>
 	/// Supported format: PNG/JPG
-	/// Default file name: using current time OVR_hh_mm_ss.png 
+	/// Default file name: using current time OVR_hh_mm_ss.png
 	/// </description>
 
 	public static bool SaveCubemapCapture(Cubemap cubemap, string pathName = null)
@@ -171,7 +188,7 @@ public class OVRCubemapCapture : MonoBehaviour
 		int x = 0;
 		int y = 0;
 		bool saveToPNG = true;
-		
+
 		if (string.IsNullOrEmpty(pathName))
 		{
 			dirName = Application.persistentDataPath + "/OVR_ScreenShot360/";
@@ -214,7 +231,7 @@ public class OVRCubemapCapture : MonoBehaviour
             Debug.LogError("Failed to create path " + dirName + " since " + e.ToString());
 			return false;
 		}
-		
+
 
 		// Create the new texture
 		Texture2D tex = new Texture2D(width * 6, height, TextureFormat.RGB24, false);
@@ -265,4 +282,3 @@ public class OVRCubemapCapture : MonoBehaviour
 	}
 
 }
-

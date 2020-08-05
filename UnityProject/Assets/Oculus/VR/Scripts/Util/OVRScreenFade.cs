@@ -1,22 +1,17 @@
 /************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
-
-Licensed under the Oculus SDK License Version 3.4.1 (the "License");
-you may not use the Oculus SDK except in compliance with the License,
-which is provided at the time of installation or download, or which
-otherwise accompanies this software in either electronic or hard copy form.
+Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
+the Utilities SDK except in compliance with the License, which is provided at the time of installation
+or download, or which otherwise accompanies this software in either electronic or hard copy form.
 
 You may obtain a copy of the License at
+https://developer.oculus.com/licenses/oculusmastersdk-1.0/
 
-https://developer.oculus.com/licenses/sdk-3.4.1
-
-Unless required by applicable law or agreed to in writing, the Oculus SDK
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
 ************************************************************************************/
 
 using UnityEngine;
@@ -49,8 +44,17 @@ public class OVRScreenFade : MonoBehaviour
 
     public float currentAlpha { get; private set; }
 
-	void Awake()
+	/// <summary>
+	/// Automatically starts a fade in
+	/// </summary>
+	void Start()
 	{
+		if (gameObject.name.StartsWith("OculusMRC_"))
+		{
+			Destroy(this);
+			return;
+		}
+
 		// create the fade material
 		fadeMaterial = new Material(Shader.Find("Oculus/Unlit Transparent Color"));
 		fadeMesh = gameObject.AddComponent<MeshFilter>();
@@ -103,12 +107,17 @@ public class OVRScreenFade : MonoBehaviour
 		mesh.uv = uv;
 
 		SetFadeLevel(0);
+
+		if (fadeOnStart)
+		{
+			StartCoroutine(Fade(1, 0));
+		}
 	}
 
-    /// <summary>
-    /// Start a fade out
-    /// </summary>
-    public void FadeOut()
+	/// <summary>
+	/// Start a fade out
+	/// </summary>
+	public void FadeOut()
     {
         StartCoroutine(Fade(0,1));
     }
@@ -121,17 +130,6 @@ public class OVRScreenFade : MonoBehaviour
 	{
 		StartCoroutine(Fade(1,0));
 	}
-
-    /// <summary>
-    /// Automatically starts a fade in
-    /// </summary>
-    void Start()
-    {
-        if (fadeOnStart)
-        {
-            StartCoroutine(Fade(1,0));
-        }
-    }
 
 	void OnEnable()
 	{
@@ -148,10 +146,10 @@ public class OVRScreenFade : MonoBehaviour
 	{
 		if (fadeRenderer != null)
 			Destroy(fadeRenderer);
-		
+
 		if (fadeMaterial != null)
 			Destroy(fadeMaterial);
-		
+
 		if (fadeMesh != null)
 			Destroy(fadeMesh);
 	}
@@ -191,7 +189,7 @@ public class OVRScreenFade : MonoBehaviour
 
     /// <summary>
     /// Update material alpha. UI fade and the current fade due to fade in/out animations (or explicit control)
-    /// both affect the fade. (The max is taken) 
+    /// both affect the fade. (The max is taken)
     /// </summary>
     private void SetMaterialAlpha()
     {
