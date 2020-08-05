@@ -1678,7 +1678,7 @@ GameObject:
   - component: {fileID: 52953272}
   - component: {fileID: 52953300}
   m_Layer: 0
-  m_Name: BrowserView
+  m_Name: OverlayBrowserView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
