@@ -5,6 +5,7 @@ Temp/
 AndroidViewToGLRendering-master/UnityLib/
 AndroidViewToGLRendering-master/Unity_Lib/
 AndroidViewToGLRendering-master/unity-lib/
+local.properties
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #

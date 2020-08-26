@@ -236,7 +236,7 @@ public class OVRSurfaceGeckoView extends GeckoView {
     }
 
 
-
+    SurfaceView mSurfaceView;
     private void SetupApplicationSurfaceView(){
         setFocusable(true);
         setFocusableInTouchMode(true);

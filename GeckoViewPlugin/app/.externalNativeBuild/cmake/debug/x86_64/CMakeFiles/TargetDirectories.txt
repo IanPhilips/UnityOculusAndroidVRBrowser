@@ -1,2 +1,2 @@
-/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/edit_cache.dir
-/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/rebuild_cache.dir
+/Users/ianphilips/Documents/unity/UnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/edit_cache.dir
+/Users/ianphilips/Documents/unity/UnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/rebuild_cache.dir

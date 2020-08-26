@@ -77,8 +77,8 @@ android {
 }
 
 ext {
-    geckoviewChannel =  ""//"-beta"
-    geckoviewVersion = "70.0.20191022130254"//"68.0.20190711090008"//"68.0.20190527103257"
+    geckoviewChannel =  ""
+    geckoviewVersion = "80.0.20200818235255"//"70.0.20191022130254"
 }
 
 dependencies {

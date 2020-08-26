@@ -23,7 +23,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Users/iansp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake -H/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app -B/Users/iansp/Documents/BlueAlloy/Android/PrivateUnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/debug/arm64-v8a
+  command = /Users/ianphilips/Library/Android/sdk/cmake/3.6.4111459/bin/cmake -H/Users/ianphilips/Documents/unity/UnityAndroidVRARBrowser/GeckoViewPlugin/app -B/Users/ianphilips/Documents/unity/UnityAndroidVRARBrowser/GeckoViewPlugin/app/.externalNativeBuild/cmake/debug/arm64-v8a
   description = Re-running CMake...
   generator = 1
 
@@ -32,7 +32,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = /Users/iansp/Library/Android/sdk/cmake/3.6.4111459/bin/ninja -t clean
+  command = /Users/ianphilips/Library/Android/sdk/cmake/3.6.4111459/bin/ninja -t clean
   description = Cleaning all built files...
 
 
@@ -40,6 +40,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = /Users/iansp/Library/Android/sdk/cmake/3.6.4111459/bin/ninja -t targets
+  command = /Users/ianphilips/Library/Android/sdk/cmake/3.6.4111459/bin/ninja -t targets
   description = All primary targets available:
 

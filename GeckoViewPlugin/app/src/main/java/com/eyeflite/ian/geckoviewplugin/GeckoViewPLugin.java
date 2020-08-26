@@ -493,7 +493,7 @@ public class GeckoViewPLugin extends Fragment implements GeckoSession.Navigation
     private GeckoSession InitNewSession(GeckoRuntime runtime){
 
         GeckoSessionSettings.Builder builder = new GeckoSessionSettings.Builder();
-        builder.useMultiprocess(false);
+//        builder.useMultiprocess(false);
         builder.suspendMediaWhenInactive(true);
         builder.userAgentMode(DefaultUserAgent);
         builder.viewportMode(GeckoSessionSettings.VIEWPORT_MODE_MOBILE);
@@ -618,27 +618,27 @@ public class GeckoViewPLugin extends Fragment implements GeckoSession.Navigation
 
     }
 
-    @Override
-    public void updateSelection(@NonNull GeckoSession session, int selStart, int selEnd, int compositionStart, int compositionEnd) {
-//        Log.i(LOG_TAG, "UPDATE SELECTION INPUT" + selStart);
+//    @Override
+//    public void updateSelection(@NonNull GeckoSession session, int selStart, int selEnd, int compositionStart, int compositionEnd) {
+////        Log.i(LOG_TAG, "UPDATE SELECTION INPUT" + selStart);
+//
+//    }
+//
+//    @Override
+//    public void updateExtractedText(@NonNull GeckoSession session, @NonNull ExtractedTextRequest request, @NonNull ExtractedText text) {
+////        Log.i(LOG_TAG, "UPDATE EXTRACTED INPUT " + text.text);
+//
+//    }
+//
+//    @Override
+//    public void updateCursorAnchorInfo(@NonNull GeckoSession session, @NonNull CursorAnchorInfo info) {
+//
+//    }
 
-    }
-
-    @Override
-    public void updateExtractedText(@NonNull GeckoSession session, @NonNull ExtractedTextRequest request, @NonNull ExtractedText text) {
-//        Log.i(LOG_TAG, "UPDATE EXTRACTED INPUT " + text.text);
-
-    }
-
-    @Override
-    public void updateCursorAnchorInfo(@NonNull GeckoSession session, @NonNull CursorAnchorInfo info) {
-
-    }
-
-    @Override
-    public void notifyAutoFill(@NonNull GeckoSession session, int notification, int virtualId) {
-
-    }
+//    @Override
+//    public void notifyAutoFill(@NonNull GeckoSession session, int notification, int virtualId) {
+//
+//    }
 
 
     /**
