@@ -33,7 +33,7 @@ use the `AndroidUnity` tag in logcat to see the plugin's log output, i.e.:
 ### Updating GeckoView  
 1. Download the latest `.aar` from https://maven.mozilla.org/maven2/?prefix=maven2/org/mozilla/geckoview/geckoview-armeabi-v7a/ and place it in Unity's Plugin/Android/  
 2. Update the .gradle file with the new version number: `geckoviewVersion = "65.0.20190201231734"`  
-3. If pushing to the oculus store note: To remove the speech api reference: Change `.aar` to zip and unzip. Then change the classes.jar to classes.zip and unzip that. Remove the `InputOptionsUtil.class` file from the classes directory and re-jar and re-aar both via `jar cvf newLib.{jar, aar} -C libDirectory/ .`
+3. If pushing to the oculus store and your binary gets rejected for using a disallowed api (I don't remember the exact wording they used to reject the abi): To remove the speech api reference: Change `.aar` to zip and unzip. Then change the classes.jar to classes.zip and unzip that. Remove the `InputOptionsUtil.class` file from the classes directory and re-jar and re-aar both via `jar cvf newLib.{jar, aar} -C libDirectory/ .`
 
 ### How to edit and compile your own Java plugin
 Open the GeckoViewPlugin in android studio.
