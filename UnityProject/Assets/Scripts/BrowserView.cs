@@ -392,15 +392,15 @@ public class BrowserView : MonoBehaviour
                 yield return null;
             }
             Debug.Log("Browser Start!");
-            string jniClass = classString.Replace(".", "/"); 
-            var pluginClass = AndroidJNI.FindClass(jniClass);
-            var surfaceMethodId =
-                AndroidJNI.GetStaticMethodID(pluginClass, "PassStaticSurface", "(Landroid/view/Surface;)V");
+            var pluginClass = _ajc.GetRawClass();
+            var pluginObject = _ajc.GetRawObject();
+            var surfaceMethodId = AndroidJNI.GetMethodID(pluginClass, "PassSurface", "(Landroid/view/Surface;)V");
 
-            AndroidJNI.CallStaticVoidMethod(pluginClass, surfaceMethodId,
-                new jvalue[] {new jvalue {l = _overlay.externalSurfaceObject}});
+            AndroidJNI.CallVoidMethod(pluginObject, surfaceMethodId,
+                new jvalue[] { new jvalue { l = _overlay.externalSurfaceObject } });
 
             AndroidJNI.DeleteLocalRef(pluginClass);
+            AndroidJNI.DeleteLocalRef(pluginObject);
             OnGeckoViewReady();
         }
 
