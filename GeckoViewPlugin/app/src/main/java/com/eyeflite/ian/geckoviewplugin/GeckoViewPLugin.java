@@ -49,7 +49,7 @@ public class GeckoViewPLugin extends Fragment implements GeckoSession.Navigation
     private String LOG_TAG = "AndroidUnity";
     private OVRSurfaceGeckoView mWebView;
     private KeyCharacterMap CharMap;
-    private GeckoRuntime mRuntime;
+    private static GeckoRuntime mRuntime;
 
     private UnityInterface UnityCallback;
     private static AudioManager mAudioManager;
@@ -413,6 +413,13 @@ public class GeckoViewPLugin extends Fragment implements GeckoSession.Navigation
   }
 
     // Unity method
+    public void PassSurface(final Surface surface){
+        mWebView.mWidth=Width;
+        mWebView.mHeight=Height;
+        mWebView.mSurface = surface;
+    }
+
+    // Unity method
     public void SetUnityBitmapCallback(UnityInterface callback){
         Log.d(LOG_TAG,"My unity callback is set");
         UnityCallback = callback;
@@ -483,6 +490,7 @@ public class GeckoViewPLugin extends Fragment implements GeckoSession.Navigation
     }
 
     private void InitNewRuntime(View view){
+        if(mRuntime != null) return;
         GeckoRuntimeSettings.Builder runtimeSettings = new GeckoRuntimeSettings.Builder();
         runtimeSettings.inputAutoZoomEnabled(false);
         mRuntime = GeckoRuntime.create(view.getContext(),runtimeSettings.build());
