@@ -16,7 +16,9 @@ Open the `Overlay` or `Underlay` `BrowserDemo` and use your head to aim and the 
 
 If you want to input text, connect your Oculus via usb and use the command: `adb shell input text 'yourtexthere'`
 
-The demo supports two 'tabs' at the moment, also known as sessions in GeckoView lingo. You can switch between youtube and browser sessions which are essentially tabs in a browser. The demo and plugin are kind of hard-wired for these two special tabs atm though the wires are not very hard.
+The demo supports two 'tabs' at the moment, also known as sessions in GeckoView lingo. You can switch between youtube and browser sessions which are essentially tabs in a browser. The demo and plugin are kind of hard-wired for these two special tabs atm though the wires are not very hard.  
+
+Thanks to sienori you can have multiple windows now, just duplicate the webview panel and fix the UI connections (on the BrowserView component and the UI components themselves).
 
 **Displaying Over the Browser:**  
 Use the `UnderlayBrowserDemo` scene to render over the browser view.
