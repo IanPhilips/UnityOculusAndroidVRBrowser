@@ -48,7 +48,8 @@ Generalize input module for demo project
 Add trackpad scrolling  
 
 ## Donations
-ETH: 0xf5C0BCf0116b0C995c421986DE105e29945763C9
+ETH/USDC/WBTC: 0xf5C0BCf0116b0C995c421986DE105e29945763C9  
+USD: https://www.paypal.com/donate?business=ZV74RCK63Y86C&currency_code=USD
 
 
 
