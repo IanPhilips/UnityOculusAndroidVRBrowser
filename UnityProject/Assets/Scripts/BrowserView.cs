@@ -58,6 +58,20 @@ public class BrowserView : MonoBehaviour
             {BrowserHistoryType.Youtube, "https://www." + YoutubeSubstring},
         };
 
+    private TouchScreenKeyboard _keyboard;
+    private string _prevInputText = "";
+    private bool _prevKeyboardVisibility = false;
+
+    void Update()
+    {
+        // Input text
+        if (_keyboard != null && _keyboard.text != _prevInputText)
+        {
+            for (int i = 0; i < _prevInputText.Length; i++) Backspace();
+            AppendText(_keyboard.text);
+            _prevInputText = _keyboard.text;
+        }
+    }
     
     // CALL THIS TO ADD KEYS TO BROWSER    
     public void AppendText(string appendText)
@@ -71,10 +85,12 @@ public class BrowserView : MonoBehaviour
         AddTap(GazePointer.transform.position);       
     }
 
-    //TODO: show your keyboard here
+    // Show your keyboard here
     public void ChangeKeyboardVisiblity(bool show)
     {
-        
+        if (show && !_prevKeyboardVisibility)
+            _keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
+        _prevKeyboardVisibility = show;
     }
 
     
