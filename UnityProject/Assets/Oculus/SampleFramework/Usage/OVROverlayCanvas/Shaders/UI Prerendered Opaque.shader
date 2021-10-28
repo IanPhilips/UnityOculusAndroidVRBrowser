@@ -7,7 +7,7 @@
 	}
 	SubShader
 	{
-		Tags {"Queue"="Geometry-100" "IgnoreProjector"="True" "RenderType"="Opaque"}
+		Tags {"Queue"="Geometry" "IgnoreProjector"="True" "RenderType"="Opaque"}
 
 		Blend One Zero, Zero Zero
 

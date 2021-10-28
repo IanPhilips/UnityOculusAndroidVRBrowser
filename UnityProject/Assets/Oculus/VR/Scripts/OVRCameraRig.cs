@@ -1,12 +1,8 @@
 /************************************************************************************
 Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
-the Utilities SDK except in compliance with the License, which is provided at the time of installation
-or download, or which otherwise accompanies this software in either electronic or hard copy form.
-
-You may obtain a copy of the License at
-https://developer.oculus.com/licenses/oculusmastersdk-1.0/
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
 
 Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
@@ -85,7 +81,8 @@ public class OVRCameraRig : MonoBehaviour
 	public bool usePerEyeCameras = false;
 	/// <summary>
 	/// If true, all tracked anchors are updated in FixedUpdate instead of Update to favor physics fidelity.
-	/// \note: If the fixed update rate doesn't match the rendering framerate (OVRManager.display.appFramerate), the anchors will visibly judder.
+	/// \note: This will cause visible judder unless you tick exactly once per frame using a custom physics
+	/// update, because you'll be sampling the position at different times into each frame.
 	/// </summary>
 	public bool useFixedUpdateForTracking = false;
 	/// <summary>

@@ -1,24 +1,32 @@
 /************************************************************************************
 Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
-the Utilities SDK except in compliance with the License, which is provided at the time of installation
-or download, or which otherwise accompanies this software in either electronic or hard copy form.
-
-You may obtain a copy of the License at
-https://developer.oculus.com/licenses/oculusmastersdk-1.0/
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
 
 Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
 ANY KIND, either express or implied. See the License for the specific language governing
 permissions and limitations under the License.
 ************************************************************************************/
+#if USING_XR_MANAGEMENT && USING_XR_SDK_OCULUS
+#define USING_XR_SDK
+#endif
+
+#if UNITY_2020_1_OR_NEWER
+#define REQUIRES_XR_SDK
+#endif
 
 using System;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using System.Collections.Generic;
+
+#if USING_XR_SDK
+using UnityEngine.XR;
+using UnityEngine.Experimental.XR;
+#endif
 
 using InputTracking = UnityEngine.XR.InputTracking;
 using Node = UnityEngine.XR.XRNode;
@@ -146,7 +154,17 @@ public class OVRDisplay
 	/// </summary>
 	public void RecenterPose()
 	{
+#if USING_XR_SDK
+		XRInputSubsystem currentInputSubsystem = OVRManager.GetCurrentInputSubsystem();
+		if (currentInputSubsystem != null)
+		{
+			currentInputSubsystem.TryRecenter();
+		}
+#elif !REQUIRES_XR_SDK
+#pragma warning disable 618
 		InputTracking.Recenter();
+#pragma warning restore 618
+#endif
 
 		// The current poses are cached for the current frame and won't be updated immediately
 		// after UnityEngine.VR.InputTracking.Recenter(). So we need to wait until next frame
@@ -363,7 +381,5 @@ public class OVRDisplay
 			eyeDescs[(int)eye].fullFov.UpFov = maxFovY;
 			eyeDescs[(int)eye].fullFov.DownFov = maxFovY;
 		}
-
-
 	}
 }

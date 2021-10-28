@@ -1,12 +1,8 @@
 /************************************************************************************
 Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
-the Utilities SDK except in compliance with the License, which is provided at the time of installation
-or download, or which otherwise accompanies this software in either electronic or hard copy form.
-
-You may obtain a copy of the License at
-https://developer.oculus.com/licenses/oculusmastersdk-1.0/
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
 
 Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
@@ -47,14 +43,12 @@ namespace UnityEngine.EventSystems
         public float rightStickDeadZone = 0.15f;
 
         [Header("Touchpad Swipe Scroll")]
-        [Tooltip("Enable scrolling by swiping the GearVR touchpad")]
+        [Tooltip("Enable scrolling by swiping the touchpad")]
         public bool useSwipeScroll = true;
         [Tooltip("Minimum trackpad movement in pixels to start swiping")]
         public float swipeDragThreshold = 2;
         [Tooltip("Distance scrolled when swipe scroll occurs")]
         public float swipeDragScale = 1f;
-        /* It's debatable which way left and right are on the Gear VR touchpad since it's facing away from you
-         * the following bool allows this to be swapped*/
         [Tooltip("Invert X axis on touchpad")]
         public bool InvertSwipeXAxis = false;
 
@@ -799,7 +793,6 @@ namespace UnityEngine.EventSystems
                 return originalPosition + delta * swipeDragScale;
             }
 #endif
-            // If not Gear VR or swipe scroll isn't enabled just return original position
             return originalPosition;
 
         }
@@ -822,7 +815,7 @@ namespace UnityEngine.EventSystems
                 if (pointerEvent.IsVRPointer())
                 {
                     //adjust the position used based on swiping action. Allowing the user to
-                    //drag items by swiping on the GearVR touchpad
+                    //drag items by swiping on the touchpad
                     pointerEvent.position = SwipeAdjustedPosition (originalPosition, pointerEvent);
                 }
                 ExecuteEvents.Execute(pointerEvent.pointerDrag, pointerEvent, ExecuteEvents.beginDragHandler);
@@ -860,8 +853,6 @@ namespace UnityEngine.EventSystems
             var released = Input.GetKeyUp(gazeClickKey) || OVRInput.GetUp(joyPadClickButton);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
-            // On Gear VR the mouse button events correspond to touch pad events. We only use these as gaze pointer clicks
-            // on Gear VR because on PC the mouse clicks are used for actual mouse pointer interactions.
             pressed |= Input.GetMouseButtonDown(0);
             released |= Input.GetMouseButtonUp(0);
 #endif

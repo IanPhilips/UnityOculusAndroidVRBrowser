@@ -15,10 +15,18 @@ namespace Assets.Oculus.VR.Editor
 	{
 		public enum TargetPlatform
 		{
-			Rift,
-			OculusGoGearVR,
-			Quest,
-			None,
+			Rift = 0,
+			//OculusGoGearVR = 1, // DEPRECATED
+			Quest = 2,
+			None = 3,
+		};
+
+		public enum GamepadType
+		{
+			OFF,
+			TWINSTICK,
+			RIGHT_D_PAD,
+			LEFT_D_PAD,
 		};
 
 		const string urlPlatformUtil =
@@ -41,6 +49,7 @@ namespace Assets.Oculus.VR.Editor
 		private bool show2DCommands = false;
 		private bool showExpansionFileCommands = false;
 		private bool showRedistCommands = false;
+		private bool showUploadDebugSymbols = false;
 
 		private const float INDENT_SPACING = 15f;
 		private const float SINGLE_LINE_SPACING = 18f;
@@ -49,21 +58,6 @@ namespace Assets.Oculus.VR.Editor
 		private const int MAX_DOWNLOAD_RETRY_COUNT = 2;
 
 		private static GUIStyle boldFoldoutStyle;
-
-		string[] platformOptions = new string[]
-		{
-			"Oculus Rift",
-			"Oculus Go | Gear VR",
-			"Oculus Quest"
-		};
-
-		string[] gamepadOptions = new string[]
-		{
-			"Off",
-			"Twinstick",
-			"Right D Pad",
-			"Left D Pad"
-		};
 
 		[MenuItem("Oculus/Tools/Oculus Platform Tool")]
 		static void Init()
@@ -74,18 +68,13 @@ namespace Assets.Oculus.VR.Editor
 
 			// Populate initial target platform value based on OVRDeviceSelector
 #if UNITY_ANDROID
-			if (OVRDeviceSelector.isTargetDeviceQuest)
+			if (OVRDeviceSelector.isTargetDeviceQuestFamily)
 			{
 				OVRPlatformToolSettings.TargetPlatform = TargetPlatform.Quest;
-			}
-			else
-			{
-				OVRPlatformToolSettings.TargetPlatform = TargetPlatform.OculusGoGearVR;
 			}
 #else
 			OVRPlatformToolSettings.TargetPlatform = TargetPlatform.Rift;
 #endif
-			EditorUtility.SetDirty(OVRPlatformToolSettings.Instance);
 
 			// Load redist packages by calling list-redists in the CLI
 			string dataPath = Application.dataPath;
@@ -112,7 +101,11 @@ namespace Assets.Oculus.VR.Editor
 			this.titleContent.text = "OVR Platform Tool";
 
 			GUIContent TargetPlatformLabel = new GUIContent("Target Oculus Platform");
-			OVRPlatformToolSettings.TargetPlatform = (TargetPlatform)MakePopup(TargetPlatformLabel, (int)OVRPlatformToolSettings.TargetPlatform, platformOptions);
+			OVRPlatformToolSettings.TargetPlatform = (TargetPlatform)MakeEnumPopup(TargetPlatformLabel, OVRPlatformToolSettings.TargetPlatform);
+
+			if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.None)
+				return;
+
 			SetOVRProjectConfig(OVRPlatformToolSettings.TargetPlatform);
 			SetDirtyOnGUIChange();
 
@@ -165,15 +158,58 @@ namespace Assets.Oculus.VR.Editor
 					OVRPlatformToolSettings.ApkBuildPath = MakeFileDirectoryField(ApkPathLabel, OVRPlatformToolSettings.ApkBuildPath,
 						"Choose APK File", true, "apk");
 
-					if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.OculusGoGearVR)
-					{
-						// Go and Gear VR specific fields
-					}
-					else if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.Quest)
+					if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.Quest)
 					{
 						// Quest specific fields
 					}
 				}
+
+				GUIContent uploadDebugSymbolsLabel = new GUIContent("Upload Debug Symbols [?]: ",
+					"Check this box to enable uploading of debug symbols.");
+				OVRPlatformToolSettings.UploadDebugSymbols = MakeToggleBox(uploadDebugSymbolsLabel, OVRPlatformToolSettings.UploadDebugSymbols);
+				if (OVRPlatformToolSettings.UploadDebugSymbols)
+				{
+					IncrementIndent();
+					if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.Quest)
+					{
+						if (showUploadDebugSymbols != OVRPlatformToolSettings.UploadDebugSymbols)
+						{
+							// If no debug symbol directory is set, default to the expected place based of scripting backend
+							if (string.IsNullOrEmpty(OVRPlatformToolSettings.DebugSymbolsDirectory))
+							{
+								ScriptingImplementation scriptingBackend = PlayerSettings.GetScriptingBackend(EditorUserBuildSettings.selectedBuildTargetGroup);
+								if (scriptingBackend == ScriptingImplementation.IL2CPP)
+								{
+									OVRPlatformToolSettings.DebugSymbolsDirectory = Path.Combine(Application.dataPath, "../Temp/StagingArea/symbols");
+								}
+								else
+								{
+									OVRPlatformToolSettings.DebugSymbolsDirectory = Path.Combine(EditorApplication.applicationContentsPath,
+										"PlaybackEngines/AndroidPlayer/Variations/mono/Release/Symbols/armeabi-v7a");
+								}
+							}
+							EditorUtility.SetDirty(OVRPlatformToolSettings.Instance);
+						}
+
+						GUIContent DebugSymbolLabel = new GUIContent("Debug Symbols Directory [?]: ",
+						"The full path to the directory containing the app symbols (libil2cpp.sym.so)");
+						OVRPlatformToolSettings.DebugSymbolsDirectory = MakeFileDirectoryField(DebugSymbolLabel, OVRPlatformToolSettings.DebugSymbolsDirectory,
+							"Choose Debug Symbols Directory", false);
+
+						GUIContent uploadSymbolsOnlyLabel = new GUIContent("Upload Debug Symbols Only [?]: ",
+							"Check this box to upload debug symbols to an existing build. Will require a Build ID along with the App ID, App Token, and Symbols Directory.");
+						OVRPlatformToolSettings.UploadDebugSymbolsOnly = MakeToggleBox(uploadSymbolsOnlyLabel, OVRPlatformToolSettings.UploadDebugSymbolsOnly);
+
+						if (OVRPlatformToolSettings.UploadDebugSymbolsOnly)
+						{
+							GUIContent BuildIDLabel = new GUIContent("Build ID [?]: ",
+								"This BuildID will be used for uploading debug symbols to a specific build.");
+							OVRPlatformToolSettings.BuildID = MakeTextBox(BuildIDLabel, OVRPlatformToolSettings.BuildID);
+						}
+					}
+					DecrementIndent();
+				}
+				showUploadDebugSymbols = OVRPlatformToolSettings.UploadDebugSymbols;
 
 				showOptionalCommands = EditorGUILayout.Foldout(showOptionalCommands, "Optional Commands", boldFoldoutStyle);
 				if (showOptionalCommands)
@@ -193,7 +229,7 @@ namespace Assets.Oculus.VR.Editor
 
 						GUIContent GamepadEmulationLabel = new GUIContent("Gamepad Emulation [?]: ",
 							"Specifies the type of gamepad emulation used by the Oculus Touch controllers.");
-						OVRPlatformToolSettings.RiftGamepadEmulation = (OVRPlatformToolSettings.GamepadType)MakePopup(GamepadEmulationLabel, (int)OVRPlatformToolSettings.RiftGamepadEmulation, gamepadOptions);
+						OVRPlatformToolSettings.RiftGamepadEmulation = (GamepadType)MakeEnumPopup(GamepadEmulationLabel, OVRPlatformToolSettings.RiftGamepadEmulation);
 
 						show2DCommands = EditorGUILayout.Foldout(show2DCommands, "2D", boldFoldoutStyle);
 						if (show2DCommands)
@@ -242,11 +278,7 @@ namespace Assets.Oculus.VR.Editor
 					}
 					else
 					{
-						if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.OculusGoGearVR)
-						{
-							// Go and Gear VR specific optional fields
-						}
-						else if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.Quest)
+						if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.Quest)
 						{
 							// Quest specific optional fields
 						}
@@ -366,16 +398,12 @@ namespace Assets.Oculus.VR.Editor
 		private void SetOVRProjectConfig(TargetPlatform targetPlatform)
 		{
 #if UNITY_ANDROID
-
 			var targetDeviceTypes = new List<OVRProjectConfig.DeviceType>();
 
-			if (targetPlatform == TargetPlatform.Quest && !OVRDeviceSelector.isTargetDeviceQuest)
+			if (targetPlatform == TargetPlatform.Quest && !OVRDeviceSelector.isTargetDeviceQuestFamily)
 			{
 				targetDeviceTypes.Add(OVRProjectConfig.DeviceType.Quest);
-			}
-			else if (targetPlatform == TargetPlatform.OculusGoGearVR && !OVRDeviceSelector.isTargetDeviceGearVrOrGo)
-			{
-				targetDeviceTypes.Add(OVRProjectConfig.DeviceType.GearVrOrGo);
+				targetDeviceTypes.Add(OVRProjectConfig.DeviceType.Quest2);
 			}
 
 			if (targetDeviceTypes.Count != 0)
@@ -425,7 +453,7 @@ namespace Assets.Oculus.VR.Editor
 		static void ExecuteCommand(TargetPlatform targetPlatform)
 		{
 			string dataPath = Application.dataPath;
-			
+
 			// If we already have a copy of the platform util, check if it needs to be updated
 			if (!ranSelfUpdate && File.Exists(dataPath + "/Oculus/VR/Editor/Tools/ovr-platform-util.exe"))
 			{
@@ -613,9 +641,17 @@ namespace Assets.Oculus.VR.Editor
 			ovrPlatUtilProcess.OutputDataReceived += new DataReceivedEventHandler(
 				(s, e) =>
 				{
-					if (e.Data != null && e.Data.Length != 0 && !e.Data.Contains("\u001b"))
+					if (e.Data != null && e.Data.Length != 0)
 					{
-						OVRPlatformTool.log += e.Data + "\n";
+						int index = e.Data.IndexOf("\u001b");
+						if (index >= 0)
+						{
+							OVRPlatformTool.log += e.Data.Substring(0, index) + "\n";
+						}
+						else
+						{
+							OVRPlatformTool.log += e.Data + "\n";
+						}
 					}
 				}
 			);
@@ -646,25 +682,29 @@ namespace Assets.Oculus.VR.Editor
 			bool success = true;
 			command = "";
 
-			switch (targetPlatform)
+			if (OVRPlatformToolSettings.UploadDebugSymbols && OVRPlatformToolSettings.UploadDebugSymbolsOnly)
 			{
-				case TargetPlatform.Rift:
-					command = "upload-rift-build";
-					break;
-				case TargetPlatform.OculusGoGearVR:
-					command = "upload-mobile-build";
-					break;
-				case TargetPlatform.Quest:
-					command = "upload-quest-build";
-					break;
-				default:
-					OVRPlatformTool.log += "ERROR: Invalid target platform selected";
-					success = false;
-					break;
+				return genDebugSymbolsCommand(out command);
+			}
+			else
+			{
+				switch (targetPlatform)
+				{
+					case TargetPlatform.Rift:
+						command = "upload-rift-build";
+						break;
+					case TargetPlatform.Quest:
+						command = "upload-quest-build";
+						break;
+					default:
+						OVRPlatformTool.log += "ERROR: Invalid target platform selected";
+						success = false;
+						break;
+				}
 			}
 
 			// Add App ID
-			ValidateTextField(AppIDFieldValidator, OVRPlatformToolSettings.AppID, "App ID", ref success);
+			ValidateTextField(IDFieldValidator, OVRPlatformToolSettings.AppID, "App ID", ref success);
 			command += " --app-id \"" + OVRPlatformToolSettings.AppID + "\"";
 
 			// Add App Token
@@ -727,15 +767,15 @@ namespace Assets.Oculus.VR.Editor
 				}
 
 				// Add Gamepad Emulation
-				if (OVRPlatformToolSettings.RiftGamepadEmulation > OVRPlatformToolSettings.GamepadType.OFF && 
-					OVRPlatformToolSettings.RiftGamepadEmulation <= OVRPlatformToolSettings.GamepadType.LEFT_D_PAD)
+				if (OVRPlatformToolSettings.RiftGamepadEmulation > GamepadType.OFF &&
+					OVRPlatformToolSettings.RiftGamepadEmulation <= GamepadType.LEFT_D_PAD)
 				{
 					command += " --gamepad-emulation ";
 					switch (OVRPlatformToolSettings.RiftGamepadEmulation)
 					{
-						case OVRPlatformToolSettings.GamepadType.TWINSTICK:		command += "TWINSTICK";		break;
-						case OVRPlatformToolSettings.GamepadType.RIGHT_D_PAD:	command += "RIGHT_D_PAD";	break;
-						case OVRPlatformToolSettings.GamepadType.LEFT_D_PAD:	command += "LEFT_D_PAD";	break;
+						case GamepadType.TWINSTICK:		command += "TWINSTICK";		break;
+						case GamepadType.RIGHT_D_PAD:	command += "RIGHT_D_PAD";	break;
+						case GamepadType.LEFT_D_PAD:	command += "LEFT_D_PAD";	break;
 						default:												command += "OFF";			break;
 					}
 				}
@@ -760,11 +800,15 @@ namespace Assets.Oculus.VR.Editor
 					command += " --obb \"" + OVRPlatformToolSettings.ObbFilePath + "\"";
 				}
 
-				if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.OculusGoGearVR)
+				// Add Debug Symbols Path
+				if (OVRPlatformToolSettings.UploadDebugSymbols)
 				{
-					// Go and Gear VR specific commands
+					ValidateTextField(DirectoryValidator, OVRPlatformToolSettings.DebugSymbolsDirectory, "Debug Symbols Directory", ref success);
+					command += " --debug-symbols-dir \"" + OVRPlatformToolSettings.DebugSymbolsDirectory + "\"";
+					command += " --debug-symbols-pattern \"*.sym.so\"";
 				}
-				else if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.Quest)
+
+				if (OVRPlatformToolSettings.TargetPlatform == TargetPlatform.Quest)
 				{
 					// Quest specific commands
 				}
@@ -839,6 +883,30 @@ namespace Assets.Oculus.VR.Editor
 			return success;
 		}
 
+		private static bool genDebugSymbolsCommand(out string command)
+		{
+			bool success = true;
+			command = "upload-debug-symbols";
+
+			// Add Build ID
+			ValidateTextField(IDFieldValidator, OVRPlatformToolSettings.BuildID, "Build ID", ref success);
+			command += " --parent \"" + OVRPlatformToolSettings.BuildID + "\"";
+
+			// Add App ID
+			ValidateTextField(IDFieldValidator, OVRPlatformToolSettings.AppID, "App ID", ref success);
+			command += " --app-id \"" + OVRPlatformToolSettings.AppID + "\"";
+
+			// Add App Token
+			ValidateTextField(GenericFieldValidator, appToken, "App Token", ref success);
+			command += " --app-secret \"" + appToken + "\"";
+
+			ValidateTextField(DirectoryValidator, OVRPlatformToolSettings.DebugSymbolsDirectory, "Debug Symbols Directory", ref success);
+			command += " --debug-symbols-dir \"" + OVRPlatformToolSettings.DebugSymbolsDirectory + "\"";
+			command += " --debug-symbols-pattern \"*.sym.so\"";
+
+			return success;
+		}
+
 		// Private delegate for text field validation functions
 		private delegate TSuccess FieldValidatorDelegate<in TText, TError, out TSuccess>(TText text, ref TError error);
 
@@ -866,14 +934,14 @@ namespace Assets.Oculus.VR.Editor
 		}
 
 		// Checks if the App ID contains only numbers
-		static bool AppIDFieldValidator(string fieldText, ref string error)
+		static bool IDFieldValidator(string fieldText, ref string error)
 		{
 			if (string.IsNullOrEmpty(fieldText))
 			{
 				error = "The field is empty.";
 				return false;
 			}
-			else if (!Regex.IsMatch(OVRPlatformToolSettings.AppID, "^[0-9]+$"))
+			else if (!Regex.IsMatch(fieldText, "^[0-9]+$"))
 			{
 				error = "The field contains invalid characters.";
 				return false;
@@ -971,13 +1039,13 @@ namespace Assets.Oculus.VR.Editor
 			return result;
 		}
 
-		private int MakePopup(GUIContent label, int variable, string[] options)
+		private Enum MakeEnumPopup(GUIContent label, Enum selected)
 		{
-			int result = 0;
+			Enum result;
 
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.LabelField(label, GUILayout.ExpandWidth(false));
-			result = EditorGUILayout.Popup(variable, options);
+			result = EditorGUILayout.EnumPopup(selected);
 			EditorGUILayout.EndHorizontal();
 
 			return result;
@@ -1056,7 +1124,12 @@ namespace Assets.Oculus.VR.Editor
 			webRequest.timeout = 60;
 			UnityWebRequestAsyncOperation webOp = webRequest.SendWebRequest();
 			while (!webOp.isDone) { }
+#if UNITY_2020_1_OR_NEWER
+			if (webRequest.result == UnityWebRequest.Result.ConnectionError ||
+				webRequest.result == UnityWebRequest.Result.ProtocolError)
+#else
 			if (webRequest.isNetworkError || webRequest.isHttpError)
+#endif
 			{
 				var networkErrorMsg = "Failed to provision Oculus Platform Util\n";
 				UnityEngine.Debug.LogError(networkErrorMsg);

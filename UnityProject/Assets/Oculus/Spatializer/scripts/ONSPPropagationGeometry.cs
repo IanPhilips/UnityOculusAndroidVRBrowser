@@ -419,12 +419,12 @@ public class ONSPPropagationGeometry : MonoBehaviour
                 {
                     // For each grid cell output two triangles
                     indices[indexOffset + 0] = (vertexOffset + (y * wRes) + x);
-                    indices[indexOffset + 1] = (vertexOffset + ((y + 1) * wRes) + x);
-                    indices[indexOffset + 2] = (vertexOffset + (y * wRes) + x + 1);
+                    indices[indexOffset + 1] = (vertexOffset + (y * wRes) + x + 1);
+                    indices[indexOffset + 2] = (vertexOffset + ((y + 1) * wRes) + x);
 
                     indices[indexOffset + 3] = (vertexOffset + ((y + 1) * wRes) + x);
-                    indices[indexOffset + 4] = (vertexOffset + ((y + 1) * wRes) + x + 1);
-                    indices[indexOffset + 5] = (vertexOffset + (y * wRes) + x + 1);
+                    indices[indexOffset + 4] = (vertexOffset + (y * wRes) + x + 1);
+                    indices[indexOffset + 5] = (vertexOffset + ((y + 1) * wRes) + x + 1);
                     indexOffset += 6;
                 }
             }

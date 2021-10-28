@@ -21,7 +21,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ************************************************************************************/
 using UnityEngine;
+#if UNITY_2019_1_OR_NEWER
+using UnityEngine.XR;
+#endif
 using System.Collections;
+using System.Collections.Generic;
 
 public class LipSyncDemo_SetCurrentTarget : MonoBehaviour
 {
@@ -29,6 +33,7 @@ public class LipSyncDemo_SetCurrentTarget : MonoBehaviour
 
     private int targetSet = 0;
     private int maxTarget = 6;
+    private bool XRButtonBeingPressed = false;
 
     // Use this for initialization
     void Start ()
@@ -75,11 +80,56 @@ public class LipSyncDemo_SetCurrentTarget : MonoBehaviour
         {
             targetSet = 5;
             SetCurrentTarget();
+
+        }
+        // Close app
+        if (Input.GetKeyDown (KeyCode.Escape))
+        {
+           Application.Quit();
         }
 
-        // Close app
-        if(Input.GetKeyDown (KeyCode.Escape))
-           Application.Quit();
+        // VR controllers: primary buttons scrolls forward, secondary backwards
+#if UNITY_2019_1_OR_NEWER
+        var inputDevices = new List<InputDevice>();
+#if UNITY_2019_3_OR_NEWER
+        InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.HeldInHand, inputDevices);
+#else
+        InputDevices.GetDevicesWithRole(InputDeviceRole.RightHanded, inputDevices);
+#endif
+        var primaryButtonPressed = false;
+        var secondaryButtonPressed = false;
+        foreach (var device in inputDevices)
+        {
+            bool boolValue;
+            if (device.TryGetFeatureValue(CommonUsages.primaryButton, out boolValue) && boolValue)
+            {
+                primaryButtonPressed = true;
+            }
+            if (device.TryGetFeatureValue(CommonUsages.secondaryButton, out boolValue) && boolValue)
+            {
+                secondaryButtonPressed = true;
+            }
+        }
+        if (primaryButtonPressed && !XRButtonBeingPressed)
+        {
+            targetSet++;
+            if (targetSet >= maxTarget)
+            {
+              targetSet = 0;
+            }
+            SetCurrentTarget();
+        }
+        if (secondaryButtonPressed && !XRButtonBeingPressed)
+        {
+            targetSet--;
+            if (targetSet < 0)
+            {
+              targetSet = maxTarget - 1;
+            }
+            SetCurrentTarget();
+        }
+        XRButtonBeingPressed = primaryButtonPressed || secondaryButtonPressed;
+#endif
     }
 
     /// <summary>

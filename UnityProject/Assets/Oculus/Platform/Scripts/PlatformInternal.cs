@@ -14,6 +14,7 @@ namespace Oculus.Platform
   {
     // Keep this enum in sync with ovrMessageTypeInternal in OVR_Platform_Internal.h
     public enum MessageTypeInternal : uint { //TODO - rename this to type; it's already in Message class
+      AbuseReport_LaunchAdvancedReportFlow          = 0x4CB13A6E,
       Application_ExecuteCoordinatedLaunch          = 0x267DB4F4,
       Application_GetInstalledApplications          = 0x520F744C,
       Avatar_UpdateMetaData                         = 0x7BCFD98E,
@@ -125,6 +126,7 @@ namespace Oculus.Platform
           message = new MessageWithLaunchBlockFlowResult(messageHandle);
           break;
 
+        case MessageTypeInternal.AbuseReport_LaunchAdvancedReportFlow:
         case MessageTypeInternal.User_LaunchReportFlow2:
           message = new MessageWithLaunchReportFlowResult(messageHandle);
           break;

@@ -175,7 +175,7 @@ public class MoviePlayerSampleControls : MonoBehaviour
             }
         }
 
-        if (OVRInput.GetActiveController() == OVRInput.Controller.LTouch || OVRInput.GetActiveController() == OVRInput.Controller.LTrackedRemote)
+        if (OVRInput.GetActiveController() == OVRInput.Controller.LTouch)
         {
             InputModule.rayTransform = LeftHand.transform;
             GazePointer.rayTransform = LeftHand.transform;

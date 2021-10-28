@@ -51,6 +51,7 @@ namespace OculusSampleFramework
 
         public Color OutlineColorInRange;
         public Color OutlineColorHighlighted;
+        public Color OutlineColorOutOfRange;
 
         void OnTriggerEnter(Collider otherCollider)
         {

@@ -56,36 +56,18 @@ public class OvrAvatarTestDriver : OvrAvatarDriver {
 
     private void CalculateCurrentPose()
     {
-        if (GetIsTrackedRemote())
+        CurrentPose = new PoseFrame
         {
-            CurrentPose = new PoseFrame
-            {
-                voiceAmplitude = voiceAmplitude,
-                headPosition = headPos,
-                headRotation = headRot,
-                handLeftPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTrackedRemote),
-                handLeftRotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.LTrackedRemote),
-                handRightPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTrackedRemote),
-                handRightRotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTrackedRemote),
-                controllerLeftPose = GetMalibuControllerPose(OVRInput.Controller.LTrackedRemote),
-                controllerRightPose = GetMalibuControllerPose(OVRInput.Controller.RTrackedRemote),
-            };
-        }
-        else
-        {
-            CurrentPose = new PoseFrame
-            {
-                voiceAmplitude = voiceAmplitude,
-                headPosition = headPos,
-                headRotation = headRot,
-                handLeftPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch),
-                handLeftRotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.LTouch),
-                handRightPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch),
-                handRightRotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch),
-                controllerLeftPose = GetControllerPose(OVRInput.Controller.LTouch),
-                controllerRightPose = GetControllerPose(OVRInput.Controller.RTouch),
-            };
-        }
+            voiceAmplitude = voiceAmplitude,
+            headPosition = headPos,
+            headRotation = headRot,
+            handLeftPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch),
+            handLeftRotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.LTouch),
+            handRightPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch),
+            handRightRotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch),
+            controllerLeftPose = GetControllerPose(OVRInput.Controller.LTouch),
+            controllerRightPose = GetControllerPose(OVRInput.Controller.RTouch),
+        };
     }
 
     public override void UpdateTransforms(IntPtr sdkAvatar)
