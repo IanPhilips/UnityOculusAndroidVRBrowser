@@ -1,12 +1,8 @@
 /************************************************************************************
 Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
-the Utilities SDK except in compliance with the License, which is provided at the time of installation
-or download, or which otherwise accompanies this software in either electronic or hard copy form.
-
-You may obtain a copy of the License at
-https://developer.oculus.com/licenses/oculusmastersdk-1.0/
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
 
 Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
@@ -50,6 +46,8 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 	private bool hasSentEvent = false;
 	private bool emulatorHasInitialized = false;
 
+	private CursorLockMode previousCursorLockMode = CursorLockMode.None;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -60,11 +58,12 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 		{
 			if (OVRManager.OVRManagerinitialized)
 			{
-				Cursor.lockState = CursorLockMode.None;
+				previousCursorLockMode = Cursor.lockState;
 				manager = OVRManager.instance;
 				recordedHeadPoseRelativeOffsetTranslation = manager.headPoseRelativeOffsetTranslation;
 				recordedHeadPoseRelativeOffsetRotation = manager.headPoseRelativeOffsetRotation;
 				emulatorHasInitialized = true;
+				lastFrameEmulationActivated = false;
 			}
 			else
 				return;
@@ -72,7 +71,11 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 		bool emulationActivated = IsEmulationActivated();
 		if (emulationActivated)
 		{
-			Cursor.lockState = CursorLockMode.Locked;
+			if (!lastFrameEmulationActivated)
+			{
+				previousCursorLockMode = Cursor.lockState;
+				Cursor.lockState = CursorLockMode.Locked;
+			}
 
 			if (!lastFrameEmulationActivated && resetHmdPoseOnRelease)
 			{
@@ -121,9 +124,10 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 		}
 		else
 		{
-			Cursor.lockState = CursorLockMode.None;
 			if (lastFrameEmulationActivated)
 			{
+				Cursor.lockState = previousCursorLockMode;
+
 				recordedHeadPoseRelativeOffsetTranslation = manager.headPoseRelativeOffsetTranslation;
 				recordedHeadPoseRelativeOffsetRotation = manager.headPoseRelativeOffsetRotation;
 

@@ -30,14 +30,6 @@ namespace Assets.Oculus.VR.Editor
 			EditorApplication.update -= Update;
 		}
 
-		public enum GamepadType
-		{
-			OFF,
-			TWINSTICK,
-			RIGHT_D_PAD,
-			LEFT_D_PAD,
-		};
-
 		public static string AppID
 		{
 			get
@@ -309,17 +301,17 @@ namespace Assets.Oculus.VR.Editor
 			}
 		}
 
-		public static GamepadType RiftGamepadEmulation
+		public static OVRPlatformTool.GamepadType RiftGamepadEmulation
 		{
 			get
 			{
 				if (EditorPrefs.HasKey("OVRPlatformToolSettings_RiftGamepadEmulation"))
 				{
-					return (GamepadType)EditorPrefs.GetInt("OVRPlatformToolSettings_RiftGamepadEmulation");
+					return (OVRPlatformTool.GamepadType)EditorPrefs.GetInt("OVRPlatformToolSettings_RiftGamepadEmulation");
 				}
 				else
 				{
-					return GamepadType.OFF;
+					return OVRPlatformTool.GamepadType.OFF;
 				}
 			}
 			set
@@ -365,6 +357,82 @@ namespace Assets.Oculus.VR.Editor
 		{
 			get { return Instance.runOvrLint; }
 			set { Instance.runOvrLint = value; }
+		}
+
+		public static bool UploadDebugSymbols
+		{
+			get
+			{
+				if (EditorPrefs.HasKey("OVRPlatformToolSettings_UploadDebugSymbols"))
+				{
+					return EditorPrefs.GetBool("OVRPlatformToolSettings_UploadDebugSymbols");
+				}
+				else
+				{
+					return true;
+				}
+			}
+			set
+			{
+				EditorPrefs.SetBool("OVRPlatformToolSettings_UploadDebugSymbols", value);
+			}
+		}
+
+		public static string DebugSymbolsDirectory
+		{
+			get
+			{
+				if (EditorPrefs.HasKey("OVRPlatformToolSettings_DebugSymbolsDirectory"))
+				{
+					return EditorPrefs.GetString("OVRPlatformToolSettings_DebugSymbolsDirectory");
+				}
+				else
+				{
+					return "";
+				}
+			}
+			set
+			{
+				EditorPrefs.SetString("OVRPlatformToolSettings_DebugSymbolsDirectory", value);
+			}
+		}
+
+		public static bool UploadDebugSymbolsOnly
+		{
+			get
+			{
+				if (EditorPrefs.HasKey("OVRPlatformToolSettings_UploadDebugSymbolsOnly"))
+				{
+					return EditorPrefs.GetBool("OVRPlatformToolSettings_UploadDebugSymbolsOnly");
+				}
+				else
+				{
+					return false;
+				}
+			}
+			set
+			{
+				EditorPrefs.SetBool("OVRPlatformToolSettings_UploadDebugSymbolsOnly", value);
+			}
+		}
+
+		public static string BuildID
+		{
+			get
+			{
+				if (EditorPrefs.HasKey("OVRPlatformToolSettings_BuildID"))
+				{
+					return EditorPrefs.GetString("OVRPlatformToolSettings_BuildID");
+				}
+				else
+				{
+					return "";
+				}
+			}
+			set
+			{
+				EditorPrefs.SetString("OVRPlatformToolSettings_BuildID", value);
+			}
 		}
 
 		[SerializeField]

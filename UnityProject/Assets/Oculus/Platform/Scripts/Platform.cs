@@ -148,6 +148,9 @@ namespace Oculus.Platform
     public static Models.LaunchDetails GetLaunchDetails() {
       return new Models.LaunchDetails(CAPI.ovr_ApplicationLifecycle_GetLaunchDetails());
     }
+    public static void LogDeeplinkResult(string trackingID, LaunchResult result) {
+      CAPI.ovr_ApplicationLifecycle_LogDeeplinkResult(trackingID, result);
+    }
   }
 
   public static partial class Rooms
@@ -399,6 +402,49 @@ namespace Oculus.Platform
     }
   }
 
+  public static partial class Challenges
+  {
+    public static Request<Models.ChallengeEntryList> GetNextEntries(Models.ChallengeEntryList list)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.ChallengeEntryList>(CAPI.ovr_HTTP_GetWithMessageType(list.NextUrl, (int)Message.MessageType.Challenges_GetNextEntries));
+      }
+
+      return null;
+    }
+
+    public static Request<Models.ChallengeEntryList> GetPreviousEntries(Models.ChallengeEntryList list)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.ChallengeEntryList>(CAPI.ovr_HTTP_GetWithMessageType(list.PreviousUrl, (int)Message.MessageType.Challenges_GetPreviousEntries));
+      }
+
+      return null;
+    }
+
+    public static Request<Models.ChallengeList> GetNextChallenges(Models.ChallengeList list)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.ChallengeList>(CAPI.ovr_HTTP_GetWithMessageType(list.NextUrl, (int)Message.MessageType.Challenges_GetNextChallenges));
+      }
+
+      return null;
+    }
+
+    public static Request<Models.ChallengeList> GetPreviousChallenges(Models.ChallengeList list)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.ChallengeList>(CAPI.ovr_HTTP_GetWithMessageType(list.PreviousUrl, (int)Message.MessageType.Challenges_GetPreviousChallenges));
+      }
+
+      return null;
+    }
+  }
+
   public static partial class Voip
   {
     public static void Start(UInt64 userID)
@@ -493,6 +539,22 @@ namespace Oculus.Platform
         CAPI.ovr_Voip_SetNewConnectionOptions((IntPtr)voipOptions);
       }
     }
+  }
+
+  public static partial class Users
+  {
+    public static string GetLoggedInUserLocale()
+    {
+      if (Core.IsInitialized())
+      {
+        return CAPI.ovr_GetLoggedInUserLocale();
+      }
+      return "";
+    }
+  }
+
+  public static partial class AbuseReport
+  {
   }
 
   public static partial class Achievements
@@ -635,7 +697,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
   }
 
   public static partial class AssetFile
@@ -828,7 +890,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
   }
 
   public static partial class Avatar
@@ -837,6 +899,155 @@ namespace Oculus.Platform
 
   public static partial class Cal
   {
+  }
+
+  public static partial class Challenges
+  {
+    /// DEPRECATED. Use server-to-server API call instead.
+    ///
+    public static Request<Models.Challenge> Create(string leaderboardName, ChallengeOptions challengeOptions)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.Challenge>(CAPI.ovr_Challenges_Create(leaderboardName, (IntPtr)challengeOptions));
+      }
+
+      return null;
+    }
+
+    /// If the current user has an invite to the challenge, decline the invite
+    ///
+    public static Request<Models.Challenge> DeclineInvite(UInt64 challengeID)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.Challenge>(CAPI.ovr_Challenges_DeclineInvite(challengeID));
+      }
+
+      return null;
+    }
+
+    /// DEPRECATED. Use server-to-server API call instead.
+    ///
+    public static Request Delete(UInt64 challengeID)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request(CAPI.ovr_Challenges_Delete(challengeID));
+      }
+
+      return null;
+    }
+
+    /// Gets the information for a single challenge
+    /// \param challengeID The id of the challenge whose entries to return.
+    ///
+    public static Request<Models.Challenge> Get(UInt64 challengeID)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.Challenge>(CAPI.ovr_Challenges_Get(challengeID));
+      }
+
+      return null;
+    }
+
+    /// Requests a block of challenge entries.
+    /// \param challengeID The id of the challenge whose entries to return.
+    /// \param limit Defines the maximum number of entries to return.
+    /// \param filter Allows you to restrict the returned values by friends.
+    /// \param startAt Defines whether to center the query on the user or start at the top of the challenge.
+    ///
+    public static Request<Models.ChallengeEntryList> GetEntries(UInt64 challengeID, int limit, LeaderboardFilterType filter, LeaderboardStartAt startAt)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.ChallengeEntryList>(CAPI.ovr_Challenges_GetEntries(challengeID, limit, filter, startAt));
+      }
+
+      return null;
+    }
+
+    /// Requests a block of challenge entries.
+    /// \param challengeID The id of the challenge whose entries to return.
+    /// \param limit The maximum number of entries to return.
+    /// \param afterRank The position after which to start.  For example, 10 returns challenge results starting with the 11th user.
+    ///
+    public static Request<Models.ChallengeEntryList> GetEntriesAfterRank(UInt64 challengeID, int limit, ulong afterRank)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.ChallengeEntryList>(CAPI.ovr_Challenges_GetEntriesAfterRank(challengeID, limit, afterRank));
+      }
+
+      return null;
+    }
+
+    /// Requests a block of challenge entries. Will return only entries matching
+    /// the user IDs passed in.
+    /// \param challengeID The id of the challenge whose entries to return.
+    /// \param limit Defines the maximum number of entries to return.
+    /// \param startAt Defines whether to center the query on the user or start at the top of the challenge. If this is LeaderboardStartAt.CenteredOnViewer or LeaderboardStartAt.CenteredOnViewerOrTop, then the current user's ID will be automatically added to the query.
+    /// \param userIDs Defines a list of user ids to get entries for.
+    ///
+    public static Request<Models.ChallengeEntryList> GetEntriesByIds(UInt64 challengeID, int limit, LeaderboardStartAt startAt, UInt64[] userIDs)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.ChallengeEntryList>(CAPI.ovr_Challenges_GetEntriesByIds(challengeID, limit, startAt, userIDs, (uint)(userIDs != null ? userIDs.Length : 0)));
+      }
+
+      return null;
+    }
+
+    /// Requests for a list of challenge
+    ///
+    public static Request<Models.ChallengeList> GetList(ChallengeOptions challengeOptions, int limit)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.ChallengeList>(CAPI.ovr_Challenges_GetList((IntPtr)challengeOptions, limit));
+      }
+
+      return null;
+    }
+
+    /// If the current user has permission, join the challenge
+    ///
+    public static Request<Models.Challenge> Join(UInt64 challengeID)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.Challenge>(CAPI.ovr_Challenges_Join(challengeID));
+      }
+
+      return null;
+    }
+
+    /// If the current user has permission, leave the challenge
+    ///
+    public static Request<Models.Challenge> Leave(UInt64 challengeID)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.Challenge>(CAPI.ovr_Challenges_Leave(challengeID));
+      }
+
+      return null;
+    }
+
+    /// DEPRECATED. Use server-to-server API call instead.
+    ///
+    public static Request<Models.Challenge> UpdateInfo(UInt64 challengeID, ChallengeOptions challengeOptions)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.Challenge>(CAPI.ovr_Challenges_UpdateInfo(challengeID, (IntPtr)challengeOptions));
+      }
+
+      return null;
+    }
+
   }
 
   public static partial class CloudStorage
@@ -1147,6 +1358,19 @@ namespace Oculus.Platform
 
   public static partial class Leaderboards
   {
+    /// Gets the information for a single leaderboard
+    /// \param leaderboardName The name of the leaderboard to return.
+    ///
+    public static Request<Models.LeaderboardList> Get(string leaderboardName)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.LeaderboardList>(CAPI.ovr_Leaderboard_Get(leaderboardName));
+      }
+
+      return null;
+    }
+
     /// Requests a block of leaderboard entries.
     /// \param leaderboardName The name of the leaderboard whose entries to return.
     /// \param limit Defines the maximum number of entries to return.
@@ -1217,6 +1441,23 @@ namespace Oculus.Platform
       return null;
     }
 
+    /// Writes a single entry to a leaderboard, can include supplementary metrics
+    /// \param leaderboardName The leaderboard for which to write the entry.
+    /// \param score The score to write.
+    /// \param supplementaryMetric A metric that can be used for tiebreakers.
+    /// \param extraData A 2KB custom data field that is associated with the leaderboard entry. This can be a game replay or anything that provides more detail about the entry to the viewer.
+    /// \param forceUpdate If true, the score always updates. This happens ecen if it is not the user's best score.
+    ///
+    public static Request<bool> WriteEntryWithSupplementaryMetric(string leaderboardName, long score, long supplementaryMetric, byte[] extraData = null, bool forceUpdate = false)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<bool>(CAPI.ovr_Leaderboard_WriteEntryWithSupplementaryMetric(leaderboardName, score, supplementaryMetric, extraData, (uint)(extraData != null ? extraData.Length : 0), forceUpdate));
+      }
+
+      return null;
+    }
+
   }
 
   public static partial class Livestreaming
@@ -1228,6 +1469,18 @@ namespace Oculus.Platform
       if (Core.IsInitialized())
       {
         return new Request<Models.LivestreamingStatus>(CAPI.ovr_Livestreaming_GetStatus());
+      }
+
+      return null;
+    }
+
+    /// Launch the Livestreaming Flow.
+    ///
+    public static Request LaunchLivestreamingFlow()
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request(CAPI.ovr_Livestreaming_LaunchLivestreamingFlow());
       }
 
       return null;
@@ -1271,7 +1524,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
   }
 
   public static partial class Matchmaking
@@ -1619,7 +1872,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
   }
 
   public static partial class Media
@@ -1658,7 +1911,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
     /// Sent when the list of known connected sessions has changed. Contains the
     /// new list of sessions.
     ///
@@ -1669,7 +1922,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
   }
 
   public static partial class Net
@@ -1685,7 +1938,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
     /// Indicates that another user is attempting to establish a P2P connection
     /// with us. Use NetworkingPeer.GetID() to extract the ID of the peer.
     ///
@@ -1696,7 +1949,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
     /// Generated in response to Net.Ping(). Either contains ping time in
     /// microseconds or indicates that there was a timeout.
     ///
@@ -1707,7 +1960,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
   }
 
   public static partial class Notifications
@@ -1765,7 +2018,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
   }
 
   public static partial class RichPresence
@@ -2153,7 +2406,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
     /// Handle this to notify the user when they've received an invitation to join
     /// a room in your game. You can use this in lieu of, or in addition to,
     /// polling for room invitations via
@@ -2166,7 +2419,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
     /// Indicates that the current room has been updated. Use Message.GetRoom() to
     /// extract the updated room.
     ///
@@ -2177,7 +2430,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
   }
 
   public static partial class Users
@@ -2355,6 +2608,122 @@ namespace Oculus.Platform
 
   }
 
+  public static partial class UserDataStore
+  {
+    /// Delete an entry by a key from a private user data store.
+    /// \param userID The ID of the user who owns this private user data store.
+    /// \param key The key of entry.
+    ///
+    public static Request<Models.UserDataStoreUpdateResponse> PrivateDeleteEntryByKey(UInt64 userID, string key)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.UserDataStoreUpdateResponse>(CAPI.ovr_UserDataStore_PrivateDeleteEntryByKey(userID, key));
+      }
+
+      return null;
+    }
+
+    /// Get entries from a private user data store.
+    /// \param userID The ID of the user who owns this private user data store.
+    ///
+    public static Request<Dictionary<string, string>> PrivateGetEntries(UInt64 userID)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Dictionary<string, string>>(CAPI.ovr_UserDataStore_PrivateGetEntries(userID));
+      }
+
+      return null;
+    }
+
+    /// Get an entry by a key from a private user data store.
+    /// \param userID The ID of the user who owns this private user data store.
+    /// \param key The key of entry.
+    ///
+    public static Request<Dictionary<string, string>> PrivateGetEntryByKey(UInt64 userID, string key)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Dictionary<string, string>>(CAPI.ovr_UserDataStore_PrivateGetEntryByKey(userID, key));
+      }
+
+      return null;
+    }
+
+    /// Write a single entry to a private user data store.
+    /// \param userID The ID of the user who owns this private user data store.
+    /// \param key The key of entry.
+    /// \param value The value of entry.
+    ///
+    public static Request<Models.UserDataStoreUpdateResponse> PrivateWriteEntry(UInt64 userID, string key, string value)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.UserDataStoreUpdateResponse>(CAPI.ovr_UserDataStore_PrivateWriteEntry(userID, key, value));
+      }
+
+      return null;
+    }
+
+    /// Delete an entry by a key from a public user data store.
+    /// \param userID The ID of the user who owns this public user data store.
+    /// \param key The key of entry.
+    ///
+    public static Request<Models.UserDataStoreUpdateResponse> PublicDeleteEntryByKey(UInt64 userID, string key)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.UserDataStoreUpdateResponse>(CAPI.ovr_UserDataStore_PublicDeleteEntryByKey(userID, key));
+      }
+
+      return null;
+    }
+
+    /// Get entries from a public user data store.
+    /// \param userID The ID of the user who owns this public user data store.
+    ///
+    public static Request<Dictionary<string, string>> PublicGetEntries(UInt64 userID)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Dictionary<string, string>>(CAPI.ovr_UserDataStore_PublicGetEntries(userID));
+      }
+
+      return null;
+    }
+
+    /// Get an entry by a key from a public user data store.
+    /// \param userID The ID of the user who owns this public user data store.
+    /// \param key The key of entry.
+    ///
+    public static Request<Dictionary<string, string>> PublicGetEntryByKey(UInt64 userID, string key)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Dictionary<string, string>>(CAPI.ovr_UserDataStore_PublicGetEntryByKey(userID, key));
+      }
+
+      return null;
+    }
+
+    /// Write a single entry to a public user data store.
+    /// \param userID The ID of the user who owns this public user data store.
+    /// \param key The key of entry.
+    /// \param value The value of entry.
+    ///
+    public static Request<Models.UserDataStoreUpdateResponse> PublicWriteEntry(UInt64 userID, string key, string value)
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.UserDataStoreUpdateResponse>(CAPI.ovr_UserDataStore_PublicWriteEntry(userID, key, value));
+      }
+
+      return null;
+    }
+
+  }
+
   public static partial class Voip
   {
     /// Sets whether SystemVoip should be suppressed so that this app's Voip can
@@ -2381,7 +2750,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
     /// Sent to indicate that the state of the VoIP connection changed. Use
     /// Message.GetNetworkingPeer() and NetworkingPeer.GetState() to extract the
     /// current state.
@@ -2393,7 +2762,7 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
     /// Sent to indicate that some part of the overall state of SystemVoip has
     /// changed. Use Message.GetSystemVoipState() and the properties of
     /// SystemVoipState to extract the state that triggered the notification.
@@ -2409,7 +2778,21 @@ namespace Oculus.Platform
         callback
       );
     }
-    
+
+  }
+
+  public static partial class Vrcamera
+  {
+    /// Get surface and update action from platform webrtc for update.
+    ///
+    public static void SetGetSurfaceUpdateNotificationCallback(Message<string>.Callback callback)
+    {
+      Callback.SetNotificationCallback(
+        Message.MessageType.Notification_Vrcamera_GetSurfaceUpdate,
+        callback
+      );
+    }
+
   }
 
 
@@ -2513,6 +2896,29 @@ namespace Oculus.Platform
           CAPI.ovr_HTTP_GetWithMessageType(
             list.NextUrl,
             (int)Message.MessageType.IAP_GetNextPurchaseArrayPage
+          )
+        );
+      }
+
+      return null;
+    }
+
+  }
+
+  public static partial class Leaderboards {
+    public static Request<Models.LeaderboardList> GetNextLeaderboardListPage(Models.LeaderboardList list) {
+      if (!list.HasNextPage)
+      {
+        Debug.LogWarning("Oculus.Platform.GetNextLeaderboardListPage: List has no next page");
+        return null;
+      }
+
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.LeaderboardList>(
+          CAPI.ovr_HTTP_GetWithMessageType(
+            list.NextUrl,
+            (int)Message.MessageType.Leaderboard_GetNextLeaderboardArrayPage
           )
         );
       }

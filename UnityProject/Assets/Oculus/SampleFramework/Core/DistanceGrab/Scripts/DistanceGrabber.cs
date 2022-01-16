@@ -25,11 +25,6 @@ namespace OculusSampleFramework
     [RequireComponent(typeof(Rigidbody))]
     public class DistanceGrabber : OVRGrabber
     {
-
-        // Radius of sphere used in spherecast from hand along forward ray to find target object.
-        [SerializeField]
-        public Color m_focusColor;
-
         // Radius of sphere used in spherecast from hand along forward ray to find target object.
         [SerializeField]
         float m_spherecastRadius = 0;
@@ -82,13 +77,18 @@ namespace OculusSampleFramework
         {
             base.Start();
 
-            // Set up our max grab distance to be based on the player's max grab distance.
-            // Adding a liberal margin of error here, because users can move away some from the 
-            // OVRPlayerController, and also players have arms.
+            // Basic hack to guess at max grab distance based on player size.
             // Note that there's no major downside to making this value too high, as objects
             // outside the player's grabbable trigger volume will not be eligible targets regardless.
-            SphereCollider sc = m_player.GetComponentInChildren<SphereCollider>();
-            m_maxGrabDistance = sc.radius + 3.0f;
+            Collider sc = m_player.GetComponentInChildren<Collider>();
+            if(sc != null)
+            {
+                m_maxGrabDistance = sc.bounds.size.z * 0.5f + 3.0f;
+            }
+            else
+            {
+                m_maxGrabDistance = 12.0f;
+            }
 
             if(m_parentHeldObject == true)
             {
@@ -124,10 +124,6 @@ namespace OculusSampleFramework
                 {
                     m_target.Targeted = m_otherHand.m_target == m_target;
                 }
-                if(m_target != null)
-                    m_target.ClearColor();
-                if(target != null)
-                    target.SetColor(m_focusColor);
                 m_target = target;
                 m_targetCollider = targetColl;
                 if (m_target != null)
@@ -256,6 +252,7 @@ namespace OculusSampleFramework
                     // Store the closest grabbable
                     Vector3 closestPointOnBounds = grabbableCollider.ClosestPointOnBounds(m_gripTransform.position);
                     float grabbableMagSq = (m_gripTransform.position - closestPointOnBounds).sqrMagnitude;
+
                     if (grabbableMagSq < closestMagSq)
                     {
                         bool accept = true;
@@ -269,7 +266,7 @@ namespace OculusSampleFramework
                             RaycastHit obstructionHitInfo;
                             Debug.DrawRay(ray.origin, ray.direction, Color.red, 0.1f);
 
-                            if (Physics.Raycast(ray, out obstructionHitInfo, m_maxGrabDistance, 1 << m_obstructionLayer))
+                            if (Physics.Raycast(ray, out obstructionHitInfo, m_maxGrabDistance, 1 << m_obstructionLayer, QueryTriggerInteraction.Ignore))
                             {
                                 float distToObject = (grabbableCollider.ClosestPointOnBounds(m_gripTransform.position) - m_gripTransform.position).magnitude;
                                 if(distToObject > obstructionHitInfo.distance * 1.1)
@@ -333,7 +330,7 @@ namespace OculusSampleFramework
 
                     dgOut = grabbable;
                     collOut = hitCollider;
-                    if (Physics.Raycast(ray, out obstructionHitInfo, 1 << m_obstructionLayer))
+                    if (Physics.Raycast(ray, out obstructionHitInfo, m_maxGrabDistance, 1 << m_obstructionLayer, QueryTriggerInteraction.Ignore))
                     {
                         DistanceGrabbable obstruction = null;
                         if(hitInfo.collider != null)

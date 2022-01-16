@@ -22,6 +22,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
+using AOT;
 
 public class OculusSpatializerUnity : MonoBehaviour
 {
@@ -35,9 +36,6 @@ public class OculusSpatializerUnity : MonoBehaviour
     public int rayCacheSize = 512;
 
     public bool dynamicReflectionsEnabled = true;
-
-    AudioRaycastCallback _raycastCallback; // cache an instance of the delegate so the GC doesn't nuke it!
-
     float particleSize = 0.2f;
     float particleOffset = 0.1f;
 
@@ -58,6 +56,7 @@ public class OculusSpatializerUnity : MonoBehaviour
 
     static LayerMask gLayerMask = -1;
     static Vector3 swapHandedness(Vector3 vec) { return new Vector3(vec.x, vec.y, -vec.z); }
+    [MonoPInvokeCallback(typeof(AudioRaycastCallback))]
     static void AudioRaycast(Vector3 origin, Vector3 direction, out Vector3 point, out Vector3 normal, System.IntPtr data)
     {
         point = Vector3.zero;
@@ -73,8 +72,7 @@ public class OculusSpatializerUnity : MonoBehaviour
 
     void Start()
     {
-        _raycastCallback = new AudioRaycastCallback(AudioRaycast);
-        OSP_Unity_AssignRaycastCallback(_raycastCallback, System.IntPtr.Zero);
+        OSP_Unity_AssignRaycastCallback(AudioRaycast, System.IntPtr.Zero);
     }
 
     void OnDestroy()
@@ -86,7 +84,7 @@ public class OculusSpatializerUnity : MonoBehaviour
     {
         if (dynamicReflectionsEnabled)
         {
-            OSP_Unity_AssignRaycastCallback(_raycastCallback, System.IntPtr.Zero);
+            OSP_Unity_AssignRaycastCallback(AudioRaycast, System.IntPtr.Zero);
         }
         else
         {
@@ -324,7 +322,7 @@ public class OculusSpatializerUnity : MonoBehaviour
 	private const string strOSP = "AudioPluginOculusSpatializer";
 
     [DllImport(strOSP)]
-    private static extern int OSP_Unity_AssignRaycastCallback(System.MulticastDelegate callback, System.IntPtr data);
+    private static extern int OSP_Unity_AssignRaycastCallback(AudioRaycastCallback callback, System.IntPtr data);
     [DllImport(strOSP)]
     private static extern int OSP_Unity_AssignRaycastCallback(System.IntPtr callback, System.IntPtr data);
 

@@ -235,17 +235,9 @@ public class GeckoViewPLugin extends Fragment implements GeckoSession.Navigation
     public void AddKeys(String text){
         final Activity a = UnityPlayer.currentActivity;
         a.runOnUiThread(() -> {
-            if (mWebView == null)
-                return;
-            MakeWebviewGetFocus();
-
-            // we are just adding text
-            char[] szRes = text.toCharArray(); // Convert String to Char array
-            KeyEvent[] events = CharMap.getEvents(szRes);
-
-            for (int i = 0; i < events.length; i++)
-                mWebView.dispatchKeyEvent(events[i]); // MainWebView is webview
-
+            Log.d(LOG_TAG, "text is: " + text);
+            KeyEvent event = new KeyEvent(SystemClock.uptimeMillis(), text, 0, 0);
+            mWebView.dispatchKeyEvent(event);
         });
     }
 

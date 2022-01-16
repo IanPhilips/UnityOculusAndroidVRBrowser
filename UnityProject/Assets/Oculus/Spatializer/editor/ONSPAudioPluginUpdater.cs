@@ -308,10 +308,6 @@ class ONSPAudioPluginUpdater
                 }
             }
         }
-        else
-        {
-            UnityEngine.Debug.Log("No new spatializer plugin(s) found");
-        }
     }
 
     private static void RestartUnityEditor()

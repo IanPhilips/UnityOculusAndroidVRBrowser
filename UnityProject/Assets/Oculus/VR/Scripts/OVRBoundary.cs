@@ -1,12 +1,8 @@
 /************************************************************************************
 Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
-the Utilities SDK except in compliance with the License, which is provided at the time of installation
-or download, or which otherwise accompanies this software in either electronic or hard copy form.
-
-You may obtain a copy of the License at
-https://developer.oculus.com/licenses/oculusmastersdk-1.0/
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
 
 Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
@@ -14,13 +10,21 @@ ANY KIND, either express or implied. See the License for the specific language g
 permissions and limitations under the License.
 ************************************************************************************/
 
+#if USING_XR_MANAGEMENT && USING_XR_SDK_OCULUS
+#define USING_XR_SDK
+#endif
+
+#if UNITY_2020_1_OR_NEWER
+#define REQUIRES_XR_SDK
+#endif
 
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using VR = UnityEngine.VR;
 using System.Runtime.InteropServices;
+#if !USING_XR_SDK && !REQUIRES_XR_SDK
 using Boundary = UnityEngine.Experimental.XR.Boundary;
+#endif
 
 /// <summary>
 /// Provides access to the Oculus boundary system.
@@ -66,7 +70,11 @@ public class OVRBoundary
 			return OVRPlugin.GetBoundaryConfigured();
 		else
 		{
+#if !USING_XR_SDK && !REQUIRES_XR_SDK
 			return Boundary.configured;
+#else
+			return false;
+#endif
 		}
 	}
 
@@ -121,11 +129,13 @@ public class OVRBoundary
 	{
 		if (OVRManager.loadedXRDevice != OVRManager.XRDevice.Oculus)
 		{
+#if !USING_XR_SDK && !REQUIRES_XR_SDK
 			if (Boundary.TryGetGeometry(cachedGeometryList, (boundaryType == BoundaryType.PlayArea) ? Boundary.Type.PlayArea : Boundary.Type.TrackedArea))
 			{
 				Vector3[] arr = cachedGeometryList.ToArray();
 				return arr;
 			}
+#endif
 			Debug.LogError("This functionality is not supported in your current version of Unity.");
 			return null;
 		}
@@ -177,9 +187,11 @@ public class OVRBoundary
 
 		else
 		{
+#if !USING_XR_SDK && !REQUIRES_XR_SDK
 			Vector3 dimensions;
 			if (Boundary.TryGetDimensions(out dimensions, (boundaryType == BoundaryType.PlayArea) ? Boundary.Type.PlayArea : Boundary.Type.TrackedArea))
 				return dimensions;
+#endif
 			return Vector3.zero;
 		}
 	}
@@ -193,7 +205,11 @@ public class OVRBoundary
 			return OVRPlugin.GetBoundaryVisible();
 		else
 		{
+#if !USING_XR_SDK && !REQUIRES_XR_SDK
 			return Boundary.visible;
+#else
+			return false;
+#endif
 		}
 	}
 
@@ -207,7 +223,9 @@ public class OVRBoundary
 			OVRPlugin.SetBoundaryVisible(value);
 		else
 		{
+#if !USING_XR_SDK && !REQUIRES_XR_SDK
 			Boundary.visible = value;
+#endif
 		}
 	}
 }

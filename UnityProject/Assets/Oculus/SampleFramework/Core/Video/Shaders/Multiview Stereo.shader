@@ -45,9 +45,6 @@ Shader "Unlit/Multiview Stereo"
 
 				float4 srcRect = lerp(_SrcRectLeft, _SrcRectRight, unity_StereoEyeIndex);
 
-				// the rect origin is top left, so invert to match
-				srcRect.y = 1 - srcRect.y - srcRect.w;
-
 				o.pos = TRANSFORM_TEX(v.uv, _MainTex);
 				o.uv = (o.pos * srcRect.zw) + srcRect.xy;
 				return o;

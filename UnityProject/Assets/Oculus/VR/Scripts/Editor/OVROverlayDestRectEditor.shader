@@ -110,8 +110,8 @@ Shader "Unlit/OVROverlayDestRectEditor"
 			fixed4 frag (v2f i) : SV_Target
 			{
 				float isLeftEye = i.uv < 0.5;
-				float2 leftUV = float2(i.uv.x * (256.0 + 32.0) / 128.0, 1 - i.uv.y);
-				float2 rightUV = float2(1 - ((1 - i.uv.x) * (256.0 + 32.0) / 128.0), 1 - i.uv.y);
+				float2 leftUV = float2(i.uv.x * (256.0 + 32.0) / 128.0, i.uv.y);
+				float2 rightUV = float2(1 - ((1 - i.uv.x) * (256.0 + 32.0) / 128.0), i.uv.y);
 
 				float2 uv = i.uv;
 				float2 textureUV = i.uv;

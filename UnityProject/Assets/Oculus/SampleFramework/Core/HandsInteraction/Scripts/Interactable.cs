@@ -98,8 +98,7 @@ namespace OculusSampleFramework
 		}
 
 		public abstract void UpdateCollisionDepth(InteractableTool interactableTool,
-		  InteractableCollisionDepth oldCollisionDepth, InteractableCollisionDepth collisionDepth,
-		  InteractableTool collidingTool);
+		  InteractableCollisionDepth oldCollisionDepth, InteractableCollisionDepth newCollisionDepth);
 
 		[Serializable]
 		public class InteractableStateArgsEvent : UnityEvent<InteractableStateArgs>
