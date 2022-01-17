@@ -44,5 +44,5 @@ Open the GeckoViewPlugin in android studio.
 Combine Underlay and Overlay scenes  
 Generalize sessions for any #, not just youtube and browser  
 Add trackpad scrolling  
-Add drag & drop clicking
+Add drag & drop clicking  
 Multi-cursor for Quest
