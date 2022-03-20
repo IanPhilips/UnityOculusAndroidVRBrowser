@@ -21,10 +21,10 @@ import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.CursorAnchorInfo;
-import android.view.inputmethod.ExtractedText;
-import android.view.inputmethod.ExtractedTextRequest;
 import android.widget.RelativeLayout;
+
+import androidx.annotation.UiThread;
+
 import com.unity3d.player.UnityPlayer;
 
 
@@ -36,6 +36,7 @@ import org.mozilla.geckoview.GeckoSession;
 import org.mozilla.geckoview.GeckoSessionSettings;
 import org.mozilla.geckoview.ScreenLength;
 import org.mozilla.geckoview.WebRequestError;
+import org.mozilla.geckoview.WebResponse;
 
 import java.util.HashMap;
 
@@ -796,11 +797,12 @@ public class GeckoViewPLugin extends Fragment implements GeckoSession.Navigation
 
     }
 
-
-    @Override
-    public void onExternalResponse(GeckoSession session, GeckoSession.WebResponseInfo response) {
-        Log.d(LOG_TAG, "on external response, type: " + response.contentType);
-        Log.d(LOG_TAG, "on external response, filename: " + response.filename);
+    @Override @UiThread
+    public void onExternalResponse(
+            @androidx.annotation.NonNull final GeckoSession session, @androidx.annotation.NonNull final WebResponse response){
+        Log.d(LOG_TAG, "on external response, we don't currently do anything with this");
+        Log.d(LOG_TAG, "on external response, headers: " + response.headers);
+        Log.d(LOG_TAG, "on external response, body: " + response.body);
         Log.d(LOG_TAG, "on external response, uri: " + response.uri);
     }
 

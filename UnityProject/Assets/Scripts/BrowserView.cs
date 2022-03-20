@@ -94,11 +94,12 @@ public class BrowserView : MonoBehaviour
     }
 
     
+    
     /// <summary>
-    /// Calls the plugin to get png bytes from the surface.
+    /// Calls the plugin to get bytes from the surface.
     /// </summary>
-    /// <returns>PNG byte array</returns>
-    public byte[] TakePngScreenShot(int width=0, int height=0, int quality=100)
+    /// <returns>byte array</returns>
+    public byte[] TakeScreenShot(int width=0, int height=0, int quality=100)
     {
         if (width == 0 || width> _surfaceWidth) width = _surfaceWidth;
         if (height == 0 || height>_surfaceHeight) height = _surfaceHeight;
