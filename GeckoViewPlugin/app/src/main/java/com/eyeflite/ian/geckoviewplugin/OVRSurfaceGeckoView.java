@@ -2,10 +2,9 @@ package com.eyeflite.ian.geckoviewplugin;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.graphics.Region;
 import android.os.Build;
 import android.os.Handler;
@@ -24,14 +23,12 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.mozilla.gecko.util.ActivityUtils;
 import org.mozilla.geckoview.BasicSelectionActionDelegate;
 import org.mozilla.geckoview.GeckoDisplay;
 import org.mozilla.geckoview.GeckoRuntime;
 import org.mozilla.geckoview.GeckoSession;
 import org.mozilla.geckoview.GeckoView;
 
-import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 
 
@@ -154,6 +151,8 @@ public class OVRSurfaceGeckoView extends GeckoView {
         }
     }
 
+    
+    // Compress can't be called from UI thread, changing to just take the raw image bytes
     public BytesBuffer GetSurfaceBytesBuffer(int width, int height, int quality){
         if (mSurface==null)
             return null;
@@ -167,11 +166,15 @@ public class OVRSurfaceGeckoView extends GeckoView {
         // crop the pixel copy bitmap according to the passed width and height
         Bitmap croppedBitmap = Bitmap.createBitmap(bitmap, 0, 0, width, height);
 
-        // convert cropped bitmap to png
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        croppedBitmap.compress(Bitmap.CompressFormat.PNG, quality, stream);
+        // REMOVED: can't call compress on UI thread
+//        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//        croppedBitmap.compress(Bitmap.CompressFormat.PNG, quality, stream);
 
-        return new BytesBuffer(stream.toByteArray());
+        int size = croppedBitmap.getRowBytes() * croppedBitmap.getHeight();
+        ByteBuffer byteBuffer = ByteBuffer.allocate(size);
+        croppedBitmap.copyPixelsToBuffer(byteBuffer);
+
+        return new BytesBuffer(byteBuffer.array());
     }
 
 
@@ -207,9 +210,9 @@ public class OVRSurfaceGeckoView extends GeckoView {
 
         if (IS_APPLICATION)
             SetupApplicationSurfaceView();
-
-
-        final Activity activity = ActivityUtils.getActivityFromContext(getContext());
+        
+        // TODO: no idea if this works, just got it from SO
+        final Activity activity = getActivity(getContext());
         if (activity != null) {
             boolean usingFloatingToolbar = true;
             Log.i(LOG_TAG, "activity is not null, setting basic selection delegate and using floating bar: " + usingFloatingToolbar );
@@ -235,6 +238,28 @@ public class OVRSurfaceGeckoView extends GeckoView {
         }
     }
 
+
+    private Activity getActivity(Context context)
+    {
+        if (context == null)
+        {
+            return null;
+        }
+        else if (context instanceof ContextWrapper)
+        {
+            if (context instanceof Activity)
+            {
+                return (Activity) context;
+            }
+            else
+            {
+                return getActivity(((ContextWrapper) context).getBaseContext());
+            }
+        }
+
+        return null;
+    }
+    
 
     SurfaceView mSurfaceView;
     private void SetupApplicationSurfaceView(){
